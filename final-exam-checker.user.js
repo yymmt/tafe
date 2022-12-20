@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         最終課題チェッカー2
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  最終課題チェッカー2
 // @author       You
 // @match        http://*/final-exam/*
 // @match        http://*/*/final-exam/*
 // @match        https://*/final-exam/*
 // @match        https://*/*/final-exam/*
-// @icon         none
+// @icon         https://demo.techacademy.jp/favicon.ico
 // @grant        none
 // @updateURL    https://raw.githubusercontent.com/yymmt/tafe/main/final-exam-checker.user.js
 // @downloadURL  https://raw.githubusercontent.com/yymmt/tafe/main/final-exam-checker.user.js
