@@ -220,10 +220,10 @@ window.onload = () => {
                 tn.i=i;
               });
               win.console.log(flatRootNodeList);
-              addError("■ フォントサイズが10%以上異なる(※1)", n=>(dif(n.fontSize,n.opp.fontSize, 1) < 0.9), n=>(`${n.fontSize}px -> ${n.opp.fontSize}px : ${n.text}`) );
-              addError("■ 文字色が異なる(※1)", n=>(n.color!=n.opp.color), n=>(`${n.color} -> ${n.opp.color} : ${n.text}`));
-              addError("■ absoluteの使い所を確認(※3)", n=>n.opp && n.position=="absolute", n=>`${n.text}`);
-              addError("■ transformの使い所を確認(※3)", n=>n.opp && !(n.transform=="none" || !n.transform), n=>`${n.text}`);
+              addError("■ フォントサイズが10%以上異なる", n=>(dif(n.fontSize,n.opp.fontSize, 1) < 0.9), n=>(`${n.fontSize}px -> ${n.opp.fontSize}px : ${n.text}`) );
+              addError("■ 文字色が異なる", n=>(n.color!=n.opp.color), n=>(`${n.color} -> ${n.opp.color} : ${n.text}`));
+              addError("■ absoluteの使い所を確認", n=>n.opp && n.position=="absolute", n=>`${n.text}`);
+              addError("■ transformの使い所を確認", n=>n.opp && !(n.transform=="none" || !n.transform), n=>`${n.text}`);
             }
             if(w==1536) {
               addOptElm("■ 特にチェックする項目(目視で確認)", -1);
@@ -332,8 +332,6 @@ window.onload = () => {
       },500);
     }
     leftFrm.src=location.href;
-
-    // win.document.querySelector(".right iframe").contentWindow.document.body.parentElement.innerHTML=html;
   });
 
 };
