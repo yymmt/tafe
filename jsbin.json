@@ -1528,6 +1528,54 @@ fefiyu:{html:`
 </p>
 `,
 },
+fenesir:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>スライダー（カルーセル）</title>
+  
+  <!-- SlickのCSS -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  
+  <!-- カルーセル -->
+  <div class="carousel">
+    <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_1.png" alt=""></div>
+    <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_2.png" alt=""></div>
+    <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_3.png" alt=""></div>
+  </div>  
+
+  <!-- jQuery -->  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- SlickのJS -->
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+
+</body>
+</html>
+`,
+css:`
+img {
+  max-width: 100%;
+  height: auto;
+}
+`,
+javascript:`
+$('.carousel').slick({
+  autoplay: true, // 自動再生
+  autoplaySpeed: 5000, // 自動再生の速さ、単位はミリ秒
+  arrows: false, // 左右のナビゲーションを無効にする
+  fade: true,
+  dots: true,
+});
+`,
+},
 fiyogeb:{html:`
 <p class="line-height-onepointfive">
   行間1.5のテキスト<br>行間1.5のテキスト<br>行間1.5のテキスト
@@ -3555,6 +3603,37 @@ css:`
 
 `,
 },
+kawidob:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>クリックイベントを書いてみよう</title>
+</head>
+<body>
+
+  <button id="button">ボタン</button>
+  <p class="text">テキスト</p>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
+`,
+javascript:`
+// #buttonをクリックしたら
+$('#button').on('click', function() {
+
+  // 文字色を赤色に変更
+  $('.text').css('color', 'red');
+
+  // クリックイベントが反応しているか確認する用のコード
+  console.log('ボタンをクリックしました');
+
+})
+`,
+},
 kegujah:{html:`
 <div>ボックス</div>
 `,
@@ -3644,6 +3723,40 @@ kiwasaz:{html:`
 `,
 javascript:`
 $('.pm').text('こんにちは！');
+`,
+},
+kizexod:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML/CSS基礎</title>
+    <meta name="description" content="HTML/CSS基礎のページです">
+  </head>
+  <body>
+    <header class="header">
+      ここはヘッダーです
+      <nav class="nav">
+        <ul>
+          <li>メニュー</li>
+          <li>メニュー</li>
+          <li>メニュー</li>
+          <li>メニュー</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <h1>ページのタイトルです</h1>
+      <h2>ボックスのタイトルです</h2>
+      <p>ボックスの説明です</p>
+      <h2>ボックスのタイトルです</h2>
+      <p>ボックスの説明です</p>
+      <h2>ボックスのタイトルです</h2>
+      <p>ボックスの説明です</p>
+    </main>
+    <footer class="footer">ここはフッターです</footer>
+  </body>
+</html>
 `,
 },
 kogulaf:{html:`
@@ -5445,13 +5558,12 @@ a {
 }
 
 .footer-sns-list-item a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 0.75rem;
+  display: block;
+  padding: 0.75rem;
   color: #040000;
   background-color: #ccc;
   border-radius: 50%;
+  line-height: 0;
 }
 
 /* コピーライト */
@@ -5720,6 +5832,36 @@ li {
   border-radius: .25rem;
 }
 
+`,
+},
+nudawem:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>セレクタを書いてみよう</title>
+</head>
+<body>
+
+  <p id="text1">テキスト1</p>
+  <p id="text2">テキスト2</p>
+  <p id="text3">テキスト3</p>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
+`,
+javascript:`
+// テキスト1の文字色を赤色にする
+$('#text1').css('color', 'red');
+
+// テキスト2の文字色を青色にする
+$('#text2').css('color', 'blue');
+
+// テキスト3の文字色を緑色にする
+$('#text3').css('color', 'green');
 `,
 },
 nupuduc:{html:`
@@ -6274,7 +6416,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 70rem;
+  max-width: 67.5rem;
   height: 100%;
   padding-right: 1.25rem;
   padding-left: 1.25rem;
@@ -8009,13 +8151,12 @@ a {
 }
 
 .footer-sns-list-item a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 0.75rem;
+  display: block;
+  padding: 0.75rem;
   color: #040000;
   background-color: #ccc;
   border-radius: 50%;
+  line-height: 0;
 }
 
 /* コピーライト */
@@ -9101,14 +9242,6 @@ a {
   color: #000;
   text-decoration: none;
 }
-
-/* 画像 */
-img {
-  max-width: 100%;
-  height: auto;
-  vertical-align: bottom;
-}
-
 
 /* コンテナ */
 .container {
