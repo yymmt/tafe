@@ -86,8 +86,8 @@
 
 .indexAll {
     position: fixed;
-    right: -4px;
-    top: 7px;
+    right: 10px;
+    top: 10px;
     min-width: 100px;
     max-width: 400px;
     z-index: 999;
@@ -105,8 +105,8 @@
 .button__open,
 .button__close {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: -4px;
+    top: 7px;
     width: 32px;
     height: 32px;
     cursor: pointer;
