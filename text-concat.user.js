@@ -89,7 +89,7 @@
     right: 10px;
     top: 10px;
     min-width: 100px;
-    max-width: 400px;
+    width: 400px;
     z-index: 999;
 }
 
@@ -120,6 +120,10 @@
     display: inline-block;
     padding: 5px 0px;
 }
+[id^="index-lesson"]{
+    cursor: pointer;
+    line-height: 2;
+}
 </style>
             `;
             $(win.document).find(".note-index").remove();
@@ -137,9 +141,15 @@
                     </div>
                 `;
                 let indexMain=indexAll.querySelector(".index__open");
-                let addIndex = html => {
+                let addIndex = (html,id) => {
                     let line=win.document.createElement("div");
                     line.innerHTML=html;
+                    if (id) {
+                        line.id = id;
+                    }
+                    else {
+                        line.style.display = 'none';
+                    }
                     indexMain.appendChild(line);
                 };
                 let indexTextNodes = e => Array.from(e.childNodes).filter(n=>n.nodeType==1 || n.nodeType==3).map(n=> n.nodeType==1?indexTextNodes(n) : n.textContent).flat();
@@ -160,7 +170,7 @@
                             });
                             let con2=win.document.createElement("div");
                             con2.id=`lesson${i}`;
-                            addIndex(`Lesson ${i}`);
+                            addIndex(`Lesson ${i}`,`index-lesson${i}`);
                             doc.querySelectorAll(".curriculum-container>section").forEach((chapterElm) => {
                                 chapterElm.querySelectorAll("h2.index, h3.index").forEach(indexElm=>{
                                     if(indexElm.tagName.toLowerCase()=="h2"){
@@ -191,6 +201,13 @@
                     win.document.title = `${i+1} / ${urls.length}`;
                 }
                 win.document.title = location.href.match(/curriculums\/([^\/]+)/)[1];
+
+                win.$('[id^="index-lesson"]').on('click',function() {
+                    let elements = $(this).nextUntil('[id]');
+                    elements.each(function() {
+                        $(this).toggle();
+                    });
+                });
 
                 let url="https://raw.githubusercontent.com/yymmt/tafe/main/jsbin.json";
                 await fetch(url).then((response) => response.text()).then((json) => {
