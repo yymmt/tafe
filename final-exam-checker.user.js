@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         最終課題チェッカー2
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  最終課題チェッカー2
 // @author       You
 // @match        http://*/final-exam/*
@@ -35,9 +35,6 @@ window.onload = () => {
       let leftFrmDoc = leftFrm.contentWindow.document;
       let rightFrmDoc = rightFrm.contentWindow.document;
       win.setTimeout(()=>{
-        if(leftFrmDoc.body.clientHeight>40000) {
-          win.alert("vhが使われている可能性があります。(最終課題チェッカーの仕組み上、iframeのheightを極端に大きくしているのでレイアウトが崩れます。レビュー指摘に「vhを使わないこと」を加えましょう。)");
-        }
         let jq = leftFrm.contentWindow.$;
         let updownButton = winDoc.querySelector(".menu .updown");
         let updownButton_onMouseMove = (event) => { rightFrm.style.top = ( parseInt(rightFrm.style.top) + event.movementY) + "px"; }
@@ -235,7 +232,7 @@ window.onload = () => {
               addFreq("ケント", "枠はマル角？");
               addFreq("オンラインの英会話教室は", "アコーディオン？矢印の向きかわる？");
               addFreq("copyright", "SNSアイコンはリンクになっている？マウスホバーで色変化？");
-              addOptElm("■■■■ 以下は元の画面で確認すること", -1);
+              addOptElm("■■■■ 以下は元の画面で確認すること(チェッカーがfixedに対応していないため)", -1);
               addOptElm("ヘッダーがfixedになっているか？", -1);
               addOptElm("無駄に横スクロールしないか", -1);
               addOptElm("アコーディオンは初期状態で閉じている？", -1);
@@ -246,21 +243,38 @@ window.onload = () => {
               addOptElm("■ 特にチェックする項目(目視で確認)", -1);
               addFreq("歳まで", "タブが横並びになっている？");
               addFreq("オンラインの英会話教室は", "三角マークの位置は？'Q','A'と本文のbaseline揃っている？");
-              addOptElm("■■■■ 以下は元の画面で確認すること", -1);
+              addOptElm("■■■■ 以下は元の画面で確認すること(チェッカーがvhに対応していないため)", -1);
               addOptElm("ハンバーガーをクリックでメニューがフェードインするか？", -1);
               addOptElm("メニュー内のリンクがページ内リンクになっているか？", -1);
               addOptElm("メニューはリンク押下時に自動で閉じるか？", -1);
               addOptElm("メニューを出した状態でPC表示に戻った時にメニューが残っていないか", -1);
               addOptElm("メニューを閉じた後、メニューと重なる位置にあったリンクはクリックできるか？", -1);
             }
-            if(w==1920 || w==1366) {
+            if(w==1920) {
+              addOptElm("■ 特にチェックする項目(目視で確認)", -1);
               addOptElm("全体的に不自然な箇所がないか", -1);
+              addOptElm("PC版レイアウトになっているか", -1);
+              addOptElm("vwの使い方によっては大きく見えすぎるところがないか", -1);
+            }
+            if(w==1366) {
+              addOptElm("■ 特にチェックする項目(目視で確認)", -1);
+              addOptElm("全体的に不自然な箇所がないか", -1);
+              addOptElm("PC版レイアウトになっているか", -1);
+              addOptElm("vwの使い方によっては小さく見えすぎるところがないか", -1);
+              addOptElm("画面右側に見切れるコンテンツがないか", -1);
             }
             if(w==768) {
-              addOptElm("全体的に不自然な箇所がないか、PCレイアウトになっているか", -1);
+              addOptElm("■ 特にチェックする項目(目視で確認)", -1);
+              addOptElm("全体的に不自然な箇所がないか", -1);
+              addOptElm("PC版レイアウトになっているか", -1);
+              addOptElm("vwの使い方によっては小さく見えすぎるところがないか", -1);
+              addOptElm("画面右側に見切れるコンテンツがないか", -1);
             }
             if(w==767) {
-              addOptElm("全体的に不自然な箇所がないか、SPレイアウトになっているか", -1);
+              addOptElm("■ 特にチェックする項目(目視で確認)", -1);
+              addOptElm("全体的に不自然な箇所がないか", -1);
+              addOptElm("SP版レイアウトになっているか", -1);
+              addOptElm("pxの使い方によっては小さく見えすぎるところがないか", -1);
             }
             coverElm.style.display = "none";
           },500);
@@ -342,17 +356,17 @@ glass: "https://i.gyazo.com/1003c1d6b5c8e3d5121ded43ea9d7bdd.png",
 side: "https://i.gyazo.com/3f561bd1f08dbcac0e4cb3e438b35b79.png",
 translate: "https://i.gyazo.com/0d333b9f1feb9c9e771e70388b2f8314.png",
 updown: "https://i.gyazo.com/5838b5112113c5e21762a241cd8eca67.png",
-comp_pc: "https://i.gyazo.com/41e9322b2911eff16179ff331d7b5511.png",
-comp_pc_cover_2: "https://i.gyazo.com/b7a1f9a4a4cf60e0652550a7c743e9a1.png",
-comp_pc_cover_3: "https://i.gyazo.com/8c18a2cdad4f664a3fdd9e89262f71a3.png",
-comp_pc_cover_4: "https://i.gyazo.com/a782cd699ad114d2aa17f797f979a0f3.png",
-comp_pc_cover_5: "https://i.gyazo.com/bfcfc73a3ef197a9183aa09c08798258.png",
-comp_sp: "https://i.gyazo.com/b349766edf9d1e71474b4f9ec6c931e8.png",
-comp_sp_cover_2: "https://i.gyazo.com/85995985fa357df8f94b6e231f91b7f0.png",
-comp_sp_cover_3: "https://i.gyazo.com/fc85b4d0b602891d0f5f3a9dd615469c.png",
-comp_sp_cover_4: "https://i.gyazo.com/987a2572ea36efe8bfb42423b5a97353.png",
-comp_sp_cover_5: "https://i.gyazo.com/205f8722b2d5b07b7c70a93eb4d1c805.png",
-comp_sp_menu: "https://i.gyazo.com/84e687fe1aba7cf637cecc373f26e31d.png",
+comp_pc: "https://i.gyazo.com/d690c907feb4bb5d97cf0ec946dc55b0.png",
+comp_pc_cover_2: "https://i.gyazo.com/762e0a4a18db9b9a982194c4c034f8e3.png",
+comp_pc_cover_3: "https://i.gyazo.com/7ae00431e6f4c2b7bdda68e701ca3ed4.png",
+comp_pc_cover_4: "https://i.gyazo.com/729c3d7853f5743fd4f26363ee11abd9.png",
+comp_pc_cover_5: "https://i.gyazo.com/ced43d9eb7b685e7c5bb57203c30d330.png",
+comp_sp: "https://i.gyazo.com/50dc1093d73dc69f19296a67e122c93b.png",
+comp_sp_cover_2: "https://i.gyazo.com/74006a53d98b30db1374761fe7e817e7.png",
+comp_sp_cover_3: "https://i.gyazo.com/10991105afdf00b754ede7bc16adc2a5.png",
+comp_sp_cover_4: "https://i.gyazo.com/ecf0967aaca835cc5f7ef0a208afa019.png",
+comp_sp_cover_5: "https://i.gyazo.com/1e39fc2f69adca6cf50ce0112653d1eb.png",
+comp_sp_menu: "https://i.gyazo.com/813be2bb0ffc4491897b3543a4d6410c.png",
 };
 
 let ARTICLES = {
@@ -403,6 +417,7 @@ BODY: `
       <input class="iframescale" type="number" value=50>
       %
       <button class="todifff">textContent difff</button>
+      <a href="https://qiita.com/yymmt/private/a33b12a442827f4c7141" target="_blank">ご注意</a>
       <div>
         確認項目
         <select class="error">
