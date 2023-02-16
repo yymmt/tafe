@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         テキスト結合
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  try to take over the world!
 // @author       You
 // @match        https://techacademy.jp/mentor/courses/*/curriculums/*/lessons
@@ -153,7 +153,7 @@
                     indexMain.appendChild(line);
                 };
                 let indexTextNodes = e => Array.from(e.childNodes).filter(n=>n.nodeType==1 || n.nodeType==3).map(n=> n.nodeType==1?indexTextNodes(n) : n.textContent).flat();
-                $(indexAll).find(".__toggle").on("click", e=> $(indexAll).toggleClass("__open").toggleClass("__close") );
+                win.$(indexAll).find(".__toggle").on("click", e=> win.$(indexAll).toggleClass("__open").toggleClass("__close") );
                 win.document.body.appendChild(indexAll);
 
                 for(let i=0;i<urls.length;i++) {
