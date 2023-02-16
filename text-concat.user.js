@@ -92,6 +92,9 @@
     width: 400px;
     z-index: 999;
 }
+.indexAll.__close {
+    width: auto;
+}
 
 .indexAll>*>* {
     display: none;
