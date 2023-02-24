@@ -355,7 +355,7 @@ img {
   width: calc((100% - 1rem) /2);
 }
 
-.about-item:nth-last-child(-n + 1) {
+.about-item:last-child {
   margin-top: 2rem;
 }
 
@@ -1528,9 +1528,53 @@ fefiyu:{html:`
 </p>
 `,
 },
-fenesir:{html:``,
-css:``,
-javascript:``,
+fenesir:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>スライダー（カルーセル）</title>
+  
+  <!-- SlickのCSS -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  
+  <!-- カルーセル -->
+  <div class="carousel">
+    <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_1.png" alt=""></div>
+    <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_2.png" alt=""></div>
+    <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_3.png" alt=""></div>
+  </div>  
+
+  <!-- jQuery -->  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- SlickのJS -->
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+
+</body>
+</html>
+`,
+css:`
+img {
+  max-width: 100%;
+  height: auto;
+}
+`,
+javascript:`
+$('.carousel').slick({
+  autoplay: true, // 自動再生
+  autoplaySpeed: 5000, // 自動再生の速さ、単位はミリ秒
+  arrows: false, // 左右のナビゲーションを無効にする
+  fade: true,
+  dots: true,
+});
+`,
 },
 fiyogeb:{html:`
 <p class="line-height-onepointfive">
@@ -3559,8 +3603,36 @@ css:`
 
 `,
 },
-kawidob:{html:``,
-javascript:``,
+kawidob:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>クリックイベントを書いてみよう</title>
+</head>
+<body>
+
+  <button id="button">ボタン</button>
+  <p class="text">テキスト</p>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
+`,
+javascript:`
+// #buttonをクリックしたら
+$('#button').on('click', function() {
+
+  // 文字色を赤色に変更
+  $('.text').css('color', 'red');
+
+  // クリックイベントが反応しているか確認する用のコード
+  console.log('ボタンをクリックしました');
+
+})
+`,
 },
 kegujah:{html:`
 <div>ボックス</div>
@@ -5589,7 +5661,7 @@ box-shadow: none !important;
 `,
 javascript:`
 $('#smarttab').smartTab({
-  enableURLhash: false
+  enableUrlHash: false
 });
 `,
 },
@@ -5762,8 +5834,35 @@ li {
 
 `,
 },
-nudawem:{html:``,
-javascript:``,
+nudawem:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>セレクタを書いてみよう</title>
+</head>
+<body>
+
+  <p id="text1">テキスト1</p>
+  <p id="text2">テキスト2</p>
+  <p id="text3">テキスト3</p>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
+`,
+javascript:`
+// テキスト1の文字色を赤色にする
+$('#text1').css('color', 'red');
+
+// テキスト2の文字色を青色にする
+$('#text2').css('color', 'blue');
+
+// テキスト3の文字色を緑色にする
+$('#text3').css('color', 'green');
+`,
 },
 nupuduc:{html:`
 <!DOCTYPE html>
@@ -6941,38 +7040,6 @@ css:`
 * ハンバーガーメニュー用のCSS
 */
 
-/* ハンバーガーメニュー */
-.hamburger-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(4, 0, 0, 0.9);
-  /* 右からスライドイン */
-  transform: translateX(100%);
-  /* 左からスライドイン */
-  /* transform: translateX(-100%); */
-  /* 上からスライドイン */
-  /* transform: translateY(-100%); */
-  /* 下からスライドイン */
-  /* transform: translateY(100%); */
-  transition: all 0.6s;
-}
-
-/* スライドイン後の位置の指定 */
-.hamburger-menu-active {
-  /* 左・右からスライドインさせる場合 */
-  transform: translateX(0);
-  /* 上・下からスライドインさせる場合 */
-  /* transform: translateY(0); */
-}
-
-.hamburger-menu-list {
-  padding: 5rem 1.25rem;
-  list-style: none;
-}
-
 /* ハンバーガーボタン */
 .hamburger-button {
   position: fixed;
@@ -6983,6 +7050,82 @@ css:`
   font-size: 1.75rem;
   color: #fff;
 }
+
+/* ハンバーガーメニュー */
+/* 右からスライドイン */
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(4, 0, 0, 0.9);
+  transition: all 0.6s;
+}
+/* スライドイン後の位置の指定 */
+.hamburger-menu-active {
+  left: 0;
+}
+
+/* 左からスライドイン
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(4, 0, 0, 0.9);
+  transition: all 0.6s;
+}
+*/
+
+/* スライドイン後の位置の指定
+.hamburger-menu-active {
+  right: 0;
+}
+*/
+
+/* 上からスライドイン
+.hamburger-menu {
+  position: fixed;
+  left: 0;
+  top: -100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(4, 0, 0, 0.9);
+  transition: all 0.6s;
+}
+*/
+
+/* スライドイン後の位置の指定
+.hamburger-menu-active {
+  top: 0;
+}
+*/
+
+/* 下からスライドイン
+.hamburger-menu {
+  position: fixed;
+  left: 0;
+  top: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(4, 0, 0, 0.9);
+  transition: all 0.6s;
+}
+*/
+
+/* スライドイン後の位置の指定
+.hamburger-menu-active {
+  top: 0;
+} 
+*/
+
+.hamburger-menu-list {
+  padding: 5rem 1.25rem;
+  list-style: none;
+}
+
 
 /**
 * ヘッダー用のCSS
@@ -7027,7 +7170,7 @@ var hamburger = $('.hamburger-menu');
 $('.hamburger-button').on('click', function() {
   // console.log('click');
 
-  // .hamburger-menuの表示・非表示を繰り返す
+  // .hamburgerの表示・非表示を繰り返す
   hamburger.toggleClass('hamburger-menu-active');
 
 });
