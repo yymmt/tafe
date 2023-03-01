@@ -6,7 +6,8 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        https://techacademy.jp/*
+// @match        https://techacademy.jp/mentor/users/*
+// @match        https://techacademy.jp/mentor/reports/*
 // @grant        none
 // @updateURL    https://raw.githubusercontent.com/yymmt/tafe/main/diff-checker.user.js
 // @downloadURL  https://raw.githubusercontent.com/yymmt/tafe/main/diff-checker.user.js
