@@ -3,7 +3,7 @@
 // ==UserScript==
 // @name         模写チェッカー
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       You
 // @match        https://techacademy.jp/*
@@ -42,15 +42,11 @@
                 };
                 let url;
                 let doc;
-                url="https://raw.githubusercontent.com/yymmt/tafe/main/jsbin.json";
-                await fetch(url).then((response) => response.text()).then((json) => {
-                    eval("jsbin="+json);
-                });
                 url="https://techacademy.jp/mentor/courses/first-sidejob/review_guide";
                 await fetch(url).then((response) => response.text()).then((html) => {
                     doc = new DOMParser().parseFromString(html, "text/html");
                 });
-                let docNthAns = n => doc.querySelectorAll(".highlighter-coderay")[n].textContent.trim()
+                let docNthAns = (sel,n) => $(doc.querySelector(`a[href$='${sel}'`)).parent().nextAll(".highlighter-coderay")[n].textContent.trim()
                 let combHtml = (code) => code
                     .replace(/\<\!\-\-[\s\S]*?\-\-\>/g, '');
                 let combCss = (code) => code
@@ -74,7 +70,7 @@
                 let noans = "模範解答なし";
                 let ansList = {
                     "kadai-html-1": [
-                        ["index.html", jsbin.kizexod.html],
+                        ["index.html", kadai_html_1],
                     ],
                     "kadai-html-2": [
                         ["index.html", noans],
@@ -83,61 +79,57 @@
                         ["index.html", noans],
                     ],
                     "kadai-portfolio-1": [
-                        ["index.html", docNthAns(2)],
-                        ["css/style.css", docNthAns(3)],
+                        ["index.html", docNthAns("kadai-portfolio-1",0)],
+                        ["css/style.css", docNthAns("kadai-portfolio-1",1)],
                     ],
                     "kadai-portfolio-2": [
-                        ["index.html", docNthAns(4)],
-                        ["css/style.css", docNthAns(5)],
+                        ["index.html", docNthAns("kadai-portfolio-2",0)],
+                        ["css/style.css", docNthAns("kadai-portfolio-2",1)],
                     ],
                     "kadai-portfolio-3": [
                         ["career.html", noans],
                     ],
                     "kadai-jquery1": [
-                        ["index.html", jsbin.nudawem.html],
-                        ["main.js", jsbin.nudawem.javascript],
+                        ["index.html", noans],
                     ],
                     "kadai-jquery2": [
-                        ["index.html", jsbin.kawidob.html],
-                        ["main.js", jsbin.kawidob.javascript],
+                        ["index.html", noans],
                     ],
                     "kadai-jquery3": [
-                        ["index.html", jsbin.fenesir.html],
-                        ["style.css", jsbin.fenesir.css],
-                        ["main.js", jsbin.fenesir.javascript],
+                        ["index.html", noans],
                     ],
                     "kadai-smartphone-1": [
-                        ["index.html", docNthAns(6)],
-                        ["css/style.css", docNthAns(7)],
-                        ["js/hamburger.js", docNthAns(8)],
-                        ["js/carousel.js", docNthAns(9)],
+                        ["index.html", docNthAns("kadai-smartphone-1",0)],
+                        ["css/style.css", docNthAns("kadai-smartphone-1",1)],
+                        ["js/hamburger.js", docNthAns("kadai-smartphone-1",2)],
+                        ["js/carousel.js", docNthAns("kadai-smartphone-1",3)],
                     ],
                     "kadai-smartphone-2": [
-                        ["index.html", docNthAns(6)],
-                        ["css/style.css", docNthAns(10)],
+                        ["index.html", docNthAns("kadai-smartphone-1",0)],
+                        ["css/style.css", docNthAns("kadai-smartphone-2",0)],
                     ],
                     "kadai-recipe-1": [
-                        ["index.html", docNthAns(11)],
-                        ["css/style.css", docNthAns(12)],
-                        ["js/main.js", docNthAns(13)],
+                        ["index.html", docNthAns("kadai-recipe-1",0)],
+                        ["css/style.css", docNthAns("kadai-recipe-1",1)],
+                        ["js/main.js", docNthAns("kadai-recipe-1",2)],
                     ],
                     "kadai-recipe-2": [
-                        ["index.html", docNthAns(14)],
-                        ["css/style.css", docNthAns(15)],
-                        ["js/main.js", docNthAns(16)],
+                        ["index.html", docNthAns("kadai-recipe-2",0)],
+                        ["css/style.css", docNthAns("kadai-recipe-2",1)],
+                        ["js/main.js", docNthAns("kadai-recipe-2",2)],
                     ],
                     "kadai-recipe-3": [
                         ["index.html", noans],
                     ],
                     "kadai-corporate-site-1": [
-                        ["index.html", docNthAns(17)],
-                        ["assets/css/style.css", docNthAns(18)],
-                        ["assets/js/main.js", docNthAns(19)],
+                        ["index.html", docNthAns("kadai-corporate-site-1",0)],
+                        ["assets/css/style.css", docNthAns("kadai-corporate-site-1",1)],
+                        ["assets/js/main.js", docNthAns("kadai-corporate-site-1",2)],
                     ],
                     "kadai-corporate-site-2": [
-                        ["index.html", docNthAns(20)],
-                        ["assets/css/style.css", docNthAns(21)],
-                        ["assets/js/main.js", docNthAns(22)],
+                        ["index.html", docNthAns("kadai-corporate-site-2",0)],
+                        ["assets/css/style.css", docNthAns("kadai-corporate-site-2",1)],
+                        ["assets/js/main.js", docNthAns("kadai-corporate-site-2",2)],
                     ],
                     "kadai-corporate-site-3": [
                         ["access/index.html", noans],
@@ -235,3 +227,39 @@
         })();
     }
 })();
+
+// この課題だけは課題レビュー基準に記載がないので直書き
+let kadai_html_1=`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML/CSS基礎</title>
+    <meta name="description" content="HTML/CSS基礎のページです">
+  </head>
+  <body>
+    <header class="header">
+      ここはヘッダーです
+      <nav class="nav">
+        <ul>
+          <li>メニュー</li>
+          <li>メニュー</li>
+          <li>メニュー</li>
+          <li>メニュー</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <h1>ページのタイトルです</h1>
+      <h2>ボックスのタイトルです</h2>
+      <p>ボックスの説明です</p>
+      <h2>ボックスのタイトルです</h2>
+      <p>ボックスの説明です</p>
+      <h2>ボックスのタイトルです</h2>
+      <p>ボックスの説明です</p>
+    </main>
+    <footer class="footer">ここはフッターです</footer>
+  </body>
+</html>
+`;
+    
