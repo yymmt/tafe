@@ -663,7 +663,6 @@ li {
   list-style: none;
 }
 
-
 /* ヘッダー
 ------------------------------------------ */
 
@@ -683,7 +682,6 @@ li {
 .hamburger-button {
   position: fixed;
   right: 0;
-  z-index: 999;
   width: 3.125rem;
   height: 3.125rem;
   font-size: 1.75rem;
@@ -2433,7 +2431,7 @@ a {
 /* コンテナ */
 .cover-container {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   max-width: 70rem;
@@ -3847,8 +3845,6 @@ kuzafus:{html:`
 
     <!-- CSSリセット -->
     <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
 
@@ -5547,6 +5543,10 @@ a {
   color: #fff;
 }
 
+.footer-nav-list-item a:hover {
+  text-decoration: underline;
+}
+
 /* SNSリンク */
 .footer-sns-list {
   display: flex;
@@ -5945,7 +5945,7 @@ padunoc:{html:`
                alt="ラップトップ" width="76" height="76">
           <div>
             <h2 class="voice-item-title">タイトルが入ります</h2>
-            <p class="voice-item-discription">テキストが入ります</p>
+            <p class="voice-item-description">テキストが入ります</p>
           </div>
         </a>
         <!-- アイテム -->
@@ -5954,7 +5954,7 @@ padunoc:{html:`
                alt="ラップトップ" width="76" height="76">
           <div>
             <h2 class="voice-item-title">タイトルが入ります</h2>
-            <p class="voice-item-discription">テキストが入ります</p>
+            <p class="voice-item-description">テキストが入ります</p>
           </div>
         </a>
         <!-- アイテム -->
@@ -5963,7 +5963,7 @@ padunoc:{html:`
                alt="ラップトップ" width="76" height="76">
           <div>
             <h2 class="voice-item-title">タイトルが入ります</h2>
-            <p class="voice-item-discription">テキストが入ります</p>
+            <p class="voice-item-description">テキストが入ります</p>
           </div>
         </a>
         <!-- アイテム -->
@@ -5972,7 +5972,7 @@ padunoc:{html:`
                alt="ラップトップ" width="76" height="76">
           <div>
             <h2 class="voice-item-title">タイトルが入ります</h2>
-            <p class="voice-item-discription">テキストが入ります</p>
+            <p class="voice-item-description">テキストが入ります</p>
           </div>
         </a>
 
@@ -6020,7 +6020,7 @@ a {
 }
 
 /* テキスト */
-.voice-item-discription {
+.voice-item-description {
   font-size: .875rem;
 }
 
@@ -7052,7 +7052,6 @@ css:`
 }
 
 /* ハンバーガーメニュー */
-/* 右からスライドイン */
 .hamburger-menu {
   position: fixed;
   top: 0;
@@ -7061,65 +7060,14 @@ css:`
   height: 100vh;
   background-color: rgba(4, 0, 0, 0.9);
   transition: all 0.6s;
+  visibility: hidden;
 }
+
 /* スライドイン後の位置の指定 */
 .hamburger-menu-active {
   left: 0;
+  visibility: visible;
 }
-
-/* 左からスライドイン
-.hamburger-menu {
-  position: fixed;
-  top: 0;
-  right: 100%;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(4, 0, 0, 0.9);
-  transition: all 0.6s;
-}
-*/
-
-/* スライドイン後の位置の指定
-.hamburger-menu-active {
-  right: 0;
-}
-*/
-
-/* 上からスライドイン
-.hamburger-menu {
-  position: fixed;
-  left: 0;
-  top: -100%;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(4, 0, 0, 0.9);
-  transition: all 0.6s;
-}
-*/
-
-/* スライドイン後の位置の指定
-.hamburger-menu-active {
-  top: 0;
-}
-*/
-
-/* 下からスライドイン
-.hamburger-menu {
-  position: fixed;
-  left: 0;
-  top: 100%;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(4, 0, 0, 0.9);
-  transition: all 0.6s;
-}
-*/
-
-/* スライドイン後の位置の指定
-.hamburger-menu-active {
-  top: 0;
-} 
-*/
 
 .hamburger-menu-list {
   padding: 5rem 1.25rem;
@@ -8159,6 +8107,8 @@ a {
 
 /* コンテナ */
 .footer-container {
+  display: flex;
+  flex-direction: column;
   max-width: 70rem;
   padding-right: 1.25rem;
   padding-left: 1.25rem;
@@ -8180,7 +8130,7 @@ a {
   color: #fff;
 }
 
-.footer-nav-list-item:hover {
+.footer-nav-list-item a:hover {
   text-decoration: underline;
 }
 
@@ -9002,7 +8952,7 @@ wocevap:{html:`
                alt="ラップトップ" width="100" height="100">
           <div>
             <h2 class="voice-item-title">タイトルが入ります</h2>
-            <p class="voice-item-discription">テキストが入ります</p>
+            <p class="voice-item-description">テキストが入ります</p>
           </div>
         </a>
         <!-- アイテム -->
@@ -9011,7 +8961,7 @@ wocevap:{html:`
                alt="ラップトップ" width="100" height="100">
           <div>
             <h2 class="voice-item-title">タイトルが入ります</h2>
-            <p class="voice-item-discription">テキストが入ります</p>
+            <p class="voice-item-description">テキストが入ります</p>
           </div>
         </a>
         <!-- アイテム -->
@@ -9020,7 +8970,7 @@ wocevap:{html:`
                alt="ラップトップ" width="100" height="100">
           <div>
             <h2 class="voice-item-title">タイトルが入ります</h2>
-            <p class="voice-item-discription">テキストが入ります</p>
+            <p class="voice-item-description">テキストが入ります</p>
           </div>
         </a>
         <!-- アイテム -->
@@ -9029,7 +8979,7 @@ wocevap:{html:`
                alt="ラップトップ" width="100" height="100">
           <div>
             <h2 class="voice-item-title">タイトルが入ります</h2>
-            <p class="voice-item-discription">テキストが入ります</p>
+            <p class="voice-item-description">テキストが入ります</p>
           </div>
         </a>
 
@@ -9077,7 +9027,7 @@ a {
 }
 
 /* テキスト */
-.voice-item-discription {
+.voice-item-description {
   font-size: .875rem;
 }
 
