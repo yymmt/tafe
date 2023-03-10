@@ -3,7 +3,7 @@
 // ==UserScript==
 // @name         模写チェッカー
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  try to take over the world!
 // @author       You
 // @match        https://techacademy.jp/mentor/users/*
@@ -71,7 +71,7 @@
                 let noans = "模範解答なし";
                 let ansList = {
                     "kadai-html-1": [
-                        ["index.html", kadai_html_1],
+                        ["index.html", docNthAns("kadai-html-1",0)],
                     ],
                     "kadai-html-2": [
                         ["index.html", noans],
@@ -228,39 +228,3 @@
         })();
     }
 })();
-
-// この課題だけは課題レビュー基準に記載がないので直書き
-let kadai_html_1=`
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML/CSS基礎</title>
-    <meta name="description" content="HTML/CSS基礎のページです">
-  </head>
-  <body>
-    <header class="header">
-      ここはヘッダーです
-      <nav class="nav">
-        <ul>
-          <li>メニュー</li>
-          <li>メニュー</li>
-          <li>メニュー</li>
-          <li>メニュー</li>
-        </ul>
-      </nav>
-    </header>
-    <main class="main">
-      <h1>ページのタイトルです</h1>
-      <h2>ボックスのタイトルです</h2>
-      <p>ボックスの説明です</p>
-      <h2>ボックスのタイトルです</h2>
-      <p>ボックスの説明です</p>
-      <h2>ボックスのタイトルです</h2>
-      <p>ボックスの説明です</p>
-    </main>
-    <footer class="footer">ここはフッターです</footer>
-  </body>
-</html>
-`;
-    
