@@ -7697,7 +7697,7 @@ tayiwal:{html:`
 `,
 css:`
 li:not(:last-child) {
-  border-bottom: 1px solid #000
+  border-bottom: 1px solid #000;
 }
 `,
 },
@@ -8311,11 +8311,11 @@ tupezor:{html:`
 `,
 css:`
 .pseudo:before {
-    content: "おはよう！"
+    content: "おはよう！";
 }
 
 .pseudo:after {
-    content: "おやすみ！"
+    content: "おやすみ！";
 }
 `,
 },
