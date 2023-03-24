@@ -18,7 +18,7 @@
     let ism = (pat) => location.href.match(pat);
     if (ism(/mentor\/users\/\d+(#.*)?$/) || ism(/mentor(.training)?.reports/)) {
         (async ()=>{
-            let g=$("a[href*='drive.google.com']").attr("href").match(/folders.([a-zA-Z0-9_-]+)/)[1];
+            let g=$("a[href*='drive.google.com:has(i)']").attr("href").match(/folders.([a-zA-Z0-9_-]+)/)[1];
             if(g){
                 let kadaiToFolder = {
                     'kadai-html-1':'kadai-html',
