@@ -10348,7 +10348,6 @@ footer {
 `,
 },
 yufakil:{html:`
-<a href="https://techacademy.jp/">テックアカデミー</a>
 <a href="https://techacademy.jp/"><img src="https://techacademy.jp/_nuxt/img/logo-blue.5e6bcca.svg" alt="テックアカデミー" width="300"></a>
 
 `,
