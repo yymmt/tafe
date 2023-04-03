@@ -9,8 +9,8 @@
 // @match        https://techacademy.jp/mentor/users/*
 // @match        https://techacademy.jp/mentor/reports/*
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/yymmt/tafe/main/diff-checker.user.js
-// @downloadURL  https://raw.githubusercontent.com/yymmt/tafe/main/diff-checker.user.js
+// @updateURL    https://raw.githubusercontent.com/kiramex/first-sidejob-2-review-tool-script/main/diff-checker.user.js
+// @downloadURL  https://raw.githubusercontent.com/kiramex/first-sidejob-2-review-tool-script/main/diff-checker.user.js
 // @supportURL   https://qiita.com/yymmt/private/a33b12a442827f4c7141
 // ==/UserScript==
 
@@ -189,7 +189,7 @@
                         btn.addEventListener("click", ()=>{
                             let frm=document.createElement("form");
                             frm.method="post";
-                            frm.action="https://yymmt.sakura.ne.jp/tarev/rclone.php";
+                            frm.action="https://techacademy-bootcamp-first-sidejob-2-review-tool-web.s3.ap-northeast-1.amazonaws.com/tarev/rclone.php";
                             frm.target="_blank";
                             frm.innerHTML=`
                             <input name="id" value="">

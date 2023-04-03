@@ -10,8 +10,8 @@
 // @match        https://*/*/final-exam/*
 // @icon         https://demo.techacademy.jp/favicon.ico
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/yymmt/tafe/main/final-exam-checker.user.js
-// @downloadURL  https://raw.githubusercontent.com/yymmt/tafe/main/final-exam-checker.user.js
+// @updateURL    https://raw.githubusercontent.com/kiramex/first-sidejob-2-review-tool-script/main/final-exam-checker.user.js
+// @downloadURL  https://raw.githubusercontent.com/kiramex/first-sidejob-2-review-tool-script/main/final-exam-checker.user.js
 // @supportURL   https://qiita.com/yymmt/private/a33b12a442827f4c7141
 // ==/UserScript==
 

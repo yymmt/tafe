@@ -6,8 +6,8 @@
 // @author       You
 // @match        https://techacademy.jp/mentor/courses/*/curriculums/*/lessons
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=techacademy.jp
-// @updateURL    https://raw.githubusercontent.com/yymmt/tafe/main/text-concat.user.js
-// @downloadURL  https://raw.githubusercontent.com/yymmt/tafe/main/text-concat.user.js
+// @updateURL    https://raw.githubusercontent.com/kiramex/first-sidejob-2-review-tool-script/main/text-concat.user.js
+// @downloadURL  https://raw.githubusercontent.com/kiramex/first-sidejob-2-review-tool-script/main/text-concat.user.js
 // @supportURL   https://qiita.com/yymmt/private/eaaf002118c93c75b620
 // @grant        none
 // ==/UserScript==
@@ -212,7 +212,7 @@
                     });
                 });
 
-                let url="https://raw.githubusercontent.com/yymmt/tafe/main/jsbin.json";
+                let url="https://raw.githubusercontent.com/kiramex/first-sidejob-2-review-tool-script/main/jsbin.json";
                 await fetch(url).then((response) => response.text()).then((json) => {
                     eval("jsbin="+json);
                 });
@@ -239,4 +239,3 @@
         });
     });
 })();
-
