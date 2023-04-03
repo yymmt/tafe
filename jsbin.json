@@ -406,15 +406,15 @@ div {
 }
 
 .padding-same-size {
-  padding: 10px;  
+  padding: 10px;
 }
 
 .padding-different-size {
-  padding: 10px 30px 10px 20px;    
+  padding: 10px 30px 10px 20px;
 }
 
 .padding-different-size-updown-rightleft {
-  padding: 10px 30px;      
+  padding: 10px 30px;
 }
 
 .padding-top {
@@ -504,7 +504,7 @@ cibadoq:{html:`
             <br>
             <label for="none">未回答</label>
             <input type="radio" id="none" name="gender" value="none">
-            
+
             <h2>好きなスポーツ</h2>
             <label for="baseball">野球</label>
             <input type="checkbox" id="baseball" name="sports" value="baseball">
@@ -526,7 +526,7 @@ cibadoq:{html:`
                 <option value="chiba">千葉県</option>
                 <option value="etc">その他</option>
             </select>
-            
+
             <h2>問い合わせ内容</h2>
             <textarea name="content"></textarea>
         </form>
@@ -969,7 +969,7 @@ cozuzux:{html:`
     <div class="item">2</div>
     <div class="item">3</div>
   </div>
-  
+
 </body>
 </html>
 `,
@@ -1520,8 +1520,8 @@ fefiyu:{html:`
 
 <p>
   Webブラウザとは、Webサイトを閲覧するためのアプリケーションです。
-  
-  
+
+
   通常は単にブラウザと呼ばれています。
 </p>
 `,
@@ -1533,27 +1533,27 @@ fenesir:{html:`
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>スライダー（カルーセル）</title>
-  
+
   <!-- SlickのCSS -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   <link rel="stylesheet" href="style.css">
-  
+
 </head>
 <body>
-  
+
   <!-- カルーセル -->
   <div class="carousel">
     <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_1.png" alt=""></div>
     <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_2.png" alt=""></div>
     <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_3.png" alt=""></div>
-  </div>  
+  </div>
 
-  <!-- jQuery -->  
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- SlickのJS -->
   <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  
+
 
 </body>
 </html>
@@ -1928,7 +1928,7 @@ fomutuk:{html:`
   <title>JS Bin</title>
 </head>
 <body>
-  
+
   <div class="container"><!-- flexコンテナ -->
     <div class="item">1</div><!-- flexアイテム -->
     <div class="item">2</div><!-- flexアイテム -->
@@ -1942,7 +1942,7 @@ fomutuk:{html:`
     <div class="item">3</div><!-- flexアイテム -->
     <div class="item">4</div><!-- flexアイテム -->
   </div>
-    
+
 
 </body>
 </html>
@@ -1967,7 +1967,7 @@ fozakif:{html:`
   <title>width、height</title>
 </head>
 <body>
-  
+
   <div class="box1"></div>
   <div class="box2"></div>
 
@@ -2124,7 +2124,7 @@ gedociz:{html:`
 
   </head>
 <body>
-  
+
   <div class="accordion">
     <section>
       <h2 class="accordion-title">タイトル1</h2>
@@ -2145,7 +2145,7 @@ gedociz:{html:`
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
+
 
 </body>
 </html>
@@ -2184,7 +2184,7 @@ $('.accordion-title').on('click', function(e) {
 
   // .accordion-contentを表示・非表示
   content.slideToggle();
-  
+
 });
 `,
 },
@@ -2317,7 +2317,7 @@ geheroj:{html:`
   <title>JS Bin</title>
 </head>
 <body>
-  
+
   <p>横並び※初期値</p>
   <div class="container-one">
     <div class="item">1</div>
@@ -2325,7 +2325,7 @@ geheroj:{html:`
     <div class="item">3</div>
     <div class="item">4</div>
   </div>
-  
+
   <p>逆向きの横並び</p>
   <div class="container-two">
     <div class="item">1</div>
@@ -2333,7 +2333,7 @@ geheroj:{html:`
     <div class="item">3</div>
     <div class="item">4</div>
   </div>
-  
+
   <p>縦並び</p>
   <div class="container-three">
     <div class="item">1</div>
@@ -2341,7 +2341,7 @@ geheroj:{html:`
     <div class="item">3</div>
     <div class="item">4</div>
   </div>
-  
+
   <p>逆向きの縦並び</p>
   <div class="container-four">
     <div class="item">1</div>
@@ -2465,8 +2465,8 @@ gesixeb:{html:`
   <title>デベロッパーツール操作用デモページ</title>
 </head>
 <body>
-  
-  
+
+
   <header>ヘッダー</header>
 
   <main>
@@ -2907,7 +2907,7 @@ hobibap:{html:`
 <span class="vertical-align-middle">
   中央揃えのテキスト
 </span>
-<img src="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-webpage/css-basic/circle.png" alt="">    
+<img src="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-webpage/css-basic/circle.png" alt="">
 <hr>
 <span class="vertical-align-bottom">
   下端揃えのテキスト
@@ -2926,7 +2926,7 @@ span {
 }
 
 .vertical-align-top {
-  vertical-align: top;  
+  vertical-align: top;
 }
 
 .vertical-align-middle {
@@ -2972,22 +2972,22 @@ header {
 main {
     display: flex;
     padding: 20px;
-    background-color: #EAEAEA;    
-    border: 2px solid #000;    
+    background-color: #EAEAEA;
+    border: 2px solid #000;
 }
 
 nav {
     width: 20%;
     padding-bottom: 40px;
     background-color: #FFD166;
-    border: 2px solid #000;    
+    border: 2px solid #000;
 }
 
 article {
     width: 60%;
     margin-right: 10px;
     margin-left: 10px;
-    background-color: #FFE966;    
+    background-color: #FFE966;
     border: 2px solid #000;
 }
 
@@ -3435,14 +3435,14 @@ css:`
 .box1 {
   width: 200px;
   margin-top: 40px;
-  padding: 60px;  
+  padding: 60px;
   text-align: center;
-  background-color:#84ceef;  
+  background-color:#84ceef;
 }
 
 .box2 {
   width: 200px;
-  padding: 60px;  
+  padding: 60px;
   margin-top: 40px;
   text-align: center;
   background-color:#e47292;
@@ -3508,12 +3508,12 @@ div {
 
 .bottom {
   bottom: 200px;
-  background-color: #666;  
+  background-color: #666;
 }
 
 .left {
   left: 100px;
-  background-color: #999;  
+  background-color: #999;
 }
 `,
 },
@@ -3586,9 +3586,9 @@ kadevun:{html:`
   <title>デベロッパーツール警告確認用デモページ</title>
 </head>
 <body>
-  
+
   <p class="text">テキスト</p>
-    
+
 </body>
 </html>
 `,
@@ -4509,7 +4509,7 @@ medilen:{html:`
   <title>無効なプロパティの確認用デモページ</title>
 </head>
 <body>
-  
+
   <div class="container">
     <div class="item"></div>
     <div class="item"></div>
@@ -4556,7 +4556,7 @@ css:`
 }
 
 .mincho {
-  font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;  
+  font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
 }
 `,
 },
@@ -4615,7 +4615,7 @@ mevekeq:{html:`
   <!-- visual01.pngは幅800px,高さ300px -->
   <h2>幅が100パーセントの場合</h2>
   <div class="percentage"></div>
-  
+
   <h2>幅が100vwの場合</h2>
   <div class="viewport_width"></div>
 
@@ -5024,15 +5024,15 @@ div {
 }
 
 .margin-same-size {
-  margin: 10px;  
+  margin: 10px;
 }
 
 .margin-different-size {
-  margin: 10px 30px 10px 20px;    
+  margin: 10px 30px 10px 20px;
 }
 
 .margin-different-size-updown-rightleft {
-  margin: 10px 30px;      
+  margin: 10px 30px;
 }
 
 .margin-top {
@@ -5109,7 +5109,7 @@ nawogov:{html:`
   <title>アコーディオン</title>
 </head>
 <body>
-  
+
   <div class="accordion">
     <section>
       <h2 class="accordion-title">タイトル1</h2>
@@ -5129,7 +5129,7 @@ nawogov:{html:`
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
+
 
 </body>
 </html>
@@ -5166,7 +5166,7 @@ $('.accordion-title').on('click', function(e) {
 
   // .accordion-contentを表示・非表示
   content.slideToggle();
-  
+
 });
 `,
 },
@@ -5249,15 +5249,15 @@ div {
 }
 
 .gray {
-  background-color: gray;  
+  background-color: gray;
 }
 
 .yellow {
-  background-color: yellow;    
+  background-color: yellow;
 }
 
 .alpha {
-  background-color: rgba(0, 0, 0, .6);  
+  background-color: rgba(0, 0, 0, .6);
 }
 `,
 },
@@ -5582,7 +5582,7 @@ nitolof:{html:`
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>タブ</title>
-  
+
   <!-- CSSリセット -->
   <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
 
@@ -5615,7 +5615,7 @@ nitolof:{html:`
     </div>
   </div>
 </div>
-  <!-- jQuery -->  
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- smartTabのJS -->
   <script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/js/jquery.smartTab.min.js" type="text/javascript"></script>
@@ -6076,7 +6076,7 @@ pixonur:{html:`
   <title>JS Bin</title>
 </head>
 <body>
-  
+
   <p>折り返し無し※初期値</p>
   <div class="container-one">
     <div class="item">1</div>
@@ -6084,7 +6084,7 @@ pixonur:{html:`
     <div class="item">3</div>
     <div class="item">4</div>
   </div>
-  
+
   <p>折り返し有り</p>
   <div class="container-two">
     <div class="item">1</div>
@@ -6092,7 +6092,7 @@ pixonur:{html:`
     <div class="item">3</div>
     <div class="item">4</div>
   </div>
-  
+
 </body>
 </html>
 `,
@@ -6221,7 +6221,7 @@ qazifum:{html:`
 <body>
 
   <img src="https://techacademy.s3.amazonaws.com/bootcamp/webdesign/mobile-design/img_work_site.png" alt="" class="responsive-images">
-  
+
 </body>
 </html>
 `,
@@ -6520,13 +6520,13 @@ qokamil:{html:`
 <div class="container">
   <p>上に重ねる指定</p>
   <div class="box box1">初期値autoの要素</div>
-  <div class="box box2">1を指定した要素</div>    
+  <div class="box box2">1を指定した要素</div>
 </div>
 <hr>
 <div class="container">
   <p>下に重ねる指定</p>
   <div class="box box3">初期値autoの要素</div>
-  <div class="box box4">-1を指定した要素</div>    
+  <div class="box box4">-1を指定した要素</div>
 </div>
 
 `,
@@ -6539,7 +6539,7 @@ css:`
   width: 100px;
   height: 100px;
   padding: 10px;
-  color: #fff;  
+  color: #fff;
 }
 
 .box1 {
@@ -6582,13 +6582,13 @@ racuqud:{html:`
   <title>JS Bin</title>
 </head>
 <body>
-  
+
   <div class="container">
     <div class="item item-one">1</div>
     <div class="item item-two">2</div>
     <div class="item item-three">3</div>
   </div>
-    
+
 </body>
 </html>
 `,
@@ -6706,7 +6706,7 @@ css:`
 }
 
 
-/* ニュース 
+/* ニュース
 ------------------------------------------ */
 
 .list-group-item {
@@ -6857,11 +6857,11 @@ div {
   height: 200px;
   background-image: url("https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/html-css/bg.jpg");
   background-size: cover;
-  background-position: 50% 20%; 
+  background-position: 50% 20%;
 }
 
 .background-position-percent {
-  background-position: 50% 50%; 
+  background-position: 50% 50%;
 }
 
 .background-position-pixel {
@@ -7275,11 +7275,11 @@ div {
 }
 
 .box-shadow {
-  box-shadow: 10px 10px 14px 10px rgba(0, 0, 0, 0.25);  
+  box-shadow: 10px 10px 14px 10px rgba(0, 0, 0, 0.25);
 }
 
 .box-shadow-inset {
-  box-shadow: 10px 10px 14px 10px rgba(0,0,0,0.25) inset;  
+  box-shadow: 10px 10px 14px 10px rgba(0,0,0,0.25) inset;
 }
 
 `,
@@ -7376,7 +7376,7 @@ silafaw:{html:`
 
   <!-- CSSリセット -->
   <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-  
+
   <!-- smartTabのCSS -->
   <link href="https://cdn.jsdelivr.net/npm/jquery-smarttab@3.1.1/dist/css/smart_tab_all.min.css" rel="stylesheet" type="text/css" />
 </head>
@@ -7389,7 +7389,7 @@ silafaw:{html:`
       <li><a class="nav-link" href="#tab-3">タブ3</a></li>
       <li><a class="nav-link" href="#tab-4">タブ4</a></li>
     </ul>
- 
+
     <div class="tab-content">
       <div id="tab-1" class="tab-pane" role="tabpanel">
         タブ1の内容が入ります。タブ1の内容が入ります。タブ1の内容が入ります。タブ1の内容が入ります。タブ1の内容が入ります。タブ1の内容が入ります。タブ1の内容が入ります。タブ1の内容が入ります。
@@ -7405,8 +7405,8 @@ silafaw:{html:`
       </div>
     </div>
   </div>
-  
-  <!-- jQuery -->  
+
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- smartTabのJS -->
   <script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@3.1.1/dist/js/jquery.smartTab.min.js" type="text/javascript"></script>
@@ -7441,7 +7441,7 @@ box-shadow: none !important;
 .tab-content {
   border-right: 2px solid #040000;
   border-bottom: 2px solid #040000;
-  border-left: 2px solid rgb(4, 0, 0);  
+  border-left: 2px solid rgb(4, 0, 0);
 }
 
 `,
@@ -7600,7 +7600,7 @@ tajayos:{html:`
   <title>JS Bin</title>
 </head>
 <body>
-  
+
   <div class="container"><!-- ←これがflex コンテナ -->
     <div class="item">1</div><!-- ←これがflex アイテム -->
     <div class="item">2</div><!-- ←これがflex アイテム -->
@@ -7668,7 +7668,7 @@ taxaduy:{html:`
   <title>Test</title>
 </head>
 <body>
-  
+
   <p class="dots"><span>こ</span><span>ん</span><span>に</span><span>ち</span><span>は</span></p>
 
 </body>
@@ -8298,11 +8298,11 @@ div {
 }
 
 .box-1 {
-  box-sizing: content-box;      
+  box-sizing: content-box;
 }
 
 .box-2 {
-  box-sizing: border-box;    
+  box-sizing: border-box;
 }
 `,
 },
@@ -8332,7 +8332,7 @@ tusufow:{html:`
   <div class="background"></div>
   <button type="button" class="my-button">ボタン</button>
   <div class="background"></div>
-  
+
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 
 </body>
@@ -8360,25 +8360,25 @@ vabemuy:{html:`
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>スライダー（カルーセル）</title>
-  
+
   <!-- CSSリセット -->
   <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-  
+
   <!-- SlickのCSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-  
+
 </head>
 <body>
-  
+
   <!-- カルーセル -->
   <div class="carousel">
     <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_1.png" alt=""></div>
     <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_2.png" alt=""></div>
     <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_3.png" alt=""></div>
-  </div>  
+  </div>
 
-  <!-- jQuery -->  
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- SlickのJS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -8396,7 +8396,7 @@ javascript:`
 // Slickリファレンス
 // https://kenwheeler.github.io/slick/
 
-$('.carousel').slick({  
+$('.carousel').slick({
   autoplay: true, // 自動再生
   autoplaySpeed: 2000, // 自動再生の速さ、単位はミリ秒
   arrows: false, // 左右のナビゲーションを無効
@@ -8491,10 +8491,10 @@ vomanoz:{html:`
         <dl>
             <dt>HTML</dt>
             <dd>Webページにおける文書（情報のまとめ役）を担当します。</dd>
-            
+
             <dt>CSS</dt>
             <dd>Webページにおけるデザイン（見た目を整える役）を担当します。</dd>
-            
+
             <dt>JavaScript</dt>
             <dd>HTMLやCSSへ動的な操作をするために使います。</dd>
         </dl>
@@ -8523,7 +8523,7 @@ vovetup:{html:`
   <title>JS Bin</title>
 </head>
 <body>
-  
+
   <p>始端寄せ（左寄せ）※初期値</p>
   <div class="container-one">
     <div class="item">1</div>
@@ -8531,7 +8531,7 @@ vovetup:{html:`
     <div class="item">3</div>
     <div class="item">4</div>
   </div>
-    
+
   <p>終端寄せ（右寄せ）</p>
   <div class="container-two">
     <div class="item">1</div>
@@ -8563,8 +8563,8 @@ vovetup:{html:`
     <div class="item">3</div>
     <div class="item">4</div>
   </div>
-    
-    
+
+
 </body>
 </html>
 `,
@@ -8613,7 +8613,7 @@ vozanel:{html:`
   <title>デベロッパーツールレンダリングフォント操作用デモページ</title>
 </head>
 <body>
-  
+
   <p>1行目のテキストです。</p>
   <p class="noto-sans">2行目のテキストです。</p>
 
@@ -8627,7 +8627,7 @@ css:`
 
 
 .noto-sans {
-  font-family: 'Noto Sans JP', sans-serif;  
+  font-family: 'Noto Sans JP', sans-serif;
 }
 `,
 },
@@ -8762,12 +8762,12 @@ css:`
 
 .font-size-28 {
   font-size: 28px;
-  /* font-size: 1.75rem; */　/* 28pxと同じフォントサイズ */ 
+  /* font-size: 1.75rem; */　/* 28pxと同じフォントサイズ */
 }
 
 .font-size-32 {
   font-size: 32px;
-  /* font-size: 2rem; */　/* 32pxと同じフォントサイズ */   
+  /* font-size: 2rem; */　/* 32pxと同じフォントサイズ */
 }
 `,
 },
@@ -8792,25 +8792,25 @@ wigowem:{html:`
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>スライダー（カルーセル）</title>
-  
+
   <!-- SlickのCSS -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-  
+
 </head>
 <body>
-  
+
   <!-- カルーセル -->
   <div class="carousel">
     <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_1.png" alt=""></div>
     <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_2.png" alt=""></div>
     <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_3.png" alt=""></div>
-  </div>  
+  </div>
 
-  <!-- jQuery -->  
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- SlickのJS -->
-  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </body>
 </html>
@@ -8840,14 +8840,14 @@ wimusoc:{html:`
 <body>
 
     <header>ヘッダー</header>
-    
+
     <main>
         <article>記事コンテンツ</article>
         <aside>サイドバー</aside>
     </main>
-    
+
     <footer>フッター</footer>
-    
+
 </body>
 </html>
 `,
@@ -8894,7 +8894,7 @@ wipurif:{html:`
     </head>
     <body>
         <p>通常の文章</p>
-      
+
         <p class="important">importantな文章</p>
 
         <div class="normal">
@@ -9066,7 +9066,7 @@ wokorex:{html:`
   <title>ハンバーガーメニュー</title>
 </head>
 <body>
-  
+
   <div class="hamburger">
     <button type="button" class="hamburger-button">MENU</button>
     <div class="hamburger-content">
@@ -9075,9 +9075,9 @@ wokorex:{html:`
       <a href="#">メニュー3</a>
     </div>
   </div>
-  
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
+
 
 </body>
 </html>
@@ -9099,10 +9099,10 @@ css:`
 javascript:`
 // MENUボタンをクリックしたら
 $('.hamburger-button').on('click', function(){
-  
+
   // .hamburger-contentを取得
   var content = $('.hamburger-content');
-  
+
   // .hamburger-contentを表示・非表示を繰り返す
   content.slideToggle();
 
@@ -9133,7 +9133,7 @@ div {
 
 .box-2 {
   width: calc(100% - 100px);
-  height: 50px;  
+  height: 50px;
 }
 
 .box-3 {
@@ -9243,7 +9243,7 @@ a {
   margin: 5rem auto;
 }
 
-/* ニュース 
+/* ニュース
 ------------------------------------------ */
 
 .news-item {
@@ -9663,15 +9663,15 @@ $('select[name="prefecture"]').on('change', function(e) {
 $('input[name="sports"]').on('change', function(e) {
   // 空の配列を用意
   var check_sports = [];
-  
+
   // チェックされている要素ごとに、check_sportsへ値を追加
   $('input[name="sports"]:checked').each(function(index, element) {
     check_sports[index] = $(element).val();
   });
-  
+
   // check_sportを表示
   $('.box').text(check_sports);
- 
+
 });
 `,
 },
@@ -9798,14 +9798,14 @@ $('#box').text('Web制作は楽しい！！');
 },
 xivelak:{html:`
 <div class="container">
-  <div class="fixed">fixedで固定した要素</div>    
+  <div class="fixed">fixedで固定した要素</div>
   <p class="text">下方向にスクロールしたときにfixedで固定した要素が上部固定になります。</p>
 </div>
 
 `,
 css:`
 .container {
-  height: 1000px;  
+  height: 1000px;
 }
 
 .fixed {
@@ -9830,25 +9830,25 @@ xiyelin:{html:`
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>スライダー（カルーセル）</title>
-  
+
   <!-- CSSリセット -->
   <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-  
+
   <!-- SlickのCSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-  
+
 </head>
 <body>
-  
+
   <!-- カルーセル -->
   <div class="carousel">
     <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_1.png" alt=""></div>
     <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_2.png" alt=""></div>
     <div><img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/jquery/carousel_3.png" alt=""></div>
-  </div>  
+  </div>
 
-  <!-- jQuery -->  
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- SlickのJS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -9866,7 +9866,7 @@ javascript:`
 // Slickリファレンス
 // https://kenwheeler.github.io/slick/
 
-$('.carousel').slick({  
+$('.carousel').slick({
   autoplay: true, // 自動再生
   autoplaySpeed: 2000, // 自動再生の速さ、単位はミリ秒
   arrows: false, // 左右のナビゲーションを無効
@@ -10109,7 +10109,7 @@ yisomec:{html:`
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>タブ</title>
-  
+
   <!-- smartTabのCSS -->
   <link href="https://cdn.jsdelivr.net/npm/jquery-smarttab@3.1.1/dist/css/smart_tab_all.min.css" rel="stylesheet" type="text/css" />
 </head>
@@ -10122,7 +10122,7 @@ yisomec:{html:`
       <li><a class="nav-link" href="#tab-3">タブ3</a></li>
       <li><a class="nav-link" href="#tab-4">タブ4</a></li>
     </ul>
- 
+
     <div class="tab-content">
       <div id="tab-1" class="tab-pane" role="tabpanel">
         タブ1の内容が入ります。タブ1の内容が入ります。タブ1の内容が入ります。タブ1の内容が入ります。タブ1の内容が入ります。タブ1の内容が入ります。タブ1の内容が入ります。タブ1の内容が入ります。
@@ -10138,8 +10138,8 @@ yisomec:{html:`
       </div>
     </div>
   </div>
-  
-  <!-- jQuery -->  
+
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- smartTabのJS -->
   <script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@3.1.1/dist/js/jquery.smartTab.min.js" type="text/javascript"></script>
@@ -10181,7 +10181,7 @@ yituxiy:{html:`
 <p>下の線を指定する</p>
 <div class="border-bottom"></div>
 <hr>
-<p>左の線を指定する</p>  
+<p>左の線を指定する</p>
 <div class="border-left"></div>
 
 `,
@@ -10193,23 +10193,23 @@ div {
 }
 
 .border {
-  border: 2px solid #000000;  
+  border: 2px solid #000000;
 }
 
 .border-top {
-  border-top: #000000 solid 2px;  
+  border-top: #000000 solid 2px;
 }
 
 .border-right {
-  border-right: #000000 solid 2px;    
+  border-right: #000000 solid 2px;
 }
 
 .border-bottom {
-  border-bottom: #000000 solid 2px;    
+  border-bottom: #000000 solid 2px;
 }
 
 .border-left {
-  border-left: #000000 solid 2px;    
+  border-left: #000000 solid 2px;
 }
 `,
 },
@@ -10516,7 +10516,7 @@ div {
 .background-size-number {
   background-image: url("https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/html-css/triangle.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;  
+  background-size: 100% 100%;
 }
 
 .background-size-contain {
@@ -10527,7 +10527,7 @@ div {
 
 .background-size-cover {
   background-image: url("https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/html-css/bg.jpg");
-  background-size: cover;  
+  background-size: cover;
 }
 `,
 },
@@ -10558,7 +10558,7 @@ header {
 
 main {
   padding-bottom: 40px;
-  background-color: #FFE966;    
+  background-color: #FFE966;
   border: 2px solid #000;
 }
 
@@ -10650,25 +10650,25 @@ css:`
 .container-two {
   display: flex;
   align-items: flex-end;
-  border: 1px solid #000;    
+  border: 1px solid #000;
 }
 
 .container-three {
   display: flex;
   align-items: center;
-  border: 1px solid #000;    
+  border: 1px solid #000;
 }
 
 .container-four {
   display: flex;
   align-items: baseline;
-  border: 1px solid #000;    
+  border: 1px solid #000;
 }
 
 .container-five {
   display: flex;
   align-items: stretch;
-  border: 1px solid #000;    
+  border: 1px solid #000;
 }
 
 .item:nth-child(2),
@@ -10925,4 +10925,3 @@ $('.my-form').on('submit', function(e) {
 });
 `,
 }}
-
