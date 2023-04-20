@@ -5312,14 +5312,21 @@ nevatuq:{html:`
 
     <!-- カバー -->
     <section class="cover">
-      <h1 class="cover-catch">キャッチコピー</h1>
-      <a href="./index.html" class="cover-button">ボタン</a>
+      <div class="cover-title">
+        <h1 class="cover-catch">キャッチコピー</h1>
+        <a href="./index.html" class="cover-button">ボタン</a>
+      </div>
+      <img src="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/parts/cover.jpg" alt="">
     </section>
 
   </body>
 </html>
 `,
 css:`
+img {
+  max-width: 100%;
+}
+
 /* リンク */
 a {
   color: #000;
@@ -5331,30 +5338,28 @@ a {
 ------------------------------------------ */
 
 .cover {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 31.25rem;
-  background-image: url("https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/parts/cover.jpg");
-  background-position: center;
-  background-size: cover;
+  position: relative;
 }
 
-/* キャッチコピー */
+.cover-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
 .cover-catch {
   margin-bottom: 2.5rem;
   font-size: 3rem;
 }
 
-/* ボタン */
 .cover-button {
   padding: .5rem 3.75rem;
   font-weight: 700;
   color: #fff;
   background-color: #26547c;
 }
-
 `,
 },
 niconem:{html:`
