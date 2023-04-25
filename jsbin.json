@@ -5312,21 +5312,14 @@ nevatuq:{html:`
 
     <!-- カバー -->
     <section class="cover">
-      <div class="cover-title">
-        <h1 class="cover-catch">キャッチコピー</h1>
-        <a href="./index.html" class="cover-button">ボタン</a>
-      </div>
-      <img src="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/parts/cover.jpg" alt="">
+      <h1 class="cover-catch">キャッチコピー</h1>
+      <a href="./index.html" class="cover-button">ボタン</a>
     </section>
 
   </body>
 </html>
 `,
 css:`
-img {
-  max-width: 100%;
-}
-
 /* リンク */
 a {
   color: #000;
@@ -5338,28 +5331,30 @@ a {
 ------------------------------------------ */
 
 .cover {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 31.25rem;
+  background-image: url("https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/parts/cover.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
-.cover-title {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-}
-
+/* キャッチコピー */
 .cover-catch {
   margin-bottom: 2.5rem;
   font-size: 3rem;
 }
 
+/* ボタン */
 .cover-button {
   padding: .5rem 3.75rem;
   font-weight: 700;
   color: #fff;
   background-color: #26547c;
 }
+
 `,
 },
 niconem:{html:`
@@ -10498,6 +10493,74 @@ css:`
     margin-top: 30px;
     margin-bottom: 30px;
     background-color: pink;
+}
+`,
+},
+zedomug:{html:`
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>カバー - 中央配置</title>
+
+    <!-- CSSリセット -->
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+  <body>
+
+    <!-- カバー -->
+    <section class="cover">
+      <div class="cover-title">
+        <h1 class="cover-catch">キャッチコピー</h1>
+        <a href="./index.html" class="cover-button">ボタン</a>
+      </div>
+      <img src="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/parts/cover.jpg" alt="">
+    </section>
+
+  </body>
+</html>
+`,
+css:`
+img {
+  max-width: 100%;
+}
+
+/* リンク */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+
+/* カバー
+------------------------------------------ */
+
+.cover {
+  position: relative;
+}
+
+.cover-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.cover-catch {
+  margin-bottom: 2.5rem;
+  font-size: 3rem;
+}
+
+.cover-button {
+  padding: .5rem 3.75rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #26547c;
 }
 `,
 },
