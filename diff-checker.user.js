@@ -47,7 +47,7 @@
                 await fetch(url).then((response) => response.text()).then((html) => {
                     doc = new DOMParser().parseFromString(html, "text/html");
                 });
-                let docNthAns = (sel,n) => $(doc.querySelector(`a[href$='${sel}'`)).parent().nextAll("pre")[n].textContent.trim()
+                let docNthAns = (sel,n) => $(doc.querySelector(`a[href$='${sel}'`)).parent().nextAll(".highlighter-coderay")[n].textContent.trim()
                 let combHtml = (code) => code
                     .replace(/\<\!\-\-[\s\S]*?\-\-\>/g, '');
                 let combCss = (code) => code
