@@ -2180,7 +2180,7 @@ javascript:`
 $('.accordion-title').on('click', function(e) {
 
   // .accordion-contentを選択
-  var content = $(e.target).next();
+  var content = $(this).next();
 
   // .accordion-contentを表示・非表示
   content.slideToggle();
