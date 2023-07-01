@@ -13,7 +13,7 @@
 // ==/UserScript==
 
 (function () {
-    $(".table").parent().append("<button class='ketugou'>全結合</button>");
+    $(".table").parent().prepend("<button class='ketugou'>全結合</button>");
     $(".ketugou").on("click", () => {
         let urls = Array.from($(".table a")).map((e) => e.href);
         let win = window.open(urls[1]);
@@ -234,6 +234,10 @@
                         app(jsbin[id].css);
                         app(jsbin[id].javascript);
                     }
+                }
+
+                win.onbeforeunload = function( e ) {
+                    e.returnValue = true;
                 }
             })();
         });
