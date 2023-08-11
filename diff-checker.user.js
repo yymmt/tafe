@@ -164,16 +164,16 @@
                 if (ism(/mentor\/users\/\d+(#.*)?$/)) {
                     ks=Object.keys(kadaiToFolder);
                     un=$(".heading-users").text();
-                    ki=$("th:contains('はじめての副業コース')").closest("table").find("td:contains('期')")[0].textContent.match(/(\d+)期/)[1];
+                    ki=$("th:contains('はじめての副業コース'),th:contains('Web制作在宅ワークスタートコース for mom')").closest("table").find("td:contains('期')")[0].textContent.match(/(\d+)期/)[1];
                 }
                 if (ism(/mentor(.training)?.reports/)) {
                     ks=[Array.from(document.querySelectorAll("a[href]"))
-                        .filter((e) => e.getAttribute("href").includes("first-sidejob-2"))
+                        .filter((e) => e.getAttribute("href").includes("first-sidejob-2") || e.getAttribute("href").includes("web-production-mom"))
                         .filter((e) => e.getAttribute("href").includes("/lessons/"))
                         .filter((e) => e.getAttribute("href").includes("#kadai"))[0]
                         .getAttribute("href").replace(/.*#/,"")];
                     un=$(".list-inline>li:first-child a").text();
-                    ki=$("li:contains('はじめての副業コース')")[0].textContent.match(/(\d+)期/)[1];
+                    ki=$("li:contains('はじめての副業コース'),li:contains('Web制作在宅ワークスタートコース for mom')")[0].textContent.match(/(\d+)期/)[1];
                 }
                 un=`${ki}_${un.replace(/\s+/,"_")}`;
                 $(".breadcrumb")[0].insertAdjacentHTML("afterend", `<div class="__openTarev"></div>`);
