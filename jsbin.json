@@ -159,7 +159,7 @@ beyeweh:{html:`
 </html>
 `,
 javascript:`
-$('.pm').text('こんにちは！');
+\$('.pm').text('こんにちは！');
 `,
 },
 bihayuw:{html:`
@@ -213,7 +213,7 @@ biqupox:{html:`
 </html>
 `,
 javascript:`
-$('a').attr('href', 'new.html');
+\$('a').attr('href', 'new.html');
 `,
 },
 biwufu:{html:`
@@ -739,24 +739,24 @@ css:`
 }
 `,
 javascript:`
-$('#inside').css({
+\$('#inside').css({
   'background-color': 'yellow',
 });
 
-$('#inside')
+\$('#inside')
   .parent()
   .css({
     'background-color': 'purple',
   });
 
-$('#inside')
+\$('#inside')
   .parent()
   .parent()
   .css({
     'background-color': 'tomato',
   });
 
-$('#inside')
+\$('#inside')
   .parent()
   .parent()
   .parent()
@@ -1112,7 +1112,7 @@ cofubul:{html:`
 </html>
 `,
 javascript:`
-$('.mylink').on('click', function(e) {
+\$('.mylink').on('click', function(e) {
   // hrefのリンク先に飛ばないようにする
   e.preventDefault();
 
@@ -1334,29 +1334,29 @@ const showTab = (selector) => {
   /* 1. タブの選択状態のリセット */
 
   // いったん、すべての.tabs-menu > liからactiveクラスを削除する
-  $('.tabs-menu > li').removeClass('active');
+  \$('.tabs-menu > li').removeClass('active');
 
   // いったん、すべての.tabs-content > sectionを非表示にする
-  $('.tabs-content > section').hide();
+  \$('.tabs-content > section').hide();
 
   /* 2. 選択されたタブの表示 */
 
   // a要素のhref属性がselectorと一致するものの親要素にだけactiveクラスを付ける
-  $(\`.tabs-menu a[href="${selector}"]\`)
+  \$(\`.tabs-menu a[href="\${selector}"]\`)
     .parent()
     .addClass('active');
   
   // .tabs-content > sectionのうち、selectorに該当するものだけを表示する
-  $(selector).show();
+  \$(selector).show();
 };
 
 // タブがクリックされたらコンテンツを表示
-$('.tabs-menu a').on('click', (e) => {
+\$('.tabs-menu a').on('click', (e) => {
   // hrefへのページ遷移を止める
   e.preventDefault();
 
   // hrefの値を受け取ってshowTab()関数に渡す。e.targetはクリックされたタブ（.tabs-menu a）を表す
-  const selector = $(e.target).attr('href');
+  const selector = \$(e.target).attr('href');
   showTab(selector);
 });
 
@@ -1585,7 +1585,7 @@ body {
 `,
 javascript:`
 // animate__animatedクラスの付いた要素にwaypointを登録
-$('.animate__animated').waypoint({
+\$('.animate__animated').waypoint({
   handler: function(direction) {
     // 要素が画面中央に来るとここが実行される
     if (direction === 'down') {
@@ -1594,7 +1594,7 @@ $('.animate__animated').waypoint({
        * イベント発生元の要素にfadeInUpアニメーションを付けることで
        * アニメーションを開始
        */
-      $(this.element).addClass('animate__fadeInUp');
+      \$(this.element).addClass('animate__fadeInUp');
 
       /**
        * waypointを削除することで、この要素に対しては
@@ -1983,18 +1983,18 @@ css:`
 javascript:`
 var onMouseenter = function(e) {
   // マウスが乗った時の処理
-  $(e.target).css({
+  \$(e.target).css({
     'background-color': '#ff9999',
   });
 };
 var onMouseleave = function(e) {
   // マウスが外れた時の処理
-  $(e.target).css({
+  \$(e.target).css({
     'background-color': '#dddddd',
   });
 };
 
-$('.box')
+\$('.box')
   .on('mouseenter', onMouseenter)
   .on('mouseleave', onMouseleave);
 `,
@@ -2018,7 +2018,7 @@ fanosox:{html:`
 </html>
 `,
 javascript:`
-$('p').css('color', 'red');
+\$('p').css('color', 'red');
 `,
 },
 fazihus:{html:`
@@ -2051,13 +2051,13 @@ css:`
 }
 `,
 javascript:`
-var box = $('.box');
+var box = \$('.box');
 
-$('.my-button-in').on('click', function() {
+\$('.my-button-in').on('click', function() {
   box.slideDown();
 });
 
-$('.my-button-out').on('click', function() {
+\$('.my-button-out').on('click', function() {
   box.slideUp();
 });
 `,
@@ -2132,7 +2132,7 @@ img {
 }
 `,
 javascript:`
-$('.carousel').slick({
+\$('.carousel').slick({
   autoplay: true, // 自動再生
   autoplaySpeed: 5000, // 自動再生の速さ、単位はミリ秒
   arrows: false, // 左右のナビゲーションを無効にする
@@ -2384,7 +2384,7 @@ css:`
 
 `,
 javascript:`
-var buttonToTop = $('#button-to-top');
+var buttonToTop = \$('#button-to-top');
 var position = 0;
 var speed = 600;
 
@@ -2394,7 +2394,7 @@ buttonToTop.on('click', function() {
   console.log(position);
 
   // アニメーションをしながらページトップに移動
-  $("html, body").animate({
+  \$("html, body").animate({
     scrollTop: position
   }, speed, "swing");
   return false;
@@ -2577,7 +2577,7 @@ foxerel:{html:`
 </html>
 `,
 javascript:`
-$('#parent > div').prepend('子要素');
+\$('#parent > div').prepend('子要素');
 `,
 },
 foxipij:{html:`
@@ -2607,11 +2607,11 @@ css:`
 }
 `,
 javascript:`
-$('#parent').on('click', '.child', () => {
+\$('#parent').on('click', '.child', () => {
   console.log('.childのイベントハンドラ');
 });
 
-$('#parent').append('<p class="child">追加した要素</p>');
+\$('#parent').append('<p class="child">追加した要素</p>');
 `,
 },
 fozakif:{html:`
@@ -2755,16 +2755,16 @@ css:`
 }
 `,
 javascript:`
-$('.my-form').on('submit', (e) => {
+\$('.my-form').on('submit', (e) => {
   // フォームが送信された時に実行される
-  const text1 = $('.text1').val();
-  const text2 = $('.text2').val();
+  const text1 = \$('.text1').val();
+  const text2 = \$('.text2').val();
 
   if (text1 !== text2) {
     // ページ遷移を止める
     e.preventDefault();
 
-    $('.error').html('テキストが一致しません');
+    \$('.error').html('テキストが一致しません');
   }
 });
 `,
@@ -2969,10 +2969,10 @@ css:`
 `,
 javascript:`
 // アコーディオンのタイトルがクリックされたら
-$('.accordion-title').on('click', function(e) {
+\$('.accordion-title').on('click', function(e) {
 
   // .accordion-contentを選択
-  var content = $(this).next();
+  var content = \$(this).next();
 
   // .accordion-contentを表示・非表示
   content.slideToggle();
@@ -3555,10 +3555,10 @@ a {
 
 `,
 javascript:`
-var hamburger = $('.hamburger-menu');
+var hamburger = \$('.hamburger-menu');
 
 // OPEN/CLOSEボタンをクリックしたら
-$('.hamburger-button').on('click', function () {
+\$('.hamburger-button').on('click', function () {
   // console.log('click');
 
   // .hamburger-menuの表示・非表示を繰り返す
@@ -3567,7 +3567,7 @@ $('.hamburger-button').on('click', function () {
 });
 
 // 画面幅のサイズが変わったら
-$(window).on('resize', function () {
+\$(window).on('resize', function () {
   // console.log('resize');
 
   // ハンバーガーメニューを閉じる
@@ -3617,7 +3617,7 @@ gunerif:{html:`
 </html>
 `,
 javascript:`
-$('#box').text('ABC').text('DEF').text('GHI');
+\$('#box').text('ABC').text('DEF').text('GHI');
 `,
 },
 guqewir:{html:`
@@ -3638,7 +3638,7 @@ guqewir:{html:`
 </html>
 `,
 javascript:`
-var box = $('#box');
+var box = \$('#box');
 box.text('Hello jQuery!');
 `,
 },
@@ -3686,7 +3686,7 @@ buttonGreeting.addEventListener('click', () => {
   let greeting;
 
   // 確認のため、コンソールに表示
-  console.log(\`現在の時間：${hour}時\`);
+  console.log(\`現在の時間：\${hour}時\`);
 
   if (hour >= 6 && hour < 12) {
     greeting = 'おはよう';
@@ -3696,7 +3696,7 @@ buttonGreeting.addEventListener('click', () => {
     greeting = 'こんばんは';
   }
 
-  box.textContent = \`${greeting}、${name}さん\`;
+  box.textContent = \`\${greeting}、\${name}さん\`;
 });
 
 buttonCheerful.addEventListener('click', () => {
@@ -3705,7 +3705,7 @@ buttonCheerful.addEventListener('click', () => {
   let greeting;
 
   // 確認のため、コンソールに表示
-  console.log(\`現在の時間：${hour}時\`);
+  console.log(\`現在の時間：\${hour}時\`);
 
   if (hour >= 6 && hour < 12) {
     greeting = 'おはよう';
@@ -3715,7 +3715,7 @@ buttonCheerful.addEventListener('click', () => {
     greeting = 'こんばんは';
   }
 
-  box.textContent = \`${greeting}！、${name}さん！！！\`;
+  box.textContent = \`\${greeting}！、\${name}さん！！！\`;
 });
 `,
 },
@@ -3838,7 +3838,7 @@ hememaq:{html:`
 </html>
 `,
 javascript:`
-$('#parent div').prepend('子孫要素');
+\$('#parent div').prepend('子孫要素');
 `,
 },
 hemovec:{html:`
@@ -3875,7 +3875,7 @@ const box = document.getElementById('box');
 
 button.addEventListener('click', () => {
   const name = input.value;
-  box.textContent = \`こんにちは、${name}さん\`;
+  box.textContent = \`こんにちは、\${name}さん\`;
 });
 `,
 },
@@ -3897,7 +3897,7 @@ hijivan:{html:`
 </html>
 `,
 javascript:`
-$('#box').text('Hello jQuery!');
+\$('#box').text('Hello jQuery!');
 `,
 },
 hobibap:{html:`
@@ -4125,7 +4125,7 @@ css:`
 
 `,
 javascript:`
-$('.animate__animated').waypoint({
+\$('.animate__animated').waypoint({
   handler: function(direction) {
     // 要素が画面中央に来るとここが実行される
     if (direction === 'down') {
@@ -4136,7 +4136,7 @@ $('.animate__animated').waypoint({
        * fadeInUpアニメーションを付けることで
        * アニメーションを開始
        */
-      $(this.element)
+      \$(this.element)
         .removeClass('animate__fadeOutUp')
         .addClass('animate__fadeInUp');
     } else if (direction === 'up') {
@@ -4147,7 +4147,7 @@ $('.animate__animated').waypoint({
        * fadeOutUpアニメーションを付けることで
        * アニメーションを開始
        */
-      $(this.element)
+      \$(this.element)
         .removeClass('animate__fadeInUp')
         .addClass('animate__fadeOutUp');
     }
@@ -4261,10 +4261,10 @@ css:`
 }
 `,
 javascript:`
-var box = $('.box');
+var box = \$('.box');
 var duration = 1000;
 
-$('.my-button-anim').on('click', function() {
+\$('.my-button-anim').on('click', function() {
   box.animate({
       width: '200px',
       left: '200px',
@@ -4273,7 +4273,7 @@ $('.my-button-anim').on('click', function() {
   );
 });
 
-$('.my-button-re').on('click', function() {
+\$('.my-button-re').on('click', function() {
   box.animate(
     {
       width: '60px',
@@ -4328,7 +4328,7 @@ jasorob:{html:`
 </html>
 `,
 javascript:`
-$('#box').text('Hello jQuery!');
+\$('#box').text('Hello jQuery!');
 `,
 },
 javonah:{html:`
@@ -4496,7 +4496,7 @@ jevavuv:{html:`
 </html>
 `,
 javascript:`
-$('.mylink').on('click', (e) => {
+\$('.mylink').on('click', (e) => {
   // hrefのリンク先に飛ばないようにする
   e.preventDefault();
 
@@ -4814,10 +4814,10 @@ kawidob:{html:`
 `,
 javascript:`
 // #buttonをクリックしたら
-$('#button').on('click', function() {
+\$('#button').on('click', function() {
 
   // 文字色を赤色に変更
-  $('.text').css('color', 'red');
+  \$('.text').css('color', 'red');
 
   // クリックイベントが反応しているか確認する用のコード
   console.log('ボタンをクリックしました');
@@ -4955,14 +4955,14 @@ buttonGreeting.addEventListener('click', () => {
   const name = input.value;
   const greeting = greet();
 
-  box.textContent = \`${greeting}、${name}さん\`;
+  box.textContent = \`\${greeting}、\${name}さん\`;
 });
 
 buttonCheerful.addEventListener('click', () => {
   const name = input.value;
   const greeting = greet();
 
-  box.textContent = \`${greeting}！、${name}さん！！！\`;
+  box.textContent = \`\${greeting}！、\${name}さん！！！\`;
 });
 `,
 },
@@ -5000,7 +5000,7 @@ kiwasaz:{html:`
 </html>
 `,
 javascript:`
-$('.pm').text('こんにちは！');
+\$('.pm').text('こんにちは！');
 `,
 },
 kiyorez:{html:`
@@ -5023,7 +5023,7 @@ kiyorez:{html:`
 `,
 javascript:`
 const element = 'p';
-$(element).text('こんにちは！');
+\$(element).text('こんにちは！');
 `,
 },
 kizexod:{html:`
@@ -5139,7 +5139,7 @@ kubulip:{html:`
 `,
 javascript:`
 const url = 'pm.html';
-$(\`[href="${url}"]\`).text('こんにちは！');
+\$(\`[href="\${url}"]\`).text('こんにちは！');
 `,
 },
 kufoxat:{html:`
@@ -5434,7 +5434,7 @@ lewuwut:{html:`
 `,
 javascript:`
 var element = 'p';
-$(element).text('こんにちは！');
+\$(element).text('こんにちは！');
 `,
 },
 lifohus:{html:`
@@ -5485,7 +5485,7 @@ lilafup:{html:`
 </html>
 `,
 javascript:`
-$('#parent > div').prepend('子要素');
+\$('#parent > div').prepend('子要素');
 `,
 },
 lipini:{html:`
@@ -5517,7 +5517,7 @@ lipini:{html:`
 </html>
 `,
 javascript:`
-$('#parent div').prepend('子孫要素');
+\$('#parent div').prepend('子孫要素');
 `,
 },
 litotux:{html:`
@@ -5974,10 +5974,10 @@ malolij:{html:`
 `,
 javascript:`
 // テキスト1の次の要素（テキスト2）の文字色を赤色にする
-$('#text1').next().css('color', 'red');
+\$('#text1').next().css('color', 'red');
 
 // テキスト4の前の要素（テキスト3）の文字色を青色にする
-$('#text4').prev().css('color', 'blue');
+\$('#text4').prev().css('color', 'blue');
 
 
 
@@ -6399,9 +6399,9 @@ css:`
 }
 `,
 javascript:`
-$('.my-button').on('click', (e) => {
+\$('.my-button').on('click', (e) => {
   // .my-buttonがクリックされた時にここが実行される
-  $(e.target)
+  \$(e.target)
     .parent()
     .css({ 'background-color': '#ff6666' });
 });
@@ -6496,7 +6496,7 @@ mirovek:{html:`
 </html>
 `,
 javascript:`
-$('#pm').text('こんにちは！');
+\$('#pm').text('こんにちは！');
 `,
 },
 miwihej:{html:`
@@ -6944,14 +6944,14 @@ css:`
 }
 `,
 javascript:`
-const $box = $('.box');
+const \$box = \$('.box');
 
-$('.my-button-in').on('click', () => {
-  $box.fadeIn();
+\$('.my-button-in').on('click', () => {
+  \$box.fadeIn();
 });
 
-$('.my-button-out').on('click', () => {
-  $box.fadeOut();
+\$('.my-button-out').on('click', () => {
+  \$box.fadeOut();
 });
 `,
 },
@@ -7014,10 +7014,10 @@ css:`
 `,
 javascript:`
 // アコーディオンのタイトルがクリックされたら
-$('.accordion-title').on('click', function(e) {
+\$('.accordion-title').on('click', function(e) {
 
   // .accordion-contentを選択
-  var content = $(e.target).next();
+  var content = \$(e.target).next();
 
   // .accordion-contentを表示・非表示
   content.slideToggle();
@@ -7073,8 +7073,8 @@ nefucip:{html:`
 </html>
 `,
 javascript:`
-$('.my-button').on('click', function() {
-  $('.box').toggle();
+\$('.my-button').on('click', function() {
+  \$('.box').toggle();
 });
 `,
 },
@@ -7281,9 +7281,9 @@ css:`
 }
 `,
 javascript:`
-var box = $('.box');
+var box = \$('.box');
 
-$('.my-button-toggle').on('click', function() {
+\$('.my-button-toggle').on('click', function() {
   box.slideToggle();
 });
 `,
@@ -7314,7 +7314,7 @@ button.addEventListener('click', () => {
   let greeting;
 
   // 確認のため、コンソールに表示
-  console.log(\`現在の時間：${hour}時\`);
+  console.log(\`現在の時間：\${hour}時\`);
 
   if (hour >= 6 && hour < 12) {
     greeting = 'おはよう';
@@ -7324,7 +7324,7 @@ button.addEventListener('click', () => {
     greeting = 'こんばんは';
   }
 
-  box.textContent = \`${greeting}、${name}さん\`;
+  box.textContent = \`\${greeting}、\${name}さん\`;
 });
 `,
 },
@@ -7374,14 +7374,14 @@ buttonGreeting.addEventListener('click', () => {
   const name = input.value;
   const greeting = greet();
 
-  box.textContent = \`${greeting}、${name}さん\`;
+  box.textContent = \`\${greeting}、\${name}さん\`;
 });
 
 buttonCheerful.addEventListener('click', () => {
   const name = input.value;
   const greeting = greet();
 
-  box.textContent = \`${greeting}！、${name}さん！！！\`;
+  box.textContent = \`\${greeting}！、\${name}さん！！！\`;
 });
 
 buttonLate.addEventListener('click', () => {
@@ -7389,7 +7389,7 @@ buttonLate.addEventListener('click', () => {
 
   setTimeout(() => {
     // 1秒経過した後に実行される
-    box.textContent = \`遅れてごめん、${name}さん\`;
+    box.textContent = \`遅れてごめん、\${name}さん\`;
   }, 1000);
 });
 `,
@@ -7621,7 +7621,7 @@ box-shadow: none !important;
 
 `,
 javascript:`
-$('#smarttab').smartTab({
+\$('#smarttab').smartTab({
   enableUrlHash: false
 });
 `,
@@ -7853,13 +7853,13 @@ nudawem:{html:`
 `,
 javascript:`
 // テキスト1の文字色を赤色にする
-$('#text1').css('color', 'red');
+\$('#text1').css('color', 'red');
 
 // テキスト2の文字色を青色にする
-$('#text2').css('color', 'blue');
+\$('#text2').css('color', 'blue');
 
 // テキスト3の文字色を緑色にする
-$('#text3').css('color', 'green');
+\$('#text3').css('color', 'green');
 `,
 },
 nupuduc:{html:`
@@ -7892,7 +7892,7 @@ css:`
 }
 `,
 javascript:`
-$('#inner')
+\$('#inner')
   .parent()
   .css({ 'background-color': 'skyblue' });
 `,
@@ -8069,7 +8069,7 @@ pebizej:{html:`
 </html>
 `,
 javascript:`
-$('p').css('color', 'red');
+\$('p').css('color', 'red');
 `,
 },
 penuhuz:{html:`
@@ -8175,19 +8175,19 @@ body {
 `,
 javascript:`
 // アコーディオンのタイトルがクリックされたら
-$('.accordion-title a').on('click', (e) => {
+\$('.accordion-title a').on('click', (e) => {
   // hrefにページ遷移しない
   e.preventDefault();
 
   // 同じsection内の.accordion-contentを選択
-  const content = $(e.target)
+  const content = \$(e.target)
     .closest('section')
     .find('.accordion-content');
 
   // .accordion-contentが非表示の場合は
   if (!content.is(':visible')) {
     // 表示中のコンテンツを閉じる
-    $('.accordion-content:visible').slideUp();
+    \$('.accordion-content:visible').slideUp();
 
     // クリックされたコンテンツを表示
     content.slideDown();
@@ -8390,11 +8390,11 @@ css:`
 }
 `,
 javascript:`
-$('.child').on('click', () => {
+\$('.child').on('click', () => {
   console.log('.childのイベントハンドラ');
 });
 
-$('#parent').append('<p class="child">追加した要素</p>');
+\$('#parent').append('<p class="child">追加した要素</p>');
 `,
 },
 pufakub:{html:`
@@ -8427,7 +8427,7 @@ pufapip:{html:`
 </html>
 `,
 javascript:`
-$('div').html('<a href="test.html">置き換えた後</a>');
+\$('div').html('<a href="test.html">置き換えた後</a>');
 `,
 },
 pugifay:{html:`
@@ -8585,7 +8585,7 @@ body {
 `,
 javascript:`
 // animate__animatedクラスの付いた要素にwaypointを登録
-$('.animate__animated').waypoint({
+\$('.animate__animated').waypoint({
   handler: function(direction) {
     // 要素が画面中央に来るとここが実行される
     if (direction === 'down') {
@@ -8596,7 +8596,7 @@ $('.animate__animated').waypoint({
        * fadeInUpアニメーションを付けることで
        * アニメーションを開始
        */
-      $(this.element)
+      \$(this.element)
         .removeClass('animate__fadeOutUp')
         .addClass('animate__fadeInUp');
     } else if (direction === 'up') {
@@ -8607,7 +8607,7 @@ $('.animate__animated').waypoint({
        * fadeOutUpアニメーションを付けることで
        * アニメーションを開始
        */
-      $(this.element)
+      \$(this.element)
         .removeClass('animate__fadeInUp')
         .addClass('animate__fadeOutUp');
     }
@@ -8640,7 +8640,7 @@ javascript:`
 var value = 'こんにちは';
 
 // #my-inputに値をセット
-$('#my-input').val(value);
+\$('#my-input').val(value);
 `,
 },
 qezeduy:{html:`
@@ -9151,7 +9151,7 @@ rasucic:{html:`
 </html>
 `,
 javascript:`
-$('#pm').text('こんにちは！');
+\$('#pm').text('こんにちは！');
 `,
 },
 rejosaf:{html:`
@@ -9332,7 +9332,7 @@ revakim:{html:`
 </html>
 `,
 javascript:`
-$('div').html('<a href="test.html">置き換えた後</a>');
+\$('div').html('<a href="test.html">置き換えた後</a>');
 `,
 },
 rexires:{html:`
@@ -9543,32 +9543,32 @@ let numSlides;
 const showSlide = (index) => {
   // 1番目のスライドでは左矢印を非表示
   if (index === 0) {
-    $('.carousel-control-prev').hide();
+    \$('.carousel-control-prev').hide();
   } else {
-    $('.carousel-control-prev').show();
+    \$('.carousel-control-prev').show();
   }
 
   // 最後のスライドでは右矢印を非表示
   if (index === numSlides - 1) {
-    $('.carousel-control-next').hide();
+    \$('.carousel-control-next').hide();
   } else {
-    $('.carousel-control-next').show();
+    \$('.carousel-control-next').show();
   }
 
   // 実行中のアニメーションがあればキャンセルした後、
   // leftを変化させるアニメーションを開始
-  $('.slides')
+  \$('.slides')
     .stop()
     .animate(
       {
-        left: \`${-slideWidth * currentSlide}px\`,
+        left: \`\${-slideWidth * currentSlide}px\`,
       },
       600,
     );
 };
 
 // 左矢印がクリックされたら1つ前のスライドを表示
-$('.carousel-control-prev').on('click', (e) => {
+\$('.carousel-control-prev').on('click', (e) => {
   e.preventDefault();
 
   currentSlide -= 1;
@@ -9576,7 +9576,7 @@ $('.carousel-control-prev').on('click', (e) => {
 });
 
 // 右矢印がクリックされたら1つ後のスライドを表示
-$('.carousel-control-next').on('click', (e) => {
+\$('.carousel-control-next').on('click', (e) => {
   e.preventDefault();
 
   currentSlide += 1;
@@ -9584,7 +9584,7 @@ $('.carousel-control-next').on('click', (e) => {
 });
 
 // スライドが全部で何枚あるか取得
-numSlides = $('.slides > li').length;
+numSlides = \$('.slides > li').length;
 
 // 最初のスライドを表示
 showSlide(currentSlide);
@@ -9729,9 +9729,9 @@ rugedej:{html:`
 </html>
 `,
 javascript:`
-$('.my-input').on('input', function(e) {
-  var value = $(e.target).val();
-  $('.box').text(value);
+\$('.my-input').on('input', function(e) {
+  var value = \$(e.target).val();
+  \$('.box').text(value);
 });
 `,
 },
@@ -9905,10 +9905,10 @@ a {
 
 `,
 javascript:`
-var hamburger = $('.hamburger-menu');
+var hamburger = \$('.hamburger-menu');
 
 // OPEN/CLOSEボタンをクリックしたら
-$('.hamburger-button').on('click', function() {
+\$('.hamburger-button').on('click', function() {
   // console.log('click');
 
   // .hamburgerの表示・非表示を繰り返す
@@ -9917,7 +9917,7 @@ $('.hamburger-button').on('click', function() {
 });
 
 // 画面幅のサイズが変わったら
-$(window).on('resize', function() {
+\$(window).on('resize', function() {
   // console.log('resize');
 
   // ハンバーガーメニューを閉じる
@@ -10022,7 +10022,7 @@ javascript:`
 const value = 'こんにちは';
 
 // #my-inputに値をセット
-$('#my-input').val(value);
+\$('#my-input').val(value);
 `,
 },
 sepuhed:{html:`
@@ -10147,7 +10147,7 @@ css:`
 }
 `,
 javascript:`
-$('.my-click').on('click', { test: 'テストデータ' }, (e) => {
+\$('.my-click').on('click', { test: 'テストデータ' }, (e) => {
   console.log('追加したデータ：', e.data.test);
 });
 `,
@@ -10330,18 +10330,18 @@ css:`
 javascript:`
 const onMouseenter = (e) => {
   // マウスが乗った時の処理
-  $(e.target).css({
+  \$(e.target).css({
     'background-color': '#ff9999',
   });
 };
 const onMouseleave = (e) => {
   // マウスが外れた時の処理
-  $(e.target).css({
+  \$(e.target).css({
     'background-color': '#dddddd',
   });
 };
 
-$('.box')
+\$('.box')
   .on('mouseenter', onMouseenter)
   .on('mouseleave', onMouseleave);
 `,
@@ -10426,7 +10426,7 @@ box-shadow: none !important;
 
 `,
 javascript:`
-$('#smarttab').smartTab({
+\$('#smarttab').smartTab({
   enableURLhash: false
 });
 `,
@@ -10451,8 +10451,8 @@ soguwe:{html:`
 </html>
 `,
 javascript:`
-$('.my-button').on('click', () => {
-  $('.box').toggle();
+\$('.my-button').on('click', () => {
+  \$('.box').toggle();
 });
 `,
 },
@@ -10534,7 +10534,7 @@ css:`
 }
 `,
 javascript:`
-$('#slider-area').slick({
+\$('#slider-area').slick({
   autoplay: true,
   autoplaySpeed: 5000,
   dots: true,
@@ -10563,7 +10563,7 @@ sozopen:{html:`
 </html>
 `,
 javascript:`
-$('[href="pm.html"]').text('こんにちは！');
+\$('[href="pm.html"]').text('こんにちは！');
 `,
 },
 sukeqax:{html:`
@@ -10896,7 +10896,7 @@ css:`
 }
 `,
 javascript:`
-$('#outer')
+\$('#outer')
   .children()
   .css({ 'background-color': 'skyblue' });
 `,
@@ -11002,7 +11002,7 @@ css:`
 }
 `,
 javascript:`
-$('#slider-area').slick();
+\$('#slider-area').slick();
 `,
 },
 terizil:{html:`
@@ -11024,7 +11024,7 @@ terizil:{html:`
 </html>
 `,
 javascript:`
-$('#box').css({
+\$('#box').css({
   'color': '#ffffff',
   'background-color': '#000000',
 });
@@ -11165,7 +11165,7 @@ css:`
 
 `,
 javascript:`
-$('.js-fadein-left').waypoint({
+\$('.js-fadein-left').waypoint({
   handler: function(direction) {
     // 要素が画面中央に来るとここが実行される
     if (direction === 'down') {
@@ -11175,7 +11175,7 @@ $('.js-fadein-left').waypoint({
        * fadeInLeftアニメーションを付けることで
        * アニメーションを開始
        */
-      $(this.element)
+      \$(this.element)
         .addClass('animate__fadeInLeft');
     }
   },
@@ -11375,7 +11375,7 @@ tiruzoq:{html:`
 </html>
 `,
 javascript:`
-$('.item').text('Hello');
+\$('.item').text('Hello');
 `,
 },
 tixupit:{html:`
@@ -11413,9 +11413,9 @@ tocopoy:{html:`
 </html>
 `,
 javascript:`
-$('.my-input').on('input', (e) => {
-  const value = $(e.target).val();
-  $('.box').text(value);
+\$('.my-input').on('input', (e) => {
+  const value = \$(e.target).val();
+  \$('.box').text(value);
 });
 `,
 },
@@ -11613,9 +11613,9 @@ css:`
 }
 `,
 javascript:`
-$('.my-button').on('click', function(e) {
+\$('.my-button').on('click', function(e) {
   // .my-buttonがクリックされると実行される
-  $(e.target)
+  \$(e.target)
     .next()
     .css({ 'background-color': '#ff6666' });
 });
@@ -11665,7 +11665,7 @@ javascript:`
 // Slickリファレンス
 // https://kenwheeler.github.io/slick/
 
-$('.carousel').slick({  
+\$('.carousel').slick({  
   autoplay: true, // 自動再生
   autoplaySpeed: 2000, // 自動再生の速さ、単位はミリ秒
   arrows: false, // 左右のナビゲーションを無効
@@ -11736,22 +11736,22 @@ css:`
 `,
 javascript:`
 // もともとの要素にイベントハンドラを登録する
-$('.child').on('click', () => {
+\$('.child').on('click', () => {
   console.log('.childのイベントハンドラ');
 });
 
 // DOM要素を生成する
-const $newElement = $('<p>', {
+const \$newElement = \$('<p>', {
   class: 'child',
   text: '追加した要素',
 });
 
 // 生成したDOM要素にイベントハンドラを登録する
-$newElement.on('click', () => {
+\$newElement.on('click', () => {
   console.log('追加した.childのイベントハンドラ');
 });
 
-$('#parent').append($newElement);
+\$('#parent').append(\$newElement);
 `,
 },
 vetinus:{html:`
@@ -11855,7 +11855,7 @@ css:`
 }
 `,
 javascript:`
-$('.my-click').on('click', { test: 'テストデータ' }, function(e) {
+\$('.my-click').on('click', { test: 'テストデータ' }, function(e) {
   console.log('追加したデータ：', e.data.test);
 });
 `,
@@ -12358,7 +12358,7 @@ css:`
 }
 `,
 javascript:`
-$('#inner')
+\$('#inner')
   .parent()
   .css({ 'background-color': 'skyblue' });
 `,
@@ -12403,7 +12403,7 @@ css:`
 }
 `,
 javascript:`
-$('#outer')
+\$('#outer')
   .children()
   .css({ 'background-color': 'skyblue' });
 `,
@@ -12560,7 +12560,7 @@ img {
 }
 `,
 javascript:`
-$('.carousel').slick({
+\$('.carousel').slick({
   autoplay: true, // 自動再生
   autoplaySpeed: 5000, // 自動再生の速さ、単位はミリ秒
   arrows: false, // 左右のナビゲーションを無効にする
@@ -12836,10 +12836,10 @@ css:`
 `,
 javascript:`
 // MENUボタンをクリックしたら
-$('.hamburger-button').on('click', function(){
+\$('.hamburger-button').on('click', function(){
   
   // .hamburger-contentを取得
-  var content = $('.hamburger-content');
+  var content = \$('.hamburger-content');
   
   // .hamburger-contentを表示・非表示を繰り返す
   content.slideToggle();
@@ -13027,7 +13027,7 @@ wurulun:{html:`
 </html>
 `,
 javascript:`
-$('#box').css({
+\$('#box').css({
   'color': '#ffffff',
   'background-color': '#000000',
 });
@@ -13253,7 +13253,7 @@ xemajok:{html:`
 </html>
 `,
 javascript:`
-$('[href="pm.html"]').text('こんにちは！');
+\$('[href="pm.html"]').text('こんにちは！');
 `,
 },
 xequyib:{html:`
@@ -13435,29 +13435,29 @@ xerukat:{html:`
 `,
 javascript:`
 // countryのラジオボタンで選択された要素を表示
-$('input[name="country"]').on('change', function(e) {
-  var value = $(e.target).val();
-  $('.box').text(value);
+\$('input[name="country"]').on('change', function(e) {
+  var value = \$(e.target).val();
+  \$('.box').text(value);
 });
 
 // prefectureのセレクトボックスで選択された要素を表示
-$('select[name="prefecture"]').on('change', function(e) {
-  var value = $(e.target).val();
-  $('.box').text(value);
+\$('select[name="prefecture"]').on('change', function(e) {
+  var value = \$(e.target).val();
+  \$('.box').text(value);
 });
 
 // sportsのチェックボックスでチェックされた要素を表示
-$('input[name="sports"]').on('change', function(e) {
+\$('input[name="sports"]').on('change', function(e) {
   // 空の配列を用意
   var check_sports = [];
   
   // チェックされている要素ごとに、check_sportsへ値を追加
-  $('input[name="sports"]:checked').each(function(index, element) {
-    check_sports[index] = $(element).val();
+  \$('input[name="sports"]:checked').each(function(index, element) {
+    check_sports[index] = \$(element).val();
   });
   
   // check_sportを表示
-  $('.box').text(check_sports);
+  \$('.box').text(check_sports);
  
 });
 `,
@@ -13578,9 +13578,9 @@ xirezoy:{html:`
 </html>
 `,
 javascript:`
-$('#box').text('Hello jQuery!');
-$('#box').text('こんにちは、jQueryの世界へ！');
-$('#box').text('Web制作は楽しい！！');
+\$('#box').text('Hello jQuery!');
+\$('#box').text('こんにちは、jQueryの世界へ！');
+\$('#box').text('Web制作は楽しい！！');
 `,
 },
 xivelak:{html:`
@@ -13653,7 +13653,7 @@ javascript:`
 // Slickリファレンス
 // https://kenwheeler.github.io/slick/
 
-$('.carousel').slick({  
+\$('.carousel').slick({  
   autoplay: true, // 自動再生
   autoplaySpeed: 2000, // 自動再生の速さ、単位はミリ秒
   arrows: false, // 左右のナビゲーションを無効
@@ -13854,13 +13854,13 @@ css:`
 }
 `,
 javascript:`
-var box = $('.box');
+var box = \$('.box');
 
-$('.my-button-in').on('click', function() {
+\$('.my-button-in').on('click', function() {
   box.fadeIn();
 });
 
-$('.my-button-out').on('click', function() {
+\$('.my-button-out').on('click', function() {
   box.fadeOut();
 });
 `,
@@ -13937,24 +13937,24 @@ css:`
 }
 `,
 javascript:`
-$('#inside').css({
+\$('#inside').css({
   'background-color': 'yellow',
 });
 
-$('#inside')
+\$('#inside')
   .parent()
   .css({
     'background-color': 'purple',
   });
 
-$('#inside')
+\$('#inside')
   .parent()
   .parent()
   .css({
     'background-color': 'tomato',
   });
 
-$('#inside')
+\$('#inside')
   .parent()
   .parent()
   .parent()
@@ -13989,10 +13989,10 @@ button.addEventListener('click', () => {
 
   if (num >= 0.5) {
     // numが0.5以上の場合
-    box.innerHTML = \`${num}<br>当たり！\`;
+    box.innerHTML = \`\${num}<br>当たり！\`;
   } else {
     // numが0.5未満の場合
-    box.innerHTML = \`${num}<br>ハズレ…\`;
+    box.innerHTML = \`\${num}<br>ハズレ…\`;
   }
 });
 `,
@@ -14104,7 +14104,7 @@ css:`
 }
 `,
 javascript:`
-$('#smarttab').smartTab();
+\$('#smarttab').smartTab();
 `,
 },
 yituxiy:{html:`
@@ -14345,11 +14345,11 @@ css:`
 }
 `,
 javascript:`
-const $box = $('.box');
+const \$box = \$('.box');
 const duration = 1000;
 
-$('.my-button-anim').on('click', () => {
-  $box.animate(
+\$('.my-button-anim').on('click', () => {
+  \$box.animate(
     {
       width: '200px',
       left: '200px',
@@ -14358,8 +14358,8 @@ $('.my-button-anim').on('click', () => {
   );
 });
 
-$('.my-button-re').on('click', () => {
-  $box.animate(
+\$('.my-button-re').on('click', () => {
+  \$box.animate(
     {
       width: '60px',
       left: '0px',
@@ -14538,14 +14538,14 @@ css:`
 }
 `,
 javascript:`
-const $box = $('.box');
+const \$box = \$('.box');
 
-$('.my-button-in').on('click', () => {
-  $box.slideDown();
+\$('.my-button-in').on('click', () => {
+  \$box.slideDown();
 });
 
-$('.my-button-out').on('click', () => {
-  $box.slideUp();
+\$('.my-button-out').on('click', () => {
+  \$box.slideUp();
 });
 `,
 },
@@ -15140,7 +15140,7 @@ zobapoq:{html:`
 </html>
 `,
 javascript:`
-$('a').attr('href', 'new.html');
+\$('a').attr('href', 'new.html');
 `,
 },
 zomutul:{html:`
@@ -15161,7 +15161,7 @@ const box = document.getElementById('box');
 
 // 10回繰り返す
 for (let i = 1; i <= 10; i++) {
-  box.innerHTML += \`${i}<br>\`;
+  box.innerHTML += \`\${i}<br>\`;
 }
 `,
 },
@@ -15250,21 +15250,21 @@ css:`
 }
 `,
 javascript:`
-$('.my-form').on('submit', function(e) {
+\$('.my-form').on('submit', function(e) {
   // フォームが送信された時に実行される
-  var text1 = $('.text1').val();
-  var text2 = $('.text2').val();
+  var text1 = \$('.text1').val();
+  var text2 = \$('.text2').val();
 
   if (text1 !== text2) {
     // ページ遷移を止める
     e.preventDefault();
 
-    $('.error').html('テキストが一致しません');
+    \$('.error').html('テキストが一致しません');
   }else{
     // ページ遷移を止める
     e.preventDefault();
 
-    $('.error').html('テキストが一致しました');
+    \$('.error').html('テキストが一致しました');
   }
 });
 `,
