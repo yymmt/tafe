@@ -22,15 +22,15 @@
 `,
 javascript:`
 const ButtonPreference = {
-  template: `
+  template: \`
     <button>いいね！</button>
-  `,
+  \`,
 }
 
 const ButtonEmpathy = {
-  template: `
+  template: \`
     <button>そだねー</button>
-  `,
+  \`,
 }
 
 const ButtonsSns = {
@@ -38,12 +38,12 @@ const ButtonsSns = {
     'button-preference': ButtonPreference,
     'button-empathy': ButtonEmpathy,
   },
-  template: `
+  template: \`
     <div>
       <button-preference></button-preference>
       <button-empathy></button-empathy>
     </div>
-  `,
+  \`,
 }
 
 new Vue({
@@ -397,11 +397,11 @@ Vue.component('button-preference', {
       this.count += 1;
     },
   },
-  template: `
+  template: \`
     <button v-on:click="countUp">
       {{ count }} いいね！
     </button>
-  `,
+  \`,
 });
 
 new Vue({
@@ -1342,7 +1342,7 @@ const showTab = (selector) => {
   /* 2. 選択されたタブの表示 */
 
   // a要素のhref属性がselectorと一致するものの親要素にだけactiveクラスを付ける
-  $(`.tabs-menu a[href="${selector}"]`)
+  $(\`.tabs-menu a[href="${selector}"]\`)
     .parent()
     .addClass('active');
   
@@ -1723,11 +1723,11 @@ dodiwod:{html:`
 javascript:`
 const ButtonPreference = {
   props: ['initialCount'],
-  template: `
+  template: \`
     <button>
       {{ initialCount }} いいね！
     </button>
-  `,
+  \`,
 }
 
 new Vue({
@@ -1768,11 +1768,11 @@ const ButtonPreference = {
       this.count += 1
     },
   },
-  template: `
+  template: \`
     <button v-on:click="countUp">
       {{ count }} いいね！
     </button>
-  `,
+  \`,
 }
 
 new Vue({
@@ -1810,11 +1810,11 @@ const buttonPreference = {
       required: true,
     },
   },
-  template: `
+  template: \`
     <button>
       {{ initialCount }} いいね！
     </button>
-  `,
+  \`,
 };
 
 new Vue({
@@ -3686,7 +3686,7 @@ buttonGreeting.addEventListener('click', () => {
   let greeting;
 
   // 確認のため、コンソールに表示
-  console.log(`現在の時間：${hour}時`);
+  console.log(\`現在の時間：${hour}時\`);
 
   if (hour >= 6 && hour < 12) {
     greeting = 'おはよう';
@@ -3696,7 +3696,7 @@ buttonGreeting.addEventListener('click', () => {
     greeting = 'こんばんは';
   }
 
-  box.textContent = `${greeting}、${name}さん`;
+  box.textContent = \`${greeting}、${name}さん\`;
 });
 
 buttonCheerful.addEventListener('click', () => {
@@ -3705,7 +3705,7 @@ buttonCheerful.addEventListener('click', () => {
   let greeting;
 
   // 確認のため、コンソールに表示
-  console.log(`現在の時間：${hour}時`);
+  console.log(\`現在の時間：${hour}時\`);
 
   if (hour >= 6 && hour < 12) {
     greeting = 'おはよう';
@@ -3715,7 +3715,7 @@ buttonCheerful.addEventListener('click', () => {
     greeting = 'こんばんは';
   }
 
-  box.textContent = `${greeting}！、${name}さん！！！`;
+  box.textContent = \`${greeting}！、${name}さん！！！\`;
 });
 `,
 },
@@ -3875,7 +3875,7 @@ const box = document.getElementById('box');
 
 button.addEventListener('click', () => {
   const name = input.value;
-  box.textContent = `こんにちは、${name}さん`;
+  box.textContent = \`こんにちは、${name}さん\`;
 });
 `,
 },
@@ -4955,14 +4955,14 @@ buttonGreeting.addEventListener('click', () => {
   const name = input.value;
   const greeting = greet();
 
-  box.textContent = `${greeting}、${name}さん`;
+  box.textContent = \`${greeting}、${name}さん\`;
 });
 
 buttonCheerful.addEventListener('click', () => {
   const name = input.value;
   const greeting = greet();
 
-  box.textContent = `${greeting}！、${name}さん！！！`;
+  box.textContent = \`${greeting}！、${name}さん！！！\`;
 });
 `,
 },
@@ -5081,12 +5081,12 @@ kobekeh:{html:`
 `,
 javascript:`
 Vue.component('buttons-preference', {
-  template: `
+  template: \`
     <div>
       <button>いいね！</button>
       <button>そだねー</button>
     </div>
-  `,
+  \`,
 });
 
 new Vue({
@@ -5139,7 +5139,7 @@ kubulip:{html:`
 `,
 javascript:`
 const url = 'pm.html';
-$(`[href="${url}"]`).text('こんにちは！');
+$(\`[href="${url}"]\`).text('こんにちは！');
 `,
 },
 kufoxat:{html:`
@@ -5173,11 +5173,11 @@ const ButtonPreference = {
       this.count += 1
     },
   },
-  template: `
+  template: \`
     <button v-on:click="countUp">
       {{ count }} いいね！
     </button>
-  `,
+  \`,
 }
 
 new Vue({
@@ -6656,24 +6656,24 @@ mogeqiq:{html:`
 `,
 javascript:`
 Vue.component('button-preference', {
-  template: `
+  template: \`
     <button>いいね！</button>
-  `,
+  \`,
 });
 
 Vue.component('button-empathy', {
-  template: `
+  template: \`
     <button>そだねー</button>
-  `,
+  \`,
 });
 
 Vue.component('buttons-sns', {
-  template: `
+  template: \`
     <div>
       <button-preference></button-preference>
       <button-empathy></button-empathy>
     </div>
-  `,
+  \`,
 });
 
 new Vue({
@@ -7314,7 +7314,7 @@ button.addEventListener('click', () => {
   let greeting;
 
   // 確認のため、コンソールに表示
-  console.log(`現在の時間：${hour}時`);
+  console.log(\`現在の時間：${hour}時\`);
 
   if (hour >= 6 && hour < 12) {
     greeting = 'おはよう';
@@ -7324,7 +7324,7 @@ button.addEventListener('click', () => {
     greeting = 'こんばんは';
   }
 
-  box.textContent = `${greeting}、${name}さん`;
+  box.textContent = \`${greeting}、${name}さん\`;
 });
 `,
 },
@@ -7374,14 +7374,14 @@ buttonGreeting.addEventListener('click', () => {
   const name = input.value;
   const greeting = greet();
 
-  box.textContent = `${greeting}、${name}さん`;
+  box.textContent = \`${greeting}、${name}さん\`;
 });
 
 buttonCheerful.addEventListener('click', () => {
   const name = input.value;
   const greeting = greet();
 
-  box.textContent = `${greeting}！、${name}さん！！！`;
+  box.textContent = \`${greeting}！、${name}さん！！！\`;
 });
 
 buttonLate.addEventListener('click', () => {
@@ -7389,7 +7389,7 @@ buttonLate.addEventListener('click', () => {
 
   setTimeout(() => {
     // 1秒経過した後に実行される
-    box.textContent = `遅れてごめん、${name}さん`;
+    box.textContent = \`遅れてごめん、${name}さん\`;
   }, 1000);
 });
 `,
@@ -8674,11 +8674,11 @@ const ButtonPreference = {
       this.count += 1
     },
   },
-  template: `
+  template: \`
     <button v-on:click="countUp">
       {{ count }} <slot>いいね！</slot>
     </button>
-  `,
+  \`,
 }
 
 new Vue({
@@ -9561,7 +9561,7 @@ const showSlide = (index) => {
     .stop()
     .animate(
       {
-        left: `${-slideWidth * currentSlide}px`,
+        left: \`${-slideWidth * currentSlide}px\`,
       },
       600,
     );
@@ -11815,11 +11815,11 @@ const ButtonPreference = {
       this.count += 1
     },
   },
-  template: `
+  template: \`
     <button v-on:click="countUp">
       {{ count }} <slot></slot>
     </button>
-  `,
+  \`,
 }
 
 new Vue({
@@ -13989,10 +13989,10 @@ button.addEventListener('click', () => {
 
   if (num >= 0.5) {
     // numが0.5以上の場合
-    box.innerHTML = `${num}<br>当たり！`;
+    box.innerHTML = \`${num}<br>当たり！\`;
   } else {
     // numが0.5未満の場合
-    box.innerHTML = `${num}<br>ハズレ…`;
+    box.innerHTML = \`${num}<br>ハズレ…\`;
   }
 });
 `,
@@ -15161,7 +15161,7 @@ const box = document.getElementById('box');
 
 // 10回繰り返す
 for (let i = 1; i <= 10; i++) {
-  box.innerHTML += `${i}<br>`;
+  box.innerHTML += \`${i}<br>\`;
 }
 `,
 },
