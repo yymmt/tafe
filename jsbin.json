@@ -1,6 +1,61 @@
 
 
-{becugen:{html:`
+{bebekid:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <buttons-sns></buttons-sns>
+  </div>
+  <!--<script src="main.js"></script>-->
+  <!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const ButtonPreference = {
+  template: `
+    <button>いいね！</button>
+  `,
+}
+
+const ButtonEmpathy = {
+  template: `
+    <button>そだねー</button>
+  `,
+}
+
+const ButtonsSns = {
+  components: {
+    'button-preference': ButtonPreference,
+    'button-empathy': ButtonEmpathy,
+  },
+  template: `
+    <div>
+      <button-preference></button-preference>
+      <button-empathy></button-empathy>
+    </div>
+  `,
+}
+
+new Vue({
+  el: '#example',
+  components: {
+    'buttons-sns': ButtonsSns,
+  },
+})
+
+`,
+},
+becugen:{html:`
 <h2>floatを使用した場合</h2>
 <div class="float-box">
   <div>
@@ -83,6 +138,30 @@ css:`
 }
 `,
 },
+beyeweh:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <p>おはよう</p>
+  <p class="pm">おはよう</p>
+  <p class="pm">おはよう</p>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+$('.pm').text('こんにちは！');
+`,
+},
 bihayuw:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -111,6 +190,30 @@ nav ul li {
     text-align: center;
     padding: 5px;
 }
+`,
+},
+biqupox:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <a href="one.html">ワン</a>
+  <a href="two.html">ツー</a>
+  <a href="three.html">スリー</a>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+$('a').attr('href', 'new.html');
 `,
 },
 biwufu:{html:`
@@ -265,6 +368,47 @@ footer {
 }
 `,
 },
+busozan:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <button-preference></button-preference>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+Vue.component('button-preference', {
+  data() {
+    return { count: 0 };
+  },
+  methods: {
+    countUp() {
+      this.count += 1;
+    },
+  },
+  template: `
+    <button v-on:click="countUp">
+      {{ count }} いいね！
+    </button>
+  `,
+});
+
+new Vue({
+  el: '#example',
+});
+`,
+},
 butohus:{html:`
 <h1>自己紹介</h1>
 <h2>氏名</h2>
@@ -277,6 +421,28 @@ Webデザイナー
   <li>イラスト</li>
   <li>英語</li>
 </ul>
+`,
+},
+cacapac:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-base-200">
+        <!-- ホームへ戻るリンク。ブランドロゴなどを置く。 -->
+        <a class="btn btn-ghost normal-case text-xl">P&amp;K</a>
+    </nav>
+</body>
+
+</html>
 `,
 },
 cahunev:{html:`
@@ -1020,6 +1186,216 @@ nav ul li {
 }
 `,
 },
+culixiz:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <div class="alert mb-2">
+        <div class="w-full">
+            3件の新着情報があります
+        </div>
+    </div>
+    <div class="alert alert-info mb-2">
+        <div class="w-full">
+            最新版のソフトウェアが公開されました
+        </div>
+    </div>
+    <div class="alert alert-success mb-2">
+        <div class="w-full">
+            登録が完了しました！
+        </div>
+    </div>
+    <div class="alert alert-warning mb-2">
+        <div class="w-full">
+            安全のためパスワードを変更してください
+        </div>
+    </div>
+    <div class="alert alert-error mb-2">
+        <div class="w-full">
+            ユーザ名かパスワードが間違っています
+        </div>
+    </div>
+</body>
+
+</html>
+`,
+},
+cuvaqeh:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <ul class="tabs-menu">
+    <li><a href="#tabs-1">タブ1</a></li>
+    <li><a href="#tabs-2">タブ2</a></li>
+    <li><a href="#tabs-3">タブ3</a></li>
+  </ul>
+  <section class="tabs-content">
+    <section id="tabs-1">
+      <p>タブ1の内容が入ります。</p>
+    </section>
+    <section id="tabs-2">
+      <p>タブ2の内容が入ります。</p>
+    </section>
+    <section id="tabs-3">
+      <p>タブ3の内容が入ります。</p>
+    </section>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+body {
+  color: #3f4548;
+}
+
+/* ulのデフォルトスタイルを消去 */
+.tabs-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* タブの基本スタイル */
+.tabs-menu li {
+  float: left;
+  margin-right: 8px;
+  margin-bottom: -1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 4px 4px 0 0;
+
+  /* 各プロパティをふわっと変える演出 */
+  transition: all 0.15s;
+}
+.tabs-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #557f95;
+  text-decoration: none;
+}
+
+/* 非選択のタブにマウスを乗せたら色を変える */
+.tabs-menu li:not(.active):hover {
+  border-color: #f0f0f0 #f0f0f0 #999;
+  background-color: #f0f0f0;
+}
+
+/* 選択中のタブ */
+.tabs-menu .active {
+  border-color: #999 #999 transparent #999;
+  background-color: #fff;
+}
+.tabs-menu .active a {
+  color: #3f4548;
+}
+
+/* タブコンテンツ表示エリア */
+.tabs-content {
+  clear: both;
+  border: 1px solid #999;
+  border-radius: 0 4px 4px 4px;
+  padding: 10px;
+}
+
+/* 各タブのコンテンツはデフォルトで非表示 */
+.tabs-content section {
+  display: none;
+}
+`,
+javascript:`
+/**
+ * selectorに該当するタブを表示する
+ */
+const showTab = (selector) => {
+  // 引数selectorの中身をコンソールで確認する
+  console.log(selector);
+
+  /* 1. タブの選択状態のリセット */
+
+  // いったん、すべての.tabs-menu > liからactiveクラスを削除する
+  $('.tabs-menu > li').removeClass('active');
+
+  // いったん、すべての.tabs-content > sectionを非表示にする
+  $('.tabs-content > section').hide();
+
+  /* 2. 選択されたタブの表示 */
+
+  // a要素のhref属性がselectorと一致するものの親要素にだけactiveクラスを付ける
+  $(`.tabs-menu a[href="${selector}"]`)
+    .parent()
+    .addClass('active');
+  
+  // .tabs-content > sectionのうち、selectorに該当するものだけを表示する
+  $(selector).show();
+};
+
+// タブがクリックされたらコンテンツを表示
+$('.tabs-menu a').on('click', (e) => {
+  // hrefへのページ遷移を止める
+  e.preventDefault();
+
+  // hrefの値を受け取ってshowTab()関数に渡す。e.targetはクリックされたタブ（.tabs-menu a）を表す
+  const selector = $(e.target).attr('href');
+  showTab(selector);
+});
+
+// 初期状態として1番目のタブを表示
+showTab('#tabs-1');
+`,
+},
+cuviyup:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <input
+      v-bind:value="name"
+      v-on:input="name = $event.target.value"
+    >
+    <p>{{ name }}</p>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const app = new Vue({
+  el: '#example',
+  data: {
+    name: '太郎',
+  },
+});
+`,
+},
 dafudip:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -1063,6 +1439,33 @@ css:`
     width: 60px;
     text-align: center;
 }
+`,
+},
+dajujut:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <div><span class="badge">未確認</span></div>
+    <div><span class="badge badge-primary">最優先</span></div>
+    <div><span class="badge badge-secondary">重要</span></div>
+    <div><span class="badge badge-info">新着</span></div>
+    <div><span class="badge badge-success">100%</span></div>
+    <div><span class="badge badge-warning">警告</span></div>
+    <div><span class="badge badge-error">危険</span></div>
+    <div><span class="badge badge-outline">お知らせ</span></div>
+    <div><span class="badge badge-ghost">保留</span></div>
+</body>
+
+</html>
 `,
 },
 dawucis:{html:`
@@ -1297,6 +1700,131 @@ a[href="https://techacademy.jp"] {
 }
 `,
 },
+dodiwod:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <button-preference initial-count="0"></button-preference>
+  </div>
+  <!--<script src="main.js"></script>-->
+  <!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const ButtonPreference = {
+  props: ['initialCount'],
+  template: `
+    <button>
+      {{ initialCount }} いいね！
+    </button>
+  `,
+}
+
+new Vue({
+  el: '#example',
+  components: {
+    'button-preference': ButtonPreference,
+  },
+})
+`,
+},
+dubomav:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <button-preference>すごいね！</button-preference>
+  </div>
+  <!--<script src="main.js"></script>-->
+  <!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const ButtonPreference = {
+  data() {
+    return { count: 0 }
+  },
+  methods: {
+    countUp() {
+      this.count += 1
+    },
+  },
+  template: `
+    <button v-on:click="countUp">
+      {{ count }} いいね！
+    </button>
+  `,
+}
+
+new Vue({
+  el: '#example',
+  components: {
+    'button-preference': ButtonPreference,
+  },
+})
+`,
+},
+dupetan:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <button-preference v-bind:initial-count="0"></button-preference>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const buttonPreference = {
+  props: {
+    initialCount: {
+      type: Number,
+      required: true,
+    },
+  },
+  template: `
+    <button>
+      {{ initialCount }} いいね！
+    </button>
+  `,
+};
+
+new Vue({
+  el: '#example',
+  components: {
+    'button-preference': buttonPreference,
+  },
+});
+`,
+},
 durokew:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -1471,6 +1999,28 @@ $('.box')
   .on('mouseleave', onMouseleave);
 `,
 },
+fanosox:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <p>重要な文章</p>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+$('p').css('color', 'red');
+`,
+},
 fazihus:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -1526,6 +2076,23 @@ fefiyu:{html:`
 </p>
 `,
 },
+fegacar:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+document.getElementById('box').textContent = 'こんにちは！';
+`,
+},
 fenesir:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -1571,6 +2138,29 @@ $('.carousel').slick({
   arrows: false, // 左右のナビゲーションを無効にする
   fade: true,
   dots: true,
+});
+`,
+},
+fiwazoz:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <a id="my-link" href="https://techacademy.jp/">
+      TechAcademy [テックアカデミー] | オンラインのプログラミングスクール
+    </a>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const link = document.getElementById('my-link');
+
+link.addEventListener('click', (e) => {
+  e.preventDefault();
 });
 `,
 },
@@ -1958,6 +2548,72 @@ css:`
 }
 `,
 },
+foxerel:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <div id="parent">
+    <div class="children">
+      <div class="grand_children"></div>
+    </div>
+    <div class="children">
+      <div class="grand_children"></div>
+    </div>
+    <div class="children">
+      <div class="grand_children"></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+$('#parent > div').prepend('子要素');
+`,
+},
+foxipij:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <div id="parent">
+    <p class="child">もともとの要素</p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+.child {
+  cursor: pointer;
+}
+`,
+javascript:`
+$('#parent').on('click', '.child', () => {
+  console.log('.childのイベントハンドラ');
+});
+
+$('#parent').append('<p class="child">追加した要素</p>');
+`,
+},
 fozakif:{html:`
 <!DOCTYPE html>
 <html>
@@ -1992,6 +2648,125 @@ div {
 
 }
 
+`,
+},
+fuhifej:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-base-200">
+        <div class="flex-1">
+            <!-- ホームへ戻るリンク。ブランドロゴなどを置く。 -->
+            <a class="btn btn-ghost normal-case text-xl">P&amp;K</a>
+
+            <!-- メニュー項目 -->
+            <ul class="menu menu-horizontal p-0 hidden sm:inline-flex">
+                <li><a href="#" class="active">子犬</a></li>
+                <li><a href="#">子猫</a></li>
+                <li tabindex="0">
+                    <a href="#">
+                        会社情報
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <ul class="p-2 bg-base-100 shadow">
+                        <li><a href="#">ビジョン</a></li>
+                        <li><a href="#">会社概要</a></li>
+                        <li><a href="#">地図</a></li>
+                        <li><a href="#">沿革</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </div>
+        <div class="flex-none">
+            <div class="dropdown dropdown-end">
+                <button class="btn btn-ghost sm:hidden">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </button>
+                <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="#">子犬</a></li>
+                    <li><a href="#">子猫</a></li>
+                    <li class="menu-title"><span>会社概要</span></li>
+                    <ul class="p-2">
+                        <li><a href="#">ビジョン</a></li>
+                        <li><a href="#">会社概要</a></li>
+                        <li><a href="#">地図</a></li>
+                        <li><a href="#">沿革</a></li>
+                    </ul>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
+`,
+},
+fujoxix:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <form class="my-form" action="" method="post">
+    同じテキストを入力してください。
+    <p>
+      <input type="text" name="text1" class="text1">
+    </p>
+    <p>
+      <input type="text" name="text2" class="text2">
+    </p>
+    <p>
+      <input type="submit" value="送信">
+    </p>
+    <p class="error"></p>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+.error {
+  color: #f00;
+}
+`,
+javascript:`
+$('.my-form').on('submit', (e) => {
+  // フォームが送信された時に実行される
+  const text1 = $('.text1').val();
+  const text2 = $('.text2').val();
+
+  if (text1 !== text2) {
+    // ページ遷移を止める
+    e.preventDefault();
+
+    $('.error').html('テキストが一致しません');
+  }
+});
 `,
 },
 furoyem:{html:`
@@ -2057,6 +2832,23 @@ Webデザイナー
   <li>イラスト</li>
   <li>英語</li>
 </ul>
+`,
+},
+gafuyil:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+document.getElementById('box').textContent = 1 + 2;
 `,
 },
 gasivam:{html:`
@@ -2549,6 +3341,72 @@ css:`
 }
 `,
 },
+godasox:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <!-- フォームの基本 -->
+    <form>
+        <div class="form-control w-full my-4">
+            <label for="test1" class="label">
+                <span class="label-text">お名前</span>
+            </label>
+            <input type="text" name="test1" placeholder="お名前を入力してください" class="input input-bordered w-full">
+        </div>
+    </form>
+
+    <hr>
+
+    <!-- ラベルを横に並べる -->
+    <form>
+        <div class="form-control w-full my-4">
+            <label for="test2" class="label">
+                <span class="label-text w-1/6">姓</span>
+                <input type="text" name="test2" placeholder="姓を入力してください" class="input input-bordered w-5/6">
+            </label>
+        </div>
+
+        <div class="form-control w-full my-4">
+            <label for="test3" class="label">
+                <span class="label-text w-1/6">名</span>
+                <input type="text" name="test3" placeholder="名を入力してください" class="input input-bordered w-5/6">
+            </label>
+        </div>
+
+        <div class="form-control w-full my-4">
+            <div>
+                <button class="btn btn-primary">登録</button>
+            </div>
+        </div>
+    </form>
+    <hr>
+
+    <!-- アクセサリをつける -->
+    <form>
+        <div class="form-control w-full my-4">
+            <label for="test4" class="label">
+                <span class="label-text">郵便番号</span>
+            </label>
+            <label class="input-group">
+                <span>〒</span>
+                <input type="text" name="test4" placeholder="000-0000" class="input input-bordered w-full">
+            </label>
+        </div>
+    </form>
+</body>
+
+</html>
+`,
+},
 goloniw:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -2798,6 +3656,108 @@ Webデザイナー
 </ul>
 `,
 },
+guzoqip:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    お名前 <input type="text" id="name">
+    <div>
+      <button type="button" id="button-greeting">あいさつ</button>
+      <button type="button" id="button-cheerful">元気にあいさつ</button>
+    </div>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const buttonGreeting = document.getElementById('button-greeting');
+const buttonCheerful = document.getElementById('button-cheerful');
+const input = document.getElementById('name');
+const box = document.getElementById('box');
+
+buttonGreeting.addEventListener('click', () => {
+  const name = input.value;
+  const hour = new Date().getHours();
+  let greeting;
+
+  // 確認のため、コンソールに表示
+  console.log(`現在の時間：${hour}時`);
+
+  if (hour >= 6 && hour < 12) {
+    greeting = 'おはよう';
+  } else if (hour >= 12 && hour < 18) {
+    greeting = 'こんにちは';
+  } else {
+    greeting = 'こんばんは';
+  }
+
+  box.textContent = `${greeting}、${name}さん`;
+});
+
+buttonCheerful.addEventListener('click', () => {
+  const name = input.value;
+  const hour = new Date().getHours();
+  let greeting;
+
+  // 確認のため、コンソールに表示
+  console.log(`現在の時間：${hour}時`);
+
+  if (hour >= 6 && hour < 12) {
+    greeting = 'おはよう';
+  } else if (hour >= 12 && hour < 18) {
+    greeting = 'こんにちは';
+  } else {
+    greeting = 'こんばんは';
+  }
+
+  box.textContent = `${greeting}！、${name}さん！！！`;
+});
+`,
+},
+hanilac:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <div>
+      <p>
+        身長： <input v-model="height" type="text"> cm
+      </p>
+      <p>
+        体重： <input v-model="weight" type="text"> kg
+      </p>
+    </div>
+    <div>
+      BMI: {{ weight / ((height / 100) * (height / 100)) || '' }}
+    </div>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const app = new Vue({
+  el: '#example',
+  data: {
+    height: '',
+    weight: '',
+  },
+});
+`,
+},
 hapejac:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -2891,6 +3851,53 @@ Webデザイナー
 Web
 イラスト
 英語
+`,
+},
+hiduqum:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    お名前 <input type="text" id="name">
+    <button type="button" id="button-greeting">あいさつ</button>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const button = document.getElementById('button-greeting');
+const input = document.getElementById('name');
+const box = document.getElementById('box');
+
+button.addEventListener('click', () => {
+  const name = input.value;
+  box.textContent = `こんにちは、${name}さん`;
+});
+`,
+},
+hijivan:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <div id="box"></div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+$('#box').text('Hello jQuery!');
 `,
 },
 hobibap:{html:`
@@ -3024,6 +4031,36 @@ honoced:{html:`
 css:`
 div { background-color: pink; }
 span { background-color: palegreen; }
+`,
+},
+howufoz:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <form id="my-form">
+      <input type="text" id="num1">
+      <input type="text" id="num2">
+      <button type="button" id="button-add">+</button>
+    </form>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const buttonAdd = document.getElementById('button-add');
+const box = document.getElementById('box');
+const num1 = document.getElementById('num1');
+const num2 = document.getElementById('num2');
+
+buttonAdd.addEventListener('click', () => {
+  const result = num1.value + num2.value;
+  box.textContent = result;
+});
 `,
 },
 hubupeb:{html:`
@@ -3247,6 +4284,32 @@ $('.my-button-re').on('click', function() {
 });
 `,
 },
+jaqatod:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">{{ greeting }}</div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const app = new Vue({
+  el: '#example',
+  data: {
+    greeting: 'Hello Vue.js!',
+  },
+});
+`,
+},
 jasorob:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -3414,6 +4477,33 @@ footer {
 }
 `,
 },
+jevavuv:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <a class="mylink" href="https://www.google.co.jp/" target="_blank">ページ2</a>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+$('.mylink').on('click', (e) => {
+  // hrefのリンク先に飛ばないようにする
+  e.preventDefault();
+
+  alert('どろん！');
+});
+`,
+},
 jeyidag:{html:`
 <!DOCTYPE html>
 <html>
@@ -3449,6 +4539,35 @@ css:`
 }
 `,
 },
+jibamin:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <input v-model="name">
+    <p>{{ name }}</p>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const app = new Vue({
+  el: '#example',
+  data: {
+    name: '太郎',
+  },
+});
+`,
+},
 jinefe:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -3465,6 +4584,35 @@ jinefe:{html:`
         </ol>
     </body>
 </html>
+`,
+},
+jizowec:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <input type="text" v-bind:value="name">
+    <p>{{ name }}</p>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const app = new Vue({
+  el: '#example',
+  data: {
+    name: '太郎',
+  },
+});
 `,
 },
 jocukow:{html:`
@@ -3601,6 +4749,51 @@ css:`
 
 `,
 },
+kahiwer:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <p>
+      <button v-on:click="countUp()">{{ count }} 回</button>
+    </p>
+    <p>現在時刻（メソッド）： {{ getDate() }}</p>
+    <p>現在時刻（算出プロパティ）： {{ date }}</p>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const app = new Vue({
+  el: '#example',
+  data: {
+    count: 0,
+  },
+  computed: {
+    date() {
+      return new Date().toLocaleString();
+    },
+  },
+  methods: {
+    countUp() {
+      this.count += 1;
+    },
+    getDate() {
+      return new Date().toLocaleString();
+    },
+  },
+});
+`,
+},
 kawidob:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -3642,6 +4835,39 @@ div {
   border: 2px solid #000;
 }
 
+`,
+},
+kifidit:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <ul id="example">
+    <li
+      v-for="(member, index) in members"
+      v-bind:key="member"
+    >
+      {{ index }}：{{ member }}
+    </li>
+  </ul>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const app = new Vue({
+  el: '#example',
+  data: {
+    members: ['桃太郎', 'イヌ', 'サル', 'キジ'],
+  },
+});
 `,
 },
 kipedex:{html:`
@@ -3686,6 +4912,60 @@ css:`
 }
 `,
 },
+kipogof:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    お名前 <input type="text" id="name">
+    <div>
+      <button type="button" id="button-greeting">あいさつ</button>
+      <button type="button" id="button-cheerful">元気にあいさつ</button>
+    </div>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const buttonGreeting = document.getElementById('button-greeting');
+const buttonCheerful = document.getElementById('button-cheerful');
+const input = document.getElementById('name');
+const box = document.getElementById('box');
+
+const greet = () => {
+  let greeting;
+  const hour = new Date().getHours();
+
+  if (hour >= 6 && hour < 12) {
+    greeting = 'おはよう';
+  } else if (hour >= 12 && hour < 18) {
+    greeting = 'こんにちは';
+  } else {
+    greeting = 'こんばんは';
+  }
+
+  return greeting;
+};
+
+buttonGreeting.addEventListener('click', () => {
+  const name = input.value;
+  const greeting = greet();
+
+  box.textContent = `${greeting}、${name}さん`;
+});
+
+buttonCheerful.addEventListener('click', () => {
+  const name = input.value;
+  const greeting = greet();
+
+  box.textContent = `${greeting}！、${name}さん！！！`;
+});
+`,
+},
 kitewon:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -3723,6 +5003,29 @@ javascript:`
 $('.pm').text('こんにちは！');
 `,
 },
+kiyorez:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <p>おはよう</p>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const element = 'p';
+$(element).text('こんにちは！');
+`,
+},
 kizexod:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -3757,6 +5060,40 @@ kizexod:{html:`
 </html>
 `,
 },
+kobekeh:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <buttons-preference></buttons-preference>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+Vue.component('buttons-preference', {
+  template: `
+    <div>
+      <button>いいね！</button>
+      <button>そだねー</button>
+    </div>
+  `,
+});
+
+new Vue({
+  el: '#example',
+});
+`,
+},
 kogulaf:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -3780,6 +5117,75 @@ css:`
     height: 100px;
     background-color: skyblue;
 }
+`,
+},
+kubulip:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <a href="pm.html">おはよう</a>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const url = 'pm.html';
+$(`[href="${url}"]`).text('こんにちは！');
+`,
+},
+kufoxat:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <button-preference v-bind:initial-count="0"></button-preference>
+  </div>
+  <!--<script src="main.js"></script>-->
+  <!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const ButtonPreference = {
+  props: ['initialCount'],
+  data() {
+    return { count: this.initialCount }
+  },
+  methods: {
+    countUp() {
+      this.count += 1
+    },
+  },
+  template: `
+    <button v-on:click="countUp">
+      {{ count }} いいね！
+    </button>
+  `,
+}
+
+new Vue({
+  el: '#example',
+  components: {
+    'button-preference': ButtonPreference,
+  },
+})
 `,
 },
 kugoxof:{html:`
@@ -3833,6 +5239,28 @@ css:`
   left: 35vw;
   font-size: 5vw;
 }
+`,
+},
+kujozox:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <button type="button" id="my-button">押して！</button>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const button = document.getElementById('my-button');
+
+// イベントリスナーが実行されるとき、イベントオブジェクトを渡される
+button.addEventListener('click', (e) => {
+  console.log('イベントの種類：', e.type);
+});
 `,
 },
 kuzafus:{html:`
@@ -4060,6 +5488,38 @@ javascript:`
 $('#parent > div').prepend('子要素');
 `,
 },
+lipini:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <div id="parent">
+    <div class="children">
+      <div class="grand_children"></div>
+    </div>
+    <div class="children">
+      <div class="grand_children"></div>
+    </div>
+    <div class="children">
+      <div class="grand_children"></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+$('#parent div').prepend('子孫要素');
+`,
+},
 litotux:{html:`
 <!DOCTYPE html>
 <html>
@@ -4209,6 +5669,57 @@ a {
   font-size: 1.75rem;
 }
 
+`,
+},
+locokic:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <div>
+      <p>身長： <input v-model="height" type="text"> cm</p>
+      <p>体重： <input v-model="weight" type="text"> kg</p>
+    </div>
+    <div>
+      BMI: {{ bmi }}
+    </div>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const app = new Vue({
+  el: '#example',
+  data: {
+    height: '',
+    weight: '',
+  },
+  computed: {
+    bmi() {
+      if (this.height && this.weight) {
+        // センチメートルをメートルに変換する
+        const meterHeight = this.height / 100;
+
+        // BMIを計算する
+        const bmi = this.weight / (meterHeight * meterHeight);
+
+        // 小数点以下の桁数を、２桁にして返す
+        return bmi.toFixed(2);
+      }
+
+      return '';
+    },
+  },
+});
 `,
 },
 lokehep:{html:`
@@ -4560,6 +6071,123 @@ css:`
 }
 `,
 },
+melifiy:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <ul class="tabs-menu">
+      <li
+        v-bind:class="{active: activeTab === 'tabs-1'}"
+        v-on:click="activeTab = 'tabs-1'"
+      >
+        タブ1
+      </li>
+      <li
+        v-bind:class="{active: activeTab === 'tabs-2'}"
+        v-on:click="activeTab = 'tabs-2'"
+      >
+        タブ2
+      </li>
+      <li
+        v-bind:class="{active: activeTab === 'tabs-3'}"
+        v-on:click="activeTab = 'tabs-3'"
+      >
+        タブ3
+      </li>
+    </ul>
+    <section class="tabs-content">
+      <section v-if="activeTab === 'tabs-1'">
+        <p>タブ1の内容が入ります。</p>
+      </section>
+      <section v-else-if="activeTab === 'tabs-2'">
+        <p>タブ2の内容が入ります。</p>
+      </section>
+      <section v-else-if="activeTab === 'tabs-3'">
+        <p>タブ3の内容が入ります。</p>
+      </section>
+    </section>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+body {
+  color: #3f4548;
+}
+
+/* ulのデフォルトスタイルを消去 */
+.tabs-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* タブの基本スタイル */
+.tabs-menu li {
+  display: block;
+  float: left;
+  margin-right: 8px;
+  margin-bottom: -1px;
+  padding: 10px 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 4px 4px 0 0;
+  color: #557f95;
+  text-decoration: none;
+
+  /* 各プロパティをふわっと変える演出 */
+  transition: all 0.15s;
+}
+
+/* タブにマウスを乗せたらカーソルの形を変える */
+.tabs-menu li:hover {
+  cursor: pointer;
+}
+
+/* 非選択のタブにマウスを乗せたら色を変える */
+.tabs-menu li:not(.active):hover {
+  border-color: #f0f0f0 #f0f0f0 #999;
+  background-color: #f0f0f0;
+}
+
+/* 選択中のタブ */
+.tabs-menu .active {
+  border-color: #999 #999 transparent #999;
+  background-color: #fff;
+}
+.tabs-menu .active {
+  color: #3f4548;
+}
+
+/* タブコンテンツ表示エリア */
+.tabs-content {
+  clear: both;
+  border: 1px solid #999;
+  border-radius: 0 4px 4px 4px;
+  padding: 10px;
+}
+`,
+javascript:`
+new Vue({
+  el: '#example',
+  data: {
+    activeTab: 'tabs-1',
+  },
+});
+`,
+},
 melulod:{html:`
 <!DOCTYPE html>
 <html>
@@ -4741,6 +6369,45 @@ css:`
 }
 `,
 },
+mikixet:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <div class="parent">
+    <button type="button" class="my-button">ボタン</button>
+  </div>
+  <div class="parent">
+    <button type="button" class="my-button">ボタン</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+.parent {
+  height: 100px;
+}
+`,
+javascript:`
+$('.my-button').on('click', (e) => {
+  // .my-buttonがクリックされた時にここが実行される
+  $(e.target)
+    .parent()
+    .css({ 'background-color': '#ff6666' });
+});
+
+`,
+},
 mimuluk:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -4806,6 +6473,30 @@ css:`
     width: 50px;
     background-color: pink;
 }
+`,
+},
+mirovek:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <p>おはよう</p>
+  <p>おはよう</p>
+  <p id="pm">おはよう</p>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+$('#pm').text('こんにちは！');
 `,
 },
 miwihej:{html:`
@@ -4944,6 +6635,52 @@ li {
 
 `,
 },
+mogeqiq:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <buttons-sns></buttons-sns>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+Vue.component('button-preference', {
+  template: `
+    <button>いいね！</button>
+  `,
+});
+
+Vue.component('button-empathy', {
+  template: `
+    <button>そだねー</button>
+  `,
+});
+
+Vue.component('buttons-sns', {
+  template: `
+    <div>
+      <button-preference></button-preference>
+      <button-empathy></button-empathy>
+    </div>
+  `,
+});
+
+new Vue({
+  el: '#example',
+});
+`,
+},
 mopixeg:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -4991,6 +6728,30 @@ mowozap:{html:`
   <input type="email" id="email" name="email" placeholder="info@example.jp">
 </form>
 
+`,
+},
+moyisoz:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <button class="btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+        ダウンロード
+    </button>
+</body>
+
+</html>
 `,
 },
 mubamu:{html:`
@@ -5052,6 +6813,59 @@ div {
 }
 `,
 },
+mucunad:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+document.getElementById('box').textContent = new Date().toLocaleString();
+`,
+},
+nafoven:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <div>
+        <button class="btn btn-primary btn-block normal-case">Block level button 1</button>
+    </div>
+    <div class="mt-2">
+        <button class="btn btn-secondary btn-block normal-case">Block level button 2</button>
+    </div>
+
+    <div class="flex mt-2">
+        <div class="w-1/2 bg-gray-200">xxx</div>
+        <div class="w-1/2 col-span-2">
+            <div class="ml-2">
+                <button class="btn btn-primary btn-block normal-case">Block level button 1</button>
+            </div>
+            <div class="ml-2 mt-2">
+                <button class="btn btn-secondary btn-block normal-case">Block level button 2</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+`,
+},
 nawabuq:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -5098,6 +6912,47 @@ css:`
     background-color: pink;
     text-align: center;
 }
+`,
+},
+nawofok:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <button type="button" class="my-button-in">フェードイン</button>
+  <button type="button" class="my-button-out">フェードアウト</button>
+  <div class="box"></div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+.box {
+  display: none;
+  width: 60px;
+  height: 60px;
+  background-color: #666;
+}
+`,
+javascript:`
+const $box = $('.box');
+
+$('.my-button-in').on('click', () => {
+  $box.fadeIn();
+});
+
+$('.my-button-out').on('click', () => {
+  $box.fadeOut();
+});
 `,
 },
 nawogov:{html:`
@@ -5433,6 +7288,112 @@ $('.my-button-toggle').on('click', function() {
 });
 `,
 },
+nikecew:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    お名前 <input type="text" id="name">
+    <button type="button" id="button-greeting">あいさつ</button>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const button = document.getElementById('button-greeting');
+const input = document.getElementById('name');
+const box = document.getElementById('box');
+
+button.addEventListener('click', () => {
+  const name = input.value;
+  const hour = new Date().getHours();
+  let greeting;
+
+  // 確認のため、コンソールに表示
+  console.log(`現在の時間：${hour}時`);
+
+  if (hour >= 6 && hour < 12) {
+    greeting = 'おはよう';
+  } else if (hour >= 12 && hour < 18) {
+    greeting = 'こんにちは';
+  } else {
+    greeting = 'こんばんは';
+  }
+
+  box.textContent = `${greeting}、${name}さん`;
+});
+`,
+},
+nilegaj:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    お名前 <input type="text" id="name">
+    <div>
+      <button type="button" id="button-greeting">あいさつ</button>
+      <button type="button" id="button-cheerful">元気にあいさつ</button>
+      <button type="button" id="button-late">遅れてあいさつ</button>
+    </div>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const buttonGreeting = document.getElementById('button-greeting');
+const buttonCheerful = document.getElementById('button-cheerful');
+const buttonLate = document.getElementById('button-late');
+
+const input = document.getElementById('name');
+const box = document.getElementById('box');
+
+const greet = () => {
+  let greeting;
+  const hour = new Date().getHours();
+
+  if (hour >= 6 && hour < 12) {
+    greeting = 'おはよう';
+  } else if (hour >= 12 && hour < 18) {
+    greeting = 'こんにちは';
+  } else {
+    greeting = 'こんばんは';
+  }
+
+  return greeting;
+};
+
+buttonGreeting.addEventListener('click', () => {
+  const name = input.value;
+  const greeting = greet();
+
+  box.textContent = `${greeting}、${name}さん`;
+});
+
+buttonCheerful.addEventListener('click', () => {
+  const name = input.value;
+  const greeting = greet();
+
+  box.textContent = `${greeting}！、${name}さん！！！`;
+});
+
+buttonLate.addEventListener('click', () => {
+  const name = input.value;
+
+  setTimeout(() => {
+    // 1秒経過した後に実行される
+    box.textContent = `遅れてごめん、${name}さん`;
+  }, 1000);
+});
+`,
+},
 nimayab:{html:`
 <!DOCTYPE html>
 <html>
@@ -5701,6 +7662,43 @@ css:`
 .f {
   color: rgba(255, 0, 255, 0.5); /* 透明度:0.5 */
 }
+`,
+},
+nofefoq:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <ul id="example">
+    <li
+      v-for="character in characters"
+      v-bind:key="character"
+    >
+      {{ character }}
+    </li>
+  </ul>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const app = new Vue({
+  el: '#example',
+  data: {
+    characters: {
+      hero: '桃太郎',
+      friend: 'イヌ',
+      enemy: '鬼',
+    },
+  },
+});
 `,
 },
 nowayad:{html:`
@@ -6026,6 +8024,32 @@ a {
 
 `,
 },
+pebiroj:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <form id="my-form">
+      <input type="text" id="input-word">
+      <input type="submit" value="送信">
+    </form>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const input = document.getElementById('input-word');
+const form = document.getElementById('my-form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log('value: ', input.value);
+});
+`,
+},
 pebizej:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -6048,6 +8072,129 @@ javascript:`
 $('p').css('color', 'red');
 `,
 },
+penuhuz:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <form id="my-form">
+      <input type="text" id="num1">
+      <input type="text" id="num2">
+      <button type="button" id="button-add">+</button>
+    </form>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const buttonAdd = document.getElementById('button-add');
+const box = document.getElementById('box');
+const num1 = document.getElementById('num1');
+const num2 = document.getElementById('num2');
+
+buttonAdd.addEventListener('click', () => {
+  const numberNum1 = Number.parseFloat(num1.value);
+  const numberNum2 = Number.parseFloat(num2.value);
+  const result = numberNum1 + numberNum2;
+
+  box.textContent = result;
+});
+`,
+},
+peyoxaf:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <div class="accordion">
+    <section>
+      <h2 class="accordion-title"><a href="#">タイトル1</a></h2>
+      <!-- コンテンツを最初から表示する場合はaccordion-content-activeクラスを付ける -->
+      <div class="accordion-content accordion-content-active">コンテンツ1</div>
+    </section>
+
+    <section>
+      <h2 class="accordion-title"><a href="#">タイトル2</a></h2>
+      <div class="accordion-content">コンテンツ2</div>
+    </section>
+
+    <section>
+      <h2 class="accordion-title"><a href="#">タイトル3</a></h2>
+      <div class="accordion-content">コンテンツ3</div>
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+body {
+  color: #3f4548;
+}
+
+/* アコーディオンのタイトル部分 */
+.accordion-title {
+  margin: 0;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  font-size: 1rem;
+}
+.accordion-title a {
+  display: block;
+  padding: 6px;
+  color: #3f4548;
+  text-decoration: none;
+}
+
+/* アコーディオンのコンテンツ部分 */
+.accordion-content {
+  /* 初期状態では非表示 */
+  display: none;
+
+  height: 60px;
+  padding: 12px 6px;
+  border: 1px solid #ccc;
+}
+/* accordion-content-activeクラスが付いているものは初期状態で表示しておく */
+.accordion-content.accordion-content-active {
+  display: block;
+}
+`,
+javascript:`
+// アコーディオンのタイトルがクリックされたら
+$('.accordion-title a').on('click', (e) => {
+  // hrefにページ遷移しない
+  e.preventDefault();
+
+  // 同じsection内の.accordion-contentを選択
+  const content = $(e.target)
+    .closest('section')
+    .find('.accordion-content');
+
+  // .accordion-contentが非表示の場合は
+  if (!content.is(':visible')) {
+    // 表示中のコンテンツを閉じる
+    $('.accordion-content:visible').slideUp();
+
+    // クリックされたコンテンツを表示
+    content.slideDown();
+  }
+});
+`,
+},
 pificis:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -6065,6 +8212,31 @@ css:`
 #important {
   color : red;
 }
+`,
+},
+pilisij:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <select id="my-select">
+      <option value="1">Item 1</option>
+      <option value="2">Item 2</option>
+      <option value="3">Item 3</option>
+    </select>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const select = document.getElementById('my-select');
+
+select.addEventListener('change', (e) => {
+  console.log('value: ', e.target.value);
+});
 `,
 },
 pixonur:{html:`
@@ -6119,6 +8291,24 @@ css:`
 }
 `,
 },
+pizafat:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS Sample</title>
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <a href="#" class="inline-block bg-gray-700 text-gray-50 px-4 py-2 rounded hover:bg-gray-800">Test</a>
+</body>
+
+</html>
+`,
+},
 pomapap:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -6150,6 +8340,63 @@ div.g {
 }
 `,
 },
+ponedej:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <ul class="tabs">
+        <li class="tab tab-lifted tab-active"><a href="#">収入</a></li>
+        <li class="tab tab-lifted"><a href="#">支出</a></li>
+        <li class="tab tab-lifted"><a href="#">合計</a></li>
+    </ul>
+</body>
+
+</html>
+`,
+},
+popamaf:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <div id="parent">
+    <p class="child">もともとの要素</p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+.child {
+  cursor: pointer;
+}
+`,
+javascript:`
+$('.child').on('click', () => {
+  console.log('.childのイベントハンドラ');
+});
+
+$('#parent').append('<p class="child">追加した要素</p>');
+`,
+},
 pufakub:{html:`
 <div></div>
 `,
@@ -6159,6 +8406,28 @@ div {
     height: 100px;
     background: url("https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/html-css/bg.jpg") center center/cover;
 }
+`,
+},
+pufapip:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <div>置き換える前</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+$('div').html('<a href="test.html">置き換えた後</a>');
 `,
 },
 pugifay:{html:`
@@ -6208,6 +8477,28 @@ css:`
   font-size: 16px;
   cursor: pointer;
 }
+`,
+},
+qacapuv:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <button type="button" id="my-button">押して！</button>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const button = document.getElementById('my-button');
+
+// ボタンをクリックすると、イベントリスナーが実行される
+button.addEventListener('click', () => {
+  alert('押された！');
+});
 `,
 },
 qazifum:{html:`
@@ -6350,6 +8641,85 @@ var value = 'こんにちは';
 
 // #my-inputに値をセット
 $('#my-input').val(value);
+`,
+},
+qezeduy:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <button-preference></button-preference>
+    <button-preference>すごいね！</button-preference>
+  </div>
+  <!--<script src="main.js"></script>-->
+  <!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const ButtonPreference = {
+  data() {
+    return { count: 0 }
+  },
+  methods: {
+    countUp() {
+      this.count += 1
+    },
+  },
+  template: `
+    <button v-on:click="countUp">
+      {{ count }} <slot>いいね！</slot>
+    </button>
+  `,
+}
+
+new Vue({
+  el: '#example',
+  components: {
+    'button-preference': ButtonPreference,
+  },
+})
+`,
+},
+qibomi:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <ul id="example">
+    <li
+      v-for="member in members"
+      v-bind:key="member"
+    >
+      {{ member }}
+    </li>
+  </ul>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const app = new Vue({
+  el: '#example',
+  data: {
+    members: ['桃太郎', 'イヌ', 'サル', 'キジ'],
+  },
+});
 `,
 },
 qiloyiv:{html:`
@@ -6571,6 +8941,145 @@ css:`
   background-color: gray;
 }
 
+`,
+},
+qowofi:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <ul class="tabs-menu">
+      <li
+        v-bind:class="{active: activeTab === 'tabs-1'}"
+        v-on:click="activeTab = 'tabs-1'"
+      >
+        タブ1
+      </li>
+      <li
+        v-bind:class="{active: activeTab === 'tabs-2'}"
+        v-on:click="activeTab = 'tabs-2'"
+      >
+        タブ2
+      </li>
+      <li
+        v-bind:class="{active: activeTab === 'tabs-3'}"
+        v-on:click="activeTab = 'tabs-3'"
+        >
+        タブ3
+      </li>
+    </ul>
+    <section class="tabs-content">
+      <section v-if="activeTab === 'tabs-1'">
+        <p>タブ1の内容が入ります。</p>
+      </section>
+      <section v-else-if="activeTab === 'tabs-2'">
+        <p>タブ2の内容が入ります。</p>
+      </section>
+      <section v-else-if="activeTab === 'tabs-3'">
+        <p>タブ3の内容が入ります。</p>
+      </section>
+      <section v-else>
+        <p>タブを選択してください。</p>
+      </section>
+    </section>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+body {
+  color: #3f4548;
+}
+
+/* ulのデフォルトスタイルを消去 */
+.tabs-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* タブの基本スタイル */
+.tabs-menu li {
+  display: block;
+  float: left;
+  margin-right: 8px;
+  margin-bottom: -1px;
+  padding: 10px 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 4px 4px 0 0;
+  color: #557f95;
+  text-decoration: none;
+
+  /* 各プロパティをふわっと変える演出 */
+  transition: all 0.15s;
+}
+
+/* タブにマウスを乗せたらカーソルの形を変える */
+.tabs-menu li:hover {
+  cursor: pointer;
+}
+
+/* 非選択のタブにマウスを乗せたら色を変える */
+.tabs-menu li:not(.active):hover {
+  border-color: #f0f0f0 #f0f0f0 #999;
+  background-color: #f0f0f0;
+}
+
+/* 選択中のタブ */
+.tabs-menu .active {
+  border-color: #999 #999 transparent #999;
+  background-color: #fff;
+}
+.tabs-menu .active {
+  color: #3f4548;
+}
+
+/* タブコンテンツ表示エリア */
+.tabs-content {
+  clear: both;
+  border: 1px solid #999;
+  border-radius: 0 4px 4px 4px;
+  padding: 10px;
+}
+`,
+javascript:`
+new Vue({
+  el: '#example',
+  data: {
+    activeTab: '',
+  },
+});
+`,
+},
+quqilul:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <button class="btn btn-primary">受信トレイ <span class="badge badge-ghost ml-1">7</span></div>
+</body>
+
+</html>
 `,
 },
 racuqud:{html:`
@@ -6893,6 +9402,225 @@ css:`
 }
 `,
 },
+rimozir:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <div class="carousel">
+    <ul class="slides">
+      <li>
+        <div class="box img1"></div>
+      </li>
+      <li>
+        <div class="box img2"></div>
+      </li>
+      <li>
+        <div class="box img3"></div>
+      </li>
+      <li>
+        <div class="box img4"></div>
+      </li>
+    </ul>
+    <a href="#" class="carousel-control carousel-control-prev inactive">&lt;</a>
+    <a href="#" class="carousel-control carousel-control-next inactive">&gt;</a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+.box {
+  width: 300px;
+  height: 300px;
+}
+.img1 {
+  background-color: tomato;
+}
+.img2 {
+  background-color: skyblue;
+}
+.img3 {
+  background-color: violet;
+}
+.img4 {
+  background-color: lime;
+}
+
+.carousel {
+  /* 子要素でposition:absoluteを使うために必要 */
+  position: relative;
+
+  /* 300x300の領域からはみ出た部分は非表示 */
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+
+  /* 左右中央寄せ */
+  margin: 0 auto;
+}
+
+/* 矢印の基本スタイル */
+.carousel-control {
+  display: block;
+  height: 50px;
+  width: 30px;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 45px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  opacity: 0.5;
+
+  /* 透明度をふわっと変える演出 */
+  transition: opacity 0.15s;
+}
+/* マウスが乗ったら濃くする */
+.carousel-control:hover {
+  opacity: 0.8;
+}
+
+/* 左矢印 */
+.carousel-control-prev {
+  position: absolute;
+  left: 0;
+  top: 125px;
+  text-indent: -2px;
+}
+
+/* 右矢印 */
+.carousel-control-next {
+  position: absolute;
+  right: 0;
+  top: 125px;
+  text-indent: 2px;
+}
+
+/* スライドのul */
+.slides {
+  /* .carouselの左上隅に表示 */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* 横に長いひと続きの写真にする */
+  width: 99999px;
+
+  /* ulのデフォルトスタイルを消去 */
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* 各スライドを横につなげる */
+.slides li {
+  float: left;
+  width: 300px;
+  height: 300px;
+}
+`,
+javascript:`
+// スライド1枚あたりの幅（px）
+const slideWidth = 300;
+
+// 現在表示中のスライドが何番目か（0から数え始める）
+let currentSlide = 0;
+
+// スライドの全枚数
+let numSlides;
+
+// index（0から始まる）番目のスライドを表示する関数
+const showSlide = (index) => {
+  // 1番目のスライドでは左矢印を非表示
+  if (index === 0) {
+    $('.carousel-control-prev').hide();
+  } else {
+    $('.carousel-control-prev').show();
+  }
+
+  // 最後のスライドでは右矢印を非表示
+  if (index === numSlides - 1) {
+    $('.carousel-control-next').hide();
+  } else {
+    $('.carousel-control-next').show();
+  }
+
+  // 実行中のアニメーションがあればキャンセルした後、
+  // leftを変化させるアニメーションを開始
+  $('.slides')
+    .stop()
+    .animate(
+      {
+        left: `${-slideWidth * currentSlide}px`,
+      },
+      600,
+    );
+};
+
+// 左矢印がクリックされたら1つ前のスライドを表示
+$('.carousel-control-prev').on('click', (e) => {
+  e.preventDefault();
+
+  currentSlide -= 1;
+  showSlide(currentSlide);
+});
+
+// 右矢印がクリックされたら1つ後のスライドを表示
+$('.carousel-control-next').on('click', (e) => {
+  e.preventDefault();
+
+  currentSlide += 1;
+  showSlide(currentSlide);
+});
+
+// スライドが全部で何枚あるか取得
+numSlides = $('.slides > li').length;
+
+// 最初のスライドを表示
+showSlide(currentSlide);
+`,
+},
+riwezim:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <div class="card card-bordered w-1/2">
+        <figure class="bg-sky-100 p-2">
+            <img src="https://demo.techacademy.jp/assets/logo-blue.svg">
+        </figure>
+        <div class="card-body">
+            <div class="card-title">新着情報</div>
+            <ul>
+                <li><a href="#" class="link link-primary">友達リクエストが1件あります</a></li>
+                <li><a href="#" class="link link-primary">メッセージが3件届いています</a></li>
+                <li><a href="#" class="link link-primary">今日開催のイベントがあります</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
+`,
+},
 rocofiy:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -6914,6 +9642,71 @@ css:`
     padding: 50px;
     background-color: skyblue;
 }
+`,
+},
+roxilif:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+      
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-base-200">
+        <!-- ホームへ戻るリンク。ブランドロゴなどを置く。 -->
+        <a class="btn btn-ghost normal-case text-xl">P&amp;K</a>
+
+        <!-- メニュー項目 -->
+        <ul class="menu menu-horizontal p-0">
+            <li><a href="#" class="active">子犬</a></li>
+            <li><a href="#">子猫</a></li>
+            <li tabindex="0">
+                <a href="#">
+                    会社情報
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <ul class="p-2 bg-base-100 shadow">
+                    <li><a href="#">ビジョン</a></li>
+                    <li><a href="#">会社概要</a></li>
+                    <li><a href="#">地図</a></li>
+                    <li><a href="#">沿革</a></li>
+                </ul>
+            </li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
+`,
+},
+ruborol:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+    </svg>
+    ダウンロード
+</body>
+
+</html>
 `,
 },
 rugedej:{html:`
@@ -7133,6 +9926,29 @@ $(window).on('resize', function() {
 
 `,
 },
+sahazaz:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <button type="button" id="my-button">押して！</button>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const button = document.getElementById('my-button');
+const box = document.getElementById('box');
+
+button.addEventListener('click', () => {
+  box.innerHTML += 'どん！<br>';
+});
+`,
+},
 salobub:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -7151,6 +9967,62 @@ salobub:{html:`
         それぞれheadタグとbodyタグで囲います。</p>
     </body>
 </html>
+`,
+},
+sanetib:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <button-preference></button-preference>
+    <button-preference></button-preference>
+    <button-preference></button-preference>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+Vue.component('button-preference', {
+  template: '<button>いいね！</button>',
+});
+
+new Vue({
+  el: '#example',
+});
+`,
+},
+segukeh:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <input type="text" id="my-input">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const value = 'こんにちは';
+
+// #my-inputに値をセット
+$('#my-input').val(value);
 `,
 },
 sepuhed:{html:`
@@ -7215,6 +10087,69 @@ body {
   height: 150px;
   background-color: palegreen;
 }
+`,
+},
+seqixom:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <p v-change-color="'red'">クリックすると赤に</p>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+Vue.directive('change-color', {
+  bind(el, binding) {
+    el.addEventListener('click', () => {
+      el.style.color = binding.value;
+    });
+  },
+});
+
+new Vue({
+  el: '#example',
+});
+`,
+},
+seramam:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <div class="my-click child">クリックしてください</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+.child {
+  cursor: pointer;
+}
+`,
+javascript:`
+$('.my-click').on('click', { test: 'テストデータ' }, (e) => {
+  console.log('追加したデータ：', e.data.test);
+});
 `,
 },
 sesetir:{html:`
@@ -7366,6 +10301,51 @@ css:`
 }
 `,
 },
+sijower:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <div class="box"></div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+}
+`,
+javascript:`
+const onMouseenter = (e) => {
+  // マウスが乗った時の処理
+  $(e.target).css({
+    'background-color': '#ff9999',
+  });
+};
+const onMouseleave = (e) => {
+  // マウスが外れた時の処理
+  $(e.target).css({
+    'background-color': '#dddddd',
+  });
+};
+
+$('.box')
+  .on('mouseenter', onMouseenter)
+  .on('mouseleave', onMouseleave);
+`,
+},
 silafaw:{html:`
 <!DOCTYPE html>
 <html>
@@ -7448,6 +10428,31 @@ box-shadow: none !important;
 javascript:`
 $('#smarttab').smartTab({
   enableURLhash: false
+});
+`,
+},
+soguwe:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <button type="button" class="my-button">表示切り替え</button>
+  <div class="box">テキスト</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+$('.my-button').on('click', () => {
+  $('.box').toggle();
 });
 `,
 },
@@ -7561,6 +10566,36 @@ javascript:`
 $('[href="pm.html"]').text('こんにちは！');
 `,
 },
+sukeqax:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <div class="dropdown">
+        <button class="btn">操作 ▼</button>
+        <!-- 選択肢 -->
+        <ul class="dropdown-content menu p-2 bg-base-100 w-52">
+            <li><a href="#">返信</a></li>
+            <li><a href="#">転送</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a href="#">削除</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
+`,
+},
 suqupe:{html:`
 <div></div>
 `,
@@ -7657,6 +10692,136 @@ p {
     color: green;
 }
 
+`,
+},
+tawugik:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="example">
+      <template v-if="tabs !== null">
+        <ul class="tabs-menu">
+          <li
+            v-for="tab in tabs"
+            v-bind:key="tab.id"
+            v-bind:class="{active: activeTab.id === tab.id}"
+            v-on:click="activeTab = tab"
+          >
+            {{ tab.title }}
+          </li>
+        </ul>
+        <section class="tabs-content">
+          <section>
+            <p>{{ activeTab.content }}</p>
+          </section>
+        </section>
+      </template>
+      <template v-else>
+        <p>データを取得中です。</p>
+      </template>
+    </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+body {
+  color: #3f4548;
+}
+
+/* ulのデフォルトスタイルを消去 */
+.tabs-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* タブの基本スタイル */
+.tabs-menu li {
+  display: block;
+  float: left;
+  margin-right: 8px;
+  margin-bottom: -1px;
+  padding: 10px 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 4px 4px 0 0;
+  color: #557f95;
+  text-decoration: none;
+
+  /* 各プロパティをふわっと変える演出 */
+  transition: all 0.15s;
+}
+
+/* タブにマウスを乗せたらカーソルの形を変える */
+.tabs-menu li:hover {
+  cursor: pointer;
+}
+
+/* 非選択のタブにマウスを乗せたら色を変える */
+.tabs-menu li:not(.active):hover {
+  border-color: #f0f0f0 #f0f0f0 #999;
+  background-color: #f0f0f0;
+}
+
+/* 選択中のタブ */
+.tabs-menu .active {
+  border-color: #999 #999 transparent #999;
+  background-color: #fff;
+}
+.tabs-menu .active {
+  color: #3f4548;
+}
+
+/* タブコンテンツ表示エリア */
+.tabs-content {
+  clear: both;
+  border: 1px solid #999;
+  border-radius: 0 4px 4px 4px;
+  padding: 10px;
+}
+`,
+javascript:`
+new Vue({
+  el: '#example',
+  data: {
+    tabs: null,
+    activeTab: null,
+  },
+  created() {
+    setTimeout(() => {
+      const fetchedData = [
+        {
+          id: 'tabs-1',
+          title: 'タブ１',
+          content: 'タブ１の内容が入ります。',
+        },
+        {
+          id: 'tabs-2',
+          title: 'タブ２',
+          content: 'タブ２の内容が入ります。',
+        },
+        {
+          id: 'tabs-3',
+          title: 'タブ３',
+          content: 'タブ３の内容が入ります。',
+        },
+      ];
+      this.tabs = fetchedData;
+      this.activeTab = fetchedData[0];
+    }, 2000);
+  },
+});
 `,
 },
 taxaduy:{html:`
@@ -7959,13 +11124,13 @@ tijiwon:{html:`
       <p>ページを下方向にスクロールするとアニメーションが確認できます</p>
     </section>
     <section class="section">
-      <div class="box animate__animated"></div>
+      <div class="box animate__animated js-fadein-left"></div>
     </section>
     <section class="section">
-      <div class="box animate__animated"></div>
+      <div class="box animate__animated js-fadein-left"></div>
     </section>
     <section class="section">
-      <div class="box animate__animated"></div>
+      <div class="box animate__animated js-fadein-left"></div>
     </section>
   </main>
 
@@ -7994,13 +11159,13 @@ css:`
 }
 
 /* ページ読み込み直後にフェードイン要素を非表示にする */
-.animate__animated {
+.js-fadein-left {
   opacity: 0;
 }
 
 `,
 javascript:`
-$('.animate__animated').waypoint({
+$('.js-fadein-left').waypoint({
   handler: function(direction) {
     // 要素が画面中央に来るとここが実行される
     if (direction === 'down') {
@@ -8014,7 +11179,7 @@ $('.animate__animated').waypoint({
         .addClass('animate__fadeInLeft');
     }
   },
-
+  
   // 要素が画面中央に来たらhandlerを実行
   offset: '50%',
 });
@@ -8161,6 +11326,34 @@ a {
 
 `,
 },
+tiqaxav:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <a v-bind:href="url">テックアカデミー</a>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const app = new Vue({
+  el: '#example',
+  data: {
+    url: 'https://techacademy.jp/',
+  },
+});
+`,
+},
 tiruzoq:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -8198,6 +11391,32 @@ tixupit:{html:`
         <p>headタグ内に記述するメタ情報には、ページタイトル、外部スタイルシートの場所、外部JavaScriptファイルの場所、文字エンコーディング情報、ページの概要、などが含まれます。ブラウザで表示した際に、これらの内容は表示されません。</p>
     </body>
 </html>
+`,
+},
+tocopoy:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <input type="text" class="my-input">
+  <div class="box"></div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+$('.my-input').on('input', (e) => {
+  const value = $(e.target).val();
+  $('.box').text(value);
+});
 `,
 },
 todunoc:{html:`
@@ -8316,6 +11535,57 @@ css:`
 .pseudo:after {
     content: "おやすみ！";
 }
+`,
+},
+tupuhut:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <div>
+      <p>身長： <input v-model="height" type="text"> cm</p>
+      <p>体重： <input v-model="weight" type="text"> kg</p>
+    </div>
+    <div>
+      BMI: {{ getBmi() }}
+    </div>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const app = new Vue({
+  el: '#example',
+  data: {
+    height: '',
+    weight: '',
+  },
+  methods: {
+    getBmi() {
+      if (this.height && this.weight) {
+        // センチメートルをメートルに変換する
+        const meterHeight = this.height / 100;
+
+        // BMIを計算する
+        const bmi = this.weight / (meterHeight * meterHeight);
+
+        // 小数点以下の桁数を、２桁にして返す
+        return bmi.toFixed(2);
+      }
+
+      return '';
+    },
+  },
+});
 `,
 },
 tusufow:{html:`
@@ -8438,6 +11708,128 @@ vegoper:{html:`
 
 `,
 },
+verereb:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <div id="parent">
+    <p class="child">もともとの要素</p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+.child {
+  cursor: pointer;
+}
+`,
+javascript:`
+// もともとの要素にイベントハンドラを登録する
+$('.child').on('click', () => {
+  console.log('.childのイベントハンドラ');
+});
+
+// DOM要素を生成する
+const $newElement = $('<p>', {
+  class: 'child',
+  text: '追加した要素',
+});
+
+// 生成したDOM要素にイベントハンドラを登録する
+$newElement.on('click', () => {
+  console.log('追加した.childのイベントハンドラ');
+});
+
+$('#parent').append($newElement);
+`,
+},
+vetinus:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <div class="my-2"><a href="#" class="btn">ボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-primary normal-case">primaryボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-secondary normal-case">secondaryボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-accent normal-case">accentボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-info normal-case">infoボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-success normal-case">successボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-warning normal-case">warningボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-error normal-case">errorボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-ghost normal-case">ghostボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-link normal-case">linkボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-outline normal-case">outlineボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-active normal-case">activeボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-disabled normal-case">disabledボタン</a></div>
+</body>
+
+</html>
+`,
+},
+vexadij:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <button-preference>すごいね！</button-preference>
+  </div>
+  <!--<script src="main.js"></script>-->
+  <!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const ButtonPreference = {
+  data() {
+    return { count: 0 }
+  },
+  methods: {
+    countUp() {
+      this.count += 1
+    },
+  },
+  template: `
+    <button v-on:click="countUp">
+      {{ count }} <slot></slot>
+    </button>
+  `,
+}
+
+new Vue({
+  el: '#example',
+  components: {
+    'button-preference': ButtonPreference,
+  },
+})
+`,
+},
 vikebox:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -8465,6 +11857,188 @@ css:`
 javascript:`
 $('.my-click').on('click', { test: 'テストデータ' }, function(e) {
   console.log('追加したデータ：', e.data.test);
+});
+`,
+},
+vikuvit:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <button type="button" id="my-button">押して！</button>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const button = document.getElementById('my-button');
+
+function onClick() {
+  alert('押された！');
+}
+
+// ボタンをクリックすると、イベントリスナーが実行される
+button.addEventListener('click', onClick);
+`,
+},
+vixicir:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+css:`
+#box {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  background-color: #ccc;
+  text-align: center;
+}
+`,
+javascript:`
+const box = document.getElementById('box');
+
+// マウスが乗った時
+box.addEventListener(
+  'mouseenter',
+  // e.targetはイベント発生元の要素（<div id="box">）を表す
+  (e) => {
+    e.target.textContent = 'マウスが乗った！';
+  }
+);
+
+// マウスが離れた時
+box.addEventListener(
+  'mouseleave',
+  (e) => {
+    e.target.textContent = 'マウスが離れた！';
+  }
+);
+`,
+},
+vizataf:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <ul class="tabs-menu">
+      <li
+        v-bind:class="{active: activeTab === 'tabs-1'}"
+        v-on:click="activeTab = 'tabs-1'"
+      >
+        タブ1
+      </li>
+      <li
+        v-bind:class="{active: activeTab === 'tabs-2'}"
+        v-on:click="activeTab = 'tabs-2'"
+      >
+        タブ2
+      </li>
+      <li
+        v-bind:class="{active: activeTab === 'tabs-3'}"
+        v-on:click="activeTab = 'tabs-3'"
+      >
+        タブ3
+      </li>
+    </ul>
+    <section class="tabs-content">
+      <section v-show="activeTab === 'tabs-1'">
+        <p>タブ1の内容が入ります。</p>
+      </section>
+      <section v-show="activeTab === 'tabs-2'">
+        <p>タブ2の内容が入ります。</p>
+      </section>
+      <section v-show="activeTab === 'tabs-3'">
+        <p>タブ3の内容が入ります。</p>
+      </section>
+    </section>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+body {
+  color: #3f4548;
+}
+
+/* ulのデフォルトスタイルを消去 */
+.tabs-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* タブの基本スタイル */
+.tabs-menu li {
+  display: block;
+  float: left;
+  margin-right: 8px;
+  margin-bottom: -1px;
+  padding: 10px 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 4px 4px 0 0;
+  color: #557f95;
+  text-decoration: none;
+
+  /* 各プロパティをふわっと変える演出 */
+  transition: all 0.15s;
+}
+
+/* タブにマウスを乗せたらカーソルの形を変える */
+.tabs-menu li:hover {
+  cursor: pointer;
+}
+
+/* 非選択のタブにマウスを乗せたら色を変える */
+.tabs-menu li:not(.active):hover {
+  border-color: #f0f0f0 #f0f0f0 #999;
+  background-color: #f0f0f0;
+}
+
+/* 選択中のタブ */
+.tabs-menu .active {
+  border-color: #999 #999 transparent #999;
+  background-color: #fff;
+  color: #3f4548;
+}
+
+/* タブコンテンツ表示エリア */
+.tabs-content {
+  clear: both;
+  border: 1px solid #999;
+  border-radius: 0 4px 4px 4px;
+  padding: 10px;
+}
+`,
+javascript:`
+new Vue({
+  el: '#example',
+  data: {
+    activeTab: 'tabs-1',
+  },
 });
 `,
 },
@@ -8630,6 +12204,35 @@ css:`
 }
 `,
 },
+vujukod:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <button-preference></button-preference>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+Vue.component('button-preference', {
+  template: '<button>いいね！</button>',
+});
+
+new Vue({
+  el: '#example',
+});
+`,
+},
 vuripux:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -8725,6 +12328,41 @@ div {
 }
 `,
 },
+wafaruq:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <div id="outer">
+    親要素
+    <div id="inner">
+      子要素
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+#inner {
+  margin: 20px;
+}
+`,
+javascript:`
+$('#inner')
+  .parent()
+  .css({ 'background-color': 'skyblue' });
+`,
+},
 webelej:{html:`
 <ol>
   <li>順序ありリスト1</li>
@@ -8733,6 +12371,41 @@ webelej:{html:`
   <li>順序ありリスト4</li>
 </ol>
 
+`,
+},
+wejelok:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <div id="outer">
+    親要素
+    <div id="inner">
+      子要素
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+#inner {
+  margin: 20px;
+}
+`,
+javascript:`
+$('#outer')
+  .children()
+  .css({ 'background-color': 'skyblue' });
 `,
 },
 wekesub:{html:`
@@ -8768,6 +12441,72 @@ css:`
   font-size: 32px;
   /* font-size: 2rem; */　/* 32pxと同じフォントサイズ */   
 }
+`,
+},
+weropov:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-base-200">
+        <!-- ホームへ戻るリンク。ブランドロゴなどを置く。 -->
+        <a class="btn btn-ghost normal-case text-xl">P&amp;K</a>
+
+        <!-- メニュー項目 -->
+        <ul class="menu menu-horizontal p-0">
+            <li><a href="#" class="active">子犬</a></li>
+            <li><a href="#">子猫</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
+`,
+},
+wifuzop:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <ul id="example">
+    <li
+      v-for="(character, key) in characters"
+      v-bind:key="key"
+    >
+      {{ key }}：{{ character }}
+    </li>
+  </ul>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+const app = new Vue({
+  el: '#example',
+  data: {
+    characters: {
+      hero: '桃太郎',
+      friend: 'イヌ',
+      enemy: '鬼',
+    },
+  },
+});
 `,
 },
 wigisos:{html:`
@@ -9269,6 +13008,31 @@ a {
 
 `,
 },
+wurulun:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <div id="box">重要な文章</div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+$('#box').css({
+  'color': '#ffffff',
+  'background-color': '#000000',
+});
+`,
+},
 xavarap:{html:`
 <!DOCTYPE html>
 <html>
@@ -9466,6 +13230,30 @@ css:`
   font-size: 1.5rem;
 }
 
+`,
+},
+xemajok:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+</head>
+
+<body>
+  <a href="am.html">おはよう</a>
+  <a href="am.html">おはよう</a>
+  <a href="pm.html">おはよう</a>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+$('[href="pm.html"]').text('こんにちは！');
 `,
 },
 xequyib:{html:`
@@ -9874,6 +13662,59 @@ $('.carousel').slick({
 });
 `,
 },
+xohaden:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <carousel>
+      <slide><span class="label">スライド１の内容</span></slide>
+      <slide><span class="label">スライド２の内容</span></slide>
+      <slide><span class="label">スライド３の内容</span></slide>
+      <slide><span class="label">スライド４の内容</span></slide>
+    </carousel>
+  </div>
+  <script src="https://ssense.github.io/vue-carousel/js/vue-carousel.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+.VueCarousel-slide {
+  position: relative;
+  min-height: 300px;
+  text-align: center;
+  font-size: 24px;
+  background-color: skyblue;
+  color: #fff;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+`,
+javascript:`
+new Vue({
+  el: '#example',
+  components: {
+    carousel: VueCarousel.Carousel,
+    slide: VueCarousel.Slide,
+  },
+});
+`,
+},
 xojipiw:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -10055,6 +13896,105 @@ css:`
   background-color: #f6bfbc;
   border-radius: 50%;
 }
+`,
+},
+yecomop:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <div id="wrapper">
+    wrapper-header
+    <div id="box">
+      box-header
+      <div id="inner">
+        inner-header
+        <div id="inside">inside</div>
+        inner-footer
+      </div>
+      box-footer
+    </div>
+    wrarpper-footer
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+#box,
+#inner,
+#inside {
+  margin: 20px;
+}
+`,
+javascript:`
+$('#inside').css({
+  'background-color': 'yellow',
+});
+
+$('#inside')
+  .parent()
+  .css({
+    'background-color': 'purple',
+  });
+
+$('#inside')
+  .parent()
+  .parent()
+  .css({
+    'background-color': 'tomato',
+  });
+
+$('#inside')
+  .parent()
+  .parent()
+  .parent()
+  .css({
+    'background-color': 'skyblue',
+  });
+`,
+},
+yedelan:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <p>
+      <button type="button" id="my-button">くじを引く</button>
+    </p>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const button = document.getElementById('my-button');
+const box = document.getElementById('box');
+
+button.addEventListener('click', () => {
+  // 0以上1未満のランダムな数値をnum変数に代入する
+  const num = Math.random();
+
+  if (num >= 0.5) {
+    // numが0.5以上の場合
+    box.innerHTML = `${num}<br>当たり！`;
+  } else {
+    // numが0.5未満の場合
+    box.innerHTML = `${num}<br>ハズレ…`;
+  }
+});
 `,
 },
 yigipah:{html:`
@@ -10373,6 +14313,62 @@ p:after {
 }
 `,
 },
+yurigiv:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <button type="button" class="my-button-anim">アニメーション</button>
+  <button type="button" class="my-button-re">元に戻す</button>
+  <div class="box"></div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+.box {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #f66;
+}
+`,
+javascript:`
+const $box = $('.box');
+const duration = 1000;
+
+$('.my-button-anim').on('click', () => {
+  $box.animate(
+    {
+      width: '200px',
+      left: '200px',
+    },
+    duration,
+  );
+});
+
+$('.my-button-re').on('click', () => {
+  $box.animate(
+    {
+      width: '60px',
+      left: '0px',
+    },
+    duration,
+  );
+});
+`,
+},
 yuyeli:{html:`
 <!DOCTYPE html>
 <html>
@@ -10398,6 +14394,23 @@ css:`
 }
 
 
+`,
+},
+zapovux:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+document.getElementById('box').textContent = 'abc' + 'def';
 `,
 },
 zaqikah:{html:`
@@ -10495,6 +14508,47 @@ css:`
 }
 `,
 },
+zedetej:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery テスト</title>
+  <!--<link rel="stylesheet" href="main.css">--><!-- JS Bin上では省略 -->
+</head>
+
+<body>
+  <button type="button" class="my-button-in">スライドダウン</button>
+  <button type="button" class="my-button-out">スライドアップ</button>
+  <div class="box"></div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+css:`
+.box {
+  display: none;
+  width: 200px;
+  height: 200px;
+  background-color: #666;
+}
+`,
+javascript:`
+const $box = $('.box');
+
+$('.my-button-in').on('click', () => {
+  $box.slideDown();
+});
+
+$('.my-button-out').on('click', () => {
+  $box.slideUp();
+});
+`,
+},
 zedomug:{html:`
 <!DOCTYPE html>
 <html>
@@ -10560,6 +14614,36 @@ a {
   font-weight: 700;
   color: #fff;
   background-color: #26547c;
+}
+`,
+},
+zexatis:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+css:`
+.bordered {
+  border: 1px solid #e00;
+}
+`,
+javascript:`
+const box = document.getElementById('box');
+
+for (let i = 0; i < 5; i++) {
+  const p = document.createElement('p');
+
+  p.textContent = 'こんにちは';
+  p.setAttribute('class', 'bordered');
+  box.appendChild(p);
 }
 `,
 },
@@ -10779,6 +14863,96 @@ css:`
 }
 `,
 },
+ziqisuk:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <form>
+        <!-- ラジオボタン -->
+        <div>性別</div>
+        <div class="flex gap-2 mb-4">
+            <div class="form-control items-center">
+                <label for="m" class="label cursor-pointer">
+                    <input type="radio" name="test1" id="m" value="m" class="radio" checked>
+                    <span class="label-text">男性</span>
+                </label>
+            </div>
+            <div class="form-control items-center">
+                <label for="f" class="label cursor-pointer">
+                    <input type="radio" name="test1" id="f" value="f" class="radio">
+                    <span class="label-text">女性</span>
+                </label>
+            </div>
+            <div class="form-control items-center">
+                <label for="e" class="label cursor-pointer">
+                    <input type="radio" name="test1" id="e" value="e" class="radio">
+                    <span class="label-text">その他</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- チェックボックス -->
+        <div>好きなスポーツ</div>
+        <div class="flex gap-2 mb-4">
+            <div class="form-control items-center">
+                <label for="baseball" class="label cursor-pointer">
+                    <input type="checkbox" name="test2" id="baseball" value="baseball" class="checkbox">
+                    <span class="label-text">野球</span>
+                </label>
+            </div>
+            <div class="form-control items-center">
+                <label for="football" class="label cursor-pointer">
+                    <input type="checkbox" name="test2" id="football" value="football" class="checkbox">
+                    <span class="label-text">サッカー</span>
+                </label>
+            </div>
+            <div class="form-control items-center">
+                <label for="basketball" class="label cursor-pointer">
+                    <input type="checkbox" name="test2" id="basketball" value="basketball" class="checkbox">
+                    <span class="label-text">バスケットボール</span>
+                </label>
+            </div>
+            <div class="form-control items-center">
+                <label for="golf" class="label cursor-pointer">
+                    <input type="checkbox" name="test2" id="golf" value="golf" class="checkbox">
+                    <span class="label-text">ゴルフ</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- セレクトボックス -->
+        <div>好きなフルーツ</div>
+        <div class="form-control w-1/2 mb-4">
+            <select name="test3" class="select select-bordered">
+                <option disabled selected>選択してください</option>
+                <option value="a">りんご</option>
+                <option value="b">バナナ</option>
+                <option value="g">ぶどう</option>
+                <option value="k">キウイ</option>
+                <option value="s">いちご</option>
+            </select>
+        </div>
+
+        <!-- テキストエリア -->
+        <div>ご意見</div>
+        <div class="form-control w-1/2 mb-4">
+            <textarea class="textarea textarea-bordered" placeholder="ご意見をご記入ください"></textarea>
+        </div>
+    </form>
+</body>
+
+</html>
+`,
+},
 zisozom:{html:`
 <!DOCTYPE html>
 <html>
@@ -10912,6 +15086,39 @@ img {
 
 `,
 },
+zixohub:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="example">
+    <p v-hide-async="2000">２秒後に非表示</p>
+  </div>
+  <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+</body>
+
+</html>
+`,
+javascript:`
+Vue.directive('hide-async', {
+  bind(el, binding) {
+    setTimeout(() => {
+      el.style.display = 'none';
+    }, binding.value);
+  },
+});
+
+new Vue({
+  el: '#example',
+});
+`,
+},
 zobapoq:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -10934,6 +15141,76 @@ zobapoq:{html:`
 `,
 javascript:`
 $('a').attr('href', 'new.html');
+`,
+},
+zomutul:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <div id="box"></div>
+    <!--<script src="main.js"></script>--><!-- JS Bin上では省略 -->
+  </body>
+</html>
+`,
+javascript:`
+const box = document.getElementById('box');
+
+// 10回繰り返す
+for (let i = 1; i <= 10; i++) {
+  box.innerHTML += `${i}<br>`;
+}
+`,
+},
+zosipil:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <table class="table table-zebra w-full">
+        <thead>
+            <tr>
+                <th class="text-center normal-case">No.</th>
+                <th>都道府県</th>
+                <th class="text-right">人口（人）</th>
+                <th class="text-right normal-case">面積（km<sup>2</sup>）</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th class="text-center">1</th>
+                <td>東京都</td>
+                <td class="text-right">14,011,487</td>
+                <td class="text-right">2,194.05</td>
+            </tr>
+            <tr>
+                <th class="text-center">2</th>
+                <td>神奈川県</td>
+                <td class="text-right">9,236,428</td>
+                <td class="text-right">2,416.11</td>
+            </tr>
+            <tr>
+                <th class="text-center">3</th>
+                <td>大阪府</td>
+                <td class="text-right">8,807,279</td>
+                <td class="text-right">1,905.34</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
 `,
 },
 zulequc:{html:`
@@ -10990,6 +15267,31 @@ $('.my-form').on('submit', function(e) {
     $('.error').html('テキストが一致しました');
   }
 });
+`,
+},
+zupusir:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS Sample</title>
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+</head>
+
+<body class="m-4">
+    <div class="md:grid md:grid-cols-12 md:gap-4">
+        <!-- 1行目 -->
+        <div class="col-span-6 text-center bg-gray-200">01</div>
+        <div class="col-span-6 text-center bg-gray-200">02</div>
+        <!-- 2行目 -->
+        <div class="col-span-5 text-center bg-gray-200">03</div>
+        <div class="col-start-8 col-span-5 text-center bg-gray-200">04</div>
+    </div>
+</body>
+
+</html>
 `,
 }}
 
