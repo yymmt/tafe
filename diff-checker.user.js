@@ -43,7 +43,7 @@
                 };
                 let url;
                 let doc;
-                url="https://techacademy.jp/mentor/courses/first-sidejob/review_guide";
+                url="https://techacademy.jp/mentor/courses/first-sidejob/curriculums/first-sidejob-2/review_guide";
                 await fetch(url).then((response) => response.text()).then((html) => {
                     doc = new DOMParser().parseFromString(html, "text/html");
                 });
