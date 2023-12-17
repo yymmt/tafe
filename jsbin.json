@@ -3503,12 +3503,14 @@ css:`
   width: 100vw;
   height: 100vh;
   background-color: rgba(4, 0, 0, 0.9);
-  transition: opacity .3s linear;
+  transition: all .6s;
   opacity: 0;
+  visibility: hidden;
 }
 
 /* スライドイン後の位置の指定 */
 .hamburger-menu-active {
+  visibility: visible;
   opacity: 1;
 }
 
