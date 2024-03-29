@@ -787,7 +787,7 @@ cikobac:{html:`
     <header class="header">
       <!-- ロゴ -->
       <a href="#" class="logo">
-        <img src="./image/logo.png" alt="">
+        <img src="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/parts/logo-white.png" alt="">
       </a>
       <!-- ハンバーガーボタン -->
       <button type="button" class="hamburger-button">
@@ -12892,17 +12892,15 @@ wupusev:{html:`
         <title>HTML/CSS</title>
     </head>
     <body>
-        <p>文章</p>
-        <div>
-          <article>
-            <p>div > article > pの文章</p>
-          </article>
-        </div>
+        <p>テキストです</p>
+        <article>
+            <p>article > pの文章</p>
+        </article>
     </body>
 </html>
 `,
 css:`
-div article p {
+article p {
   color: red;
 }
 `,
