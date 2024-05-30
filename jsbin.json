@@ -101,6 +101,67 @@ css:`
 }
 `,
 },
+bewegab:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML/CSS</title>
+    </head>
+    <body>
+        <div class="parent1">
+            <div class="child1">
+                子要素1
+            </div>
+        </div>
+        <div class="parent2">
+            <div class="child2">
+                子要素2
+            </div>
+        </div>
+    </body>
+</html>
+`,
+css:`
+body {
+    margin: 0;   /* ブラウザのデフォルト値の打ち消し */
+}
+
+.parent1 {
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.parent2 {
+    width: 150px;
+    height: 150px;
+    background-color: skyblue;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.child1 {
+    width: 70px;
+    height: 70px;
+    background-color: palegreen;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.child2 {
+    width: 70px;
+    height: 70px;
+    background-color: orange;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+`,
+},
 bewudox:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -189,6 +250,39 @@ nav ul li {
     background-color: #dddddd;
     text-align: center;
     padding: 5px;
+}
+`,
+},
+bilojuf:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML/CSS</title>
+    </head>
+    <body>
+        <p class="bg-red">赤い背景の文章</p>
+        <p class="bg-green">緑の背景の文章</p>
+        <p class="bg-blue">青い背景の文章</p>
+        <p class="bg-yellow">黄色の背景の文章</p>
+    </body>
+</html>
+`,
+css:`
+.bg-red {
+    background-color: red;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.bg-yellow {
+    background-color: yellow;
 }
 `,
 },
@@ -293,6 +387,37 @@ a {
   content: "/";
 }
 
+`,
+},
+bogimab:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body class="m-4">
+    <div class="card card-bordered w-1/2">
+        <figure class="bg-sky-100 p-2">
+            <img src="https://demo.techacademy.jp/assets/logo-blue.svg">
+        </figure>
+        <div class="card-body">
+            <div class="card-title">新着情報</div>
+            <ul>
+                <li><a href="#" class="link link-primary">友達リクエストが1件あります</a></li>
+                <li><a href="#" class="link link-primary">メッセージが3件届いています</a></li>
+                <li><a href="#" class="link link-primary">今日開催のイベントがあります</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
 `,
 },
 botacuw:{html:`
@@ -2243,6 +2368,48 @@ body {
 }
 `,
 },
+fobotek:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+      
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-base-200">
+        <!-- ホームへ戻るリンク。ブランドロゴなどを置く。 -->
+        <a class="btn btn-ghost normal-case text-xl">P&amp;K</a>
+
+        <!-- メニュー項目 -->
+        <ul class="menu menu-horizontal p-0">
+            <li><a href="#" class="active">子犬</a></li>
+            <li><a href="#">子猫</a></li>
+            <li tabindex="0">
+                <details>
+                    <summary>
+                        会社情報
+                    </summary>
+                    <ul class="p-2 bg-base-100 shadow rounded-t-none">
+                        <li><a href="#">ビジョン</a></li>
+                        <li><a href="#">会社概要</a></li>
+                        <li><a href="#">地図</a></li>
+                        <li><a href="#">沿革</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
+`,
+},
 fohadab:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -2779,6 +2946,25 @@ furoyem:{html:`
 
 `,
 },
+futihir:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body class="m-4">
+    <button class="btn btn-primary">受信トレイ <span class="badge badge-ghost ml-1">7</span></div>
+</body>
+
+</html>
+`,
+},
 fuvupu:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -3313,6 +3499,96 @@ footer {
 }
 `,
 },
+gesowun:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body class="m-4">
+    <form>
+        <!-- ラジオボタン -->
+        <div>性別</div>
+        <div class="flex gap-2 mb-4">
+            <div class="form-control items-center">
+                <label for="m" class="label cursor-pointer">
+                    <input type="radio" name="test1" id="m" value="m" class="radio" checked>
+                    <span class="label-text">男性</span>
+                </label>
+            </div>
+            <div class="form-control items-center">
+                <label for="f" class="label cursor-pointer">
+                    <input type="radio" name="test1" id="f" value="f" class="radio">
+                    <span class="label-text">女性</span>
+                </label>
+            </div>
+            <div class="form-control items-center">
+                <label for="e" class="label cursor-pointer">
+                    <input type="radio" name="test1" id="e" value="e" class="radio">
+                    <span class="label-text">その他</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- チェックボックス -->
+        <div>好きなスポーツ</div>
+        <div class="flex gap-2 mb-4">
+            <div class="form-control items-center">
+                <label for="baseball" class="label cursor-pointer">
+                    <input type="checkbox" name="test2" id="baseball" value="baseball" class="checkbox">
+                    <span class="label-text">野球</span>
+                </label>
+            </div>
+            <div class="form-control items-center">
+                <label for="football" class="label cursor-pointer">
+                    <input type="checkbox" name="test2" id="football" value="football" class="checkbox">
+                    <span class="label-text">サッカー</span>
+                </label>
+            </div>
+            <div class="form-control items-center">
+                <label for="basketball" class="label cursor-pointer">
+                    <input type="checkbox" name="test2" id="basketball" value="basketball" class="checkbox">
+                    <span class="label-text">バスケットボール</span>
+                </label>
+            </div>
+            <div class="form-control items-center">
+                <label for="golf" class="label cursor-pointer">
+                    <input type="checkbox" name="test2" id="golf" value="golf" class="checkbox">
+                    <span class="label-text">ゴルフ</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- セレクトボックス -->
+        <div>好きなフルーツ</div>
+        <div class="form-control w-1/2 mb-4">
+            <select name="test3" class="select select-bordered">
+                <option disabled selected>選択してください</option>
+                <option value="a">りんご</option>
+                <option value="b">バナナ</option>
+                <option value="g">ぶどう</option>
+                <option value="k">キウイ</option>
+                <option value="s">いちご</option>
+            </select>
+        </div>
+
+        <!-- テキストエリア -->
+        <div>ご意見</div>
+        <div class="form-control w-1/2 mb-4">
+            <textarea class="textarea textarea-bordered" placeholder="ご意見をご記入ください"></textarea>
+        </div>
+    </form>
+</body>
+
+</html>
+`,
+},
 ginuhey:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -3576,6 +3852,73 @@ var hamburger = \$('.hamburger-menu');
   hamburger.removeClass('hamburger-menu-active');
 });
 
+`,
+},
+gujiniz:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-base-200">
+        <div class="flex-1">
+            <!-- ホームへ戻るリンク。ブランドロゴなどを置く。 -->
+            <a class="btn btn-ghost normal-case text-xl">P&amp;K</a>
+
+            <!-- メニュー項目 -->
+            <ul class="menu menu-horizontal p-0 hidden sm:inline-flex">
+                <li><a href="#" class="active">子犬</a></li>
+                <li><a href="#">子猫</a></li>
+                <li tabindex="0">
+                    <details>
+                        <summary>
+                            会社情報
+                        </summary>
+                        <ul class="p-2 bg-base-100 shadow rounded-t-none">
+                            <li><a href="#">ビジョン</a></li>
+                            <li><a href="#">会社概要</a></li>
+                            <li><a href="#">地図</a></li>
+                            <li><a href="#">沿革</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </div>
+        <div class="flex-none">
+            <div class="dropdown dropdown-end">
+                <button class="btn btn-ghost sm:hidden">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </span>
+                </button>
+                <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="#">子犬</a></li>
+                    <li><a href="#">子猫</a></li>
+                    <li class="menu-title"><span>会社概要</span></li>
+                    <ul class="p-2">
+                        <li><a href="#">ビジョン</a></li>
+                        <li><a href="#">会社概要</a></li>
+                        <li><a href="#">地図</a></li>
+                        <li><a href="#">沿革</a></li>
+                    </ul>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
 `,
 },
 gumoney:{html:`
@@ -4065,6 +4408,10 @@ buttonAdd.addEventListener('click', () => {
 });
 `,
 },
+https::{html:`
+undefined
+`,
+},
 hubupeb:{html:`
 <!DOCTYPE html>
 <html>
@@ -4428,6 +4775,30 @@ css:`
 }
 `,
 },
+jekihaw:{html:`
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <p>文章</p>
+  <div>
+      <article>
+          <p>div > article > pの文章</p>
+      </article>
+  </div>
+</body>
+</html>
+`,
+css:`
+div article p {
+    color: red;
+}
+`,
+},
 jepodas:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -4667,6 +5038,30 @@ div {
 }
 `,
 },
+josodej:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body class="m-4">
+    <button class="btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+        ダウンロード
+    </button>
+</body>
+
+</html>
+`,
+},
 jozenap:{html:`
 <div></div>
 `,
@@ -4794,6 +5189,38 @@ const app = new Vue({
     },
   },
 });
+`,
+},
+kalatoj:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body class="m-4">
+    <div class="my-2"><a href="#" class="btn normal-case">ボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-neutral normal-case">neutralボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-primary normal-case">primaryボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-secondary normal-case">secondaryボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-accent normal-case">accentボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-info normal-case">infoボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-success normal-case">successボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-warning normal-case">warningボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-error normal-case">errorボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-ghost normal-case">ghostボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-link normal-case">linkボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-outline normal-case">outlineボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-active normal-case">activeボタン</a></div>
+    <div class="my-2"><a href="#" class="btn btn-disabled normal-case">disabledボタン</a></div>
+</body>
+
+</html>
 `,
 },
 kawidob:{html:`
@@ -5142,6 +5569,29 @@ kubulip:{html:`
 javascript:`
 const url = 'pm.html';
 \$(\`[href="\${url}"]\`).text('こんにちは！');
+`,
+},
+kubumiy:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body class="m-4">
+    <ul class="tabs tabs-lifted">
+        <li class="tab tab-active"><a href="#">収入</a></li>
+        <li class="tab"><a href="#">支出</a></li>
+        <li class="tab"><a href="#">合計</a></li>
+    </ul>
+</body>
+
+</html>
 `,
 },
 kufoxat:{html:`
@@ -6868,6 +7318,60 @@ nafoven:{html:`
 </html>
 `,
 },
+najigeg:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML/CSS</title>
+    </head>
+    <body>
+        <div class="div1">
+            div1
+        </div>
+        <div class="div2">
+            div2
+        </div>
+        <div class="div3">
+            div3
+        </div>
+    </body>
+</html>
+`,
+css:`
+body {
+    margin: 0;   /* ブラウザのデフォルト値の打ち消し */
+}
+
+.div1 {
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.div2 {
+    width: 50px;
+    height: 50px;
+    background-color: palegreen;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+.div3 {
+    width: 50px;
+    height: 50px;
+    background-color: skyblue;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 1;
+}
+`,
+},
 nawabuq:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -7664,6 +8168,49 @@ css:`
 .f {
   color: rgba(255, 0, 255, 0.5); /* 透明度:0.5 */
 }
+`,
+},
+nodatuw:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body class="m-4">
+    <div class="alert mb-2">
+        <div class="w-full text-left">
+            3件の新着情報があります
+        </div>
+    </div>
+    <div class="alert alert-info mb-2">
+        <div class="w-full text-left">
+            最新版のソフトウェアが公開されました
+        </div>
+    </div>
+    <div class="alert alert-success mb-2">
+        <div class="w-full text-left">
+            登録が完了しました！
+        </div>
+    </div>
+    <div class="alert alert-warning mb-2">
+        <div class="w-full text-left">
+            安全のためパスワードを変更してください
+        </div>
+    </div>
+    <div class="alert alert-error mb-2">
+        <div class="w-full text-left">
+            ユーザ名かパスワードが間違っています
+        </div>
+    </div>
+</body>
+
+</html>
 `,
 },
 nofefoq:{html:`
@@ -9156,6 +9703,60 @@ javascript:`
 \$('#pm').text('こんにちは！');
 `,
 },
+rayivix:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS Sample</title>
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body class="m-4">
+    <div class="md:grid md:grid-cols-12 md:gap-4">
+        <!-- 1行目 -->
+        <div class="col-span-6 text-center bg-gray-200">01</div>
+        <div class="col-span-6 text-center bg-gray-200">02</div>
+        <!-- 2行目 -->
+        <div class="col-span-5 text-center bg-gray-200">03</div>
+        <div class="col-start-8 col-span-5 text-center bg-gray-200">04</div>
+    </div>
+</body>
+
+</html>
+`,
+},
+rejipis:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body class="m-4">
+    <div><span class="badge">未確認</span></div>
+    <div><span class="badge badge-neutral">確認済み</span></div>
+    <div><span class="badge badge-primary">最優先</span></div>
+    <div><span class="badge badge-secondary">重要</span></div>
+    <div><span class="badge badge-accent">補足</span></div>
+    <div><span class="badge badge-info">新着</span></div>
+    <div><span class="badge badge-success">100%</span></div>
+    <div><span class="badge badge-warning">警告</span></div>
+    <div><span class="badge badge-error">危険</span></div>
+    <div><span class="badge badge-outline">お知らせ</span></div>
+    <div><span class="badge badge-ghost">保留</span></div>
+</body>
+
+</html>
+`,
+},
 rejosaf:{html:`
 <!DOCTYPE html>
 <html>
@@ -10004,6 +10605,35 @@ new Vue({
 });
 `,
 },
+sapowog:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-base-200">
+        <!-- ホームへ戻るリンク。ブランドロゴなどを置く。 -->
+        <a class="btn btn-ghost normal-case text-xl">P&amp;K</a>
+
+        <!-- メニュー項目 -->
+        <ul class="menu menu-horizontal p-0">
+            <li><a href="#" class="active">子犬</a></li>
+            <li><a href="#">子猫</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
+`,
+},
 segukeh:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -10027,6 +10657,61 @@ const value = 'こんにちは';
 
 // #my-inputに値をセット
 \$('#my-input').val(value);
+`,
+},
+selukos:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML/CSS</title>
+    </head>
+    <body>
+        <div class="parent1">
+            <div class="child1">
+                子要素1
+            </div>
+        </div>
+        <div class="parent2">
+            <div class="child2">
+                子要素2
+            </div>
+        </div>
+    </body>
+</html>
+`,
+css:`
+body {
+    margin: 0;   /* ブラウザのデフォルト値の打ち消し */
+}
+
+.parent1 {
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.parent2 {
+    width: 150px;
+    height: 150px;
+    background-color: skyblue;
+    position: absolute;
+    top: 160px;
+    left: 10px;
+}
+
+.child1 {
+    width: 70px;
+    height: 70px;
+    background-color: palegreen;
+}
+.child2 {
+    width: 70px;
+    height: 70px;
+    background-color: orange;
+}
 `,
 },
 sepuhed:{html:`
@@ -10870,6 +11555,42 @@ li:not(:last-child) {
 }
 `,
 },
+tecapiy:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body class="m-4">
+    <div>
+        <button class="btn btn-primary btn-block normal-case">Block level button 1</button>
+    </div>
+    <div class="mt-2">
+        <button class="btn btn-secondary btn-block normal-case">Block level button 2</button>
+    </div>
+
+    <div class="flex mt-2">
+        <div class="w-1/2 bg-gray-200">xxx</div>
+        <div class="w-1/2 col-span-2">
+            <div class="ml-2">
+                <button class="btn btn-primary btn-block normal-case">Block level button 1</button>
+            </div>
+            <div class="ml-2 mt-2">
+                <button class="btn btn-secondary btn-block normal-case">Block level button 2</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+`,
+},
 telifok:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -11473,6 +12194,90 @@ nav ul li {
 }
 `,
 },
+tosebif:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS Sample</title>
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body class="m-4">
+    <a href="#" class="inline-block bg-gray-700 text-gray-50 px-4 py-2 rounded hover:bg-gray-800">Test</a>
+</body>
+
+</html>
+`,
+},
+tosized:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body class="m-4">
+    <!-- フォームの基本 -->
+    <form>
+        <div class="form-control w-full my-4">
+            <label for="test1" class="label">
+                <span class="label-text">お名前</span>
+            </label>
+            <input type="text" name="test1" placeholder="お名前を入力してください" class="input input-bordered w-full">
+        </div>
+    </form>
+
+    <hr>
+
+    <!-- ラベルを横に並べる -->
+    <form>
+        <div class="form-control w-full my-4">
+            <label for="test2" class="label">
+                <span class="label-text w-1/6">姓</span>
+                <input type="text" name="test2" placeholder="姓を入力してください" class="input input-bordered w-5/6">
+            </label>
+        </div>
+
+        <div class="form-control w-full my-4">
+            <label for="test3" class="label">
+                <span class="label-text w-1/6">名</span>
+                <input type="text" name="test3" placeholder="名を入力してください" class="input input-bordered w-5/6">
+            </label>
+        </div>
+
+        <div class="form-control w-full my-4">
+            <div>
+                <button class="btn btn-primary">登録</button>
+            </div>
+        </div>
+    </form>
+    <hr>
+
+    <!-- アクセサリをつける -->
+    <form>
+        <div class="form-control w-full my-4">
+            <label for="test4" class="label">
+                <span class="label-text">郵便番号</span>
+            </label>
+            <label class="input-group">
+                <span>〒</span>
+                <input type="text" name="test4" placeholder="000-0000" class="input input-bordered w-full">
+            </label>
+        </div>
+    </form>
+</body>
+
+</html>
+`,
+},
 toxasoz:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -11888,6 +12693,57 @@ function onClick() {
 button.addEventListener('click', onClick);
 `,
 },
+viqayis:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML/CSS</title>
+    </head>
+    <body>
+        <div class="div1">
+            div1
+        </div>
+        <div class="div2">
+            div2
+        </div>
+        <div class="div3">
+            div3
+        </div>
+    </body>
+</html>
+`,
+css:`
+body {
+    margin: 0;   /* ブラウザのデフォルト値の打ち消し */
+}
+
+.div1 {
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.div2 {
+    width: 50px;
+    height: 50px;
+    background-color: palegreen;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.div3 {
+    width: 50px;
+    height: 50px;
+    background-color: skyblue;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+`,
+},
 vixicir:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -12206,6 +13062,28 @@ css:`
 .noto-sans {
   font-family: 'Noto Sans JP', sans-serif;  
 }
+`,
+},
+vujehef:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body>
+    <nav class="navbar bg-base-200">
+        <!-- ホームへ戻るリンク。ブランドロゴなどを置く。 -->
+        <a class="btn btn-ghost normal-case text-xl">P&amp;K</a>
+    </nav>
+</body>
+
+</html>
 `,
 },
 vujukod:{html:`
@@ -13171,6 +14049,61 @@ a {
   font-size: 1.75rem;
 }
 
+`,
+},
+xayomof:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML/CSS</title>
+    </head>
+    <body>
+        <div class="parent1">
+            <div class="child1">
+                子要素1
+            </div>
+        </div>
+        <div class="parent2">
+            <div class="child2">
+                子要素2
+            </div>
+        </div>
+    </body>
+</html>
+`,
+css:`
+body {
+    margin: 0;   /* ブラウザのデフォルト値の打ち消し */
+}
+
+.parent1 {
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.parent2 {
+    width: 150px;
+    height: 150px;
+    background-color: skyblue;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.child1 {
+    width: 70px;
+    height: 70px;
+    background-color: palegreen;
+}
+.child2 {
+    width: 70px;
+    height: 70px;
+    background-color: orange;
+}
 `,
 },
 xebeqis:{html:`
@@ -14398,6 +15331,54 @@ css:`
 
 `,
 },
+zabapuv:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script></script>
+</head>
+
+<body class="m-4">
+    <table class="table table-zebra w-full">
+        <thead>
+            <tr>
+                <th class="text-center normal-case">No.</th>
+                <th>都道府県</th>
+                <th class="text-right">人口（人）</th>
+                <th class="text-right normal-case">面積（km<sup>2</sup>）</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th class="text-center">1</th>
+                <td>東京都</td>
+                <td class="text-right">14,011,487</td>
+                <td class="text-right">2,194.05</td>
+            </tr>
+            <tr>
+                <th class="text-center">2</th>
+                <td>神奈川県</td>
+                <td class="text-right">9,236,428</td>
+                <td class="text-right">2,416.11</td>
+            </tr>
+            <tr>
+                <th class="text-center">3</th>
+                <td>大阪府</td>
+                <td class="text-right">8,807,279</td>
+                <td class="text-right">1,905.34</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
+`,
+},
 zapovux:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -14617,6 +15598,36 @@ a {
   color: #fff;
   background-color: #26547c;
 }
+`,
+},
+zetujum:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailwindCSS + daisyUI Sample</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+</head>
+
+<body class="m-4">
+    <div class="dropdown">
+        <button class="btn">操作 ▼</button>
+        <!-- 選択肢 -->
+        <ul class="dropdown-content menu p-2 bg-base-100 w-52">
+            <li><a href="#">返信</a></li>
+            <li><a href="#">転送</a></li>
+            <li>
+                <div class="divider"></div>
+            </li>
+            <li><a href="#">削除</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
 `,
 },
 zexatis:{html:`
