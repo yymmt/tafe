@@ -4408,10 +4408,6 @@ buttonAdd.addEventListener('click', () => {
 });
 `,
 },
-https::{html:`
-undefined
-`,
-},
 hubupeb:{html:`
 <!DOCTYPE html>
 <html>
