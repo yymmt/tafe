@@ -12333,11 +12333,11 @@ tupezor:{html:`
 <p class="pseudo">こんにちは！</p>
 `,
 css:`
-.pseudo:before {
+.pseudo::before {
     content: "おはよう！";
 }
 
-.pseudo:after {
+.pseudo::after {
     content: "おやすみ！";
 }
 `,
