@@ -1246,23 +1246,12 @@ javascript:`
 `,
 },
 cozuzux:{html:`
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-</head>
-<body>
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
 
-  <div class="container">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-  </div>
-  
-</body>
-</html>
 `,
 css:`
 .container {
@@ -1805,19 +1794,11 @@ table td{
 `,
 },
 dewivak:{html:`
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>HTML/CSS</title>
-    </head>
-    <body>
-        <a href="https://www.yahoo.co.jp">Yahoo! JAPAN</a><br>
-        <a href="https://www.google.co.jp">Google</a><br>
-        <a href="https://www.bing.com">Bing</a><br>
-        <a href="https://techacademy.jp">TechAcademy</a><br>
-    </body>
-</html>
+<a href="https://www.yahoo.co.jp">Yahoo! JAPAN</a><br>
+<a href="https://www.google.co.jp">Google</a><br>
+<a href="https://www.bing.com">Bing</a><br>
+<a href="https://techacademy.jp">TechAcademy</a><br>
+
 `,
 css:`
 a[href="https://techacademy.jp"] {
@@ -2432,27 +2413,18 @@ css:`
 `,
 },
 fohawiy:{html:`
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>HTML/CSS</title>
-    </head>
-    <body>
-        <p class="w-bold">boldの文章</p>
-        <p class="w-normal">normalの文章</p>
+<p class="w-bold">boldの文章</p>
+<p class="w-normal">normalの文章</p>
+<p class="w-100">100の文章</p>
+<p class="w-200">200の文章</p>
+<p class="w-300">300の文章</p>
+<p class="w-400">400の文章</p>
+<p class="w-500">500の文章</p>
+<p class="w-600">600の文章</p>
+<p class="w-700">700の文章</p>
+<p class="w-800">800の文章</p>
+<p class="w-900">900の文章</p>
 
-        <p class="w-100">100の文章</p>
-        <p class="w-200">200の文章</p>
-        <p class="w-300">300の文章</p>
-        <p class="w-400">400の文章</p>
-        <p class="w-500">500の文章</p>
-        <p class="w-600">600の文章</p>
-        <p class="w-700">700の文章</p>
-        <p class="w-800">800の文章</p>
-        <p class="w-900">900の文章</p>
-    </body>
-</html>
 `,
 css:`
 .w-bold {
@@ -2677,32 +2649,20 @@ css:`
 `,
 },
 fomutuk:{html:`
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-</head>
-<body>
-  
-  <div class="container"><!-- flexコンテナ -->
-    <div class="item">1</div><!-- flexアイテム -->
-    <div class="item">2</div><!-- flexアイテム -->
-    <div class="item">3</div><!-- flexアイテム -->
-    <div class="item">4</div><!-- flexアイテム -->
-  </div>
+<div class="container"><!-- flexコンテナ -->
+  <div class="item">1</div><!-- flexアイテム -->
+  <div class="item">2</div><!-- flexアイテム -->
+  <div class="item">3</div><!-- flexアイテム -->
+  <div class="item">4</div><!-- flexアイテム -->
+</div>
 
-  <div class="container"><!-- flexコンテナ -->
-    <div class="item">1</div><!-- flexアイテム -->
-    <div class="item">2</div><!-- flexアイテム -->
-    <div class="item">3</div><!-- flexアイテム -->
-    <div class="item">4</div><!-- flexアイテム -->
-  </div>
-    
+<div class="container"><!-- flexコンテナ -->
+  <div class="item">1</div><!-- flexアイテム -->
+  <div class="item">2</div><!-- flexアイテム -->
+  <div class="item">3</div><!-- flexアイテム -->
+  <div class="item">4</div><!-- flexアイテム -->
+</div>
 
-</body>
-</html>
 `,
 css:`
 .container {
@@ -2782,20 +2742,9 @@ javascript:`
 `,
 },
 fozakif:{html:`
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>width、height</title>
-</head>
-<body>
-  
-  <div class="box1"></div>
-  <div class="box2"></div>
+<div class="box1"></div>
+<div class="box2"></div>
 
-</body>
-</html>
 `,
 css:`
 div {
@@ -6346,12 +6295,6 @@ lurapic:{html:`
 </html>
 `,
 css:`
-/* リンク */
-a {
-  color: #040000;
-  text-decoration: none;
-}
-
 /* 画像 */
 img {
   max-width: 100%;
@@ -6637,24 +6580,13 @@ new Vue({
 `,
 },
 melulod:{html:`
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>JS Bin</title>
-  </head>
-  <body>
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+</div>
 
-    <div class="container">
-      <div class="item">1</div>
-      <div class="item">2</div>
-      <div class="item">3</div>
-      <div class="item">4</div>
-    </div>
-
-  </body>
-</html>
 `,
 css:`
 .container{
@@ -7148,17 +7080,9 @@ mopixeg:{html:`
 `,
 },
 mowogab:{html:`
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>HTML/CSS</title>
-    </head>
-    <body>
-        <p>普通の文章</p>
-        <p class="important">importantな文章</p>
-    </body>
-</html>
+<p>普通の文章</p>
+<p class="important">importantな文章</p>
+
 `,
 css:`
 p.important {
@@ -10711,21 +10635,13 @@ body {
 `,
 },
 sepuhed:{html:`
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>HTML/CSS</title>
-    </head>
-    <body>
-        <h1 class="important">importantな見出し</h1>
-        <p>普通の文章</p>
-        <div class="important">
-          importantなdiv要素内
-          <p>importantではないp要素だが、importantなdiv要素の中にあるので文字色は赤になる</p>
-        </div>
-    </body>
-</html>
+<h1 class="important">importantな見出し</h1>
+<p>普通の文章</p>
+<div class="important">
+  importantなdiv要素内
+  <p>importantではないp要素だが、importantなdiv要素の中にあるので文字色は赤になる</p>
+</div>
+
 `,
 css:`
 .important {
@@ -11312,25 +11228,13 @@ li {
 `,
 },
 tajayos:{html:`
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-</head>
-<body>
-  
-  <div class="container"><!-- ←これがflex コンテナ -->
-    <div class="item">1</div><!-- ←これがflex アイテム -->
-    <div class="item">2</div><!-- ←これがflex アイテム -->
-    <div class="item">3</div><!-- ←これがflex アイテム -->
-    <div class="item">4</div><!-- ←これがflex アイテム -->
-  </div>
+<div class="container"><!-- ←これがflex コンテナ -->
+  <div class="item">1</div><!-- ←これがflex アイテム -->
+  <div class="item">2</div><!-- ←これがflex アイテム -->
+  <div class="item">3</div><!-- ←これがflex アイテム -->
+  <div class="item">4</div><!-- ←これがflex アイテム -->
+</div>
 
-
-</body>
-</html>
 `,
 css:`
 .container {
@@ -11346,16 +11250,8 @@ css:`
 `,
 },
 takaxos:{html:`
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>HTML/CSS</title>
-    </head>
-    <body>
-        <p class="bg-image"></p>
-    </body>
-</html>
+<p class="bg-image"></p>
+
 `,
 css:`
 .bg-image {
@@ -12944,58 +12840,46 @@ div {
 `,
 },
 vovetup:{html:`
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-</head>
-<body>
-  
-  <p>始端寄せ（左寄せ）※初期値</p>
-  <div class="container-one">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-  </div>
-    
-  <p>終端寄せ（右寄せ）</p>
-  <div class="container-two">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-  </div>
+<p>始端寄せ（左寄せ）※初期値</p>
+<div class="container-one">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+</div>
 
-  <p>中央寄せ</p>
-  <div class="container-three">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-  </div>
+<p>終端寄せ（右寄せ）</p>
+<div class="container-two">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+</div>
 
-  <p>両端揃えの均等配置</p>
-  <div class="container-four">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-  </div>
+<p>中央寄せ</p>
+<div class="container-three">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+</div>
 
-  <p>余白を均等配置（両端の余白はボックス同士の余白の半分）</p>
-  <div class="container-five">
-    <div class="item">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item">4</div>
-  </div>
-    
-    
-</body>
-</html>
+<p>両端揃えの均等配置</p>
+<div class="container-four">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+</div>
+
+<p>余白を均等配置（両端の余白はボックス同士の余白の半分）</p>
+<div class="container-five">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+</div>
+
 `,
 css:`
 .item {
@@ -14954,17 +14838,9 @@ css:`
 `,
 },
 yiruduy:{html:`
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>HTML/CSS</title>
-    </head>
-    <body>
-      <p>普通の文章</p>
-      <p id="important">id属性が指定されたp要素</p>
-    </body>
-</html>
+<p>普通の文章</p>
+<p id="important">id属性が指定されたp要素</p>
+
 `,
 css:`
 #important {
@@ -15458,21 +15334,13 @@ css:`
 `,
 },
 zedapac:{html:`
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>HTML/CSS</title>
-    </head>
-    <body>
-        <div class="box1">
-            div要素内1
-        </div>
-        <div class="box2">
-            div要素内2
-        </div>
-    </body>
-</html>
+<div class="box1">
+  div要素内1
+</div>
+<div class="box2">
+  div要素内2
+</div>
+
 `,
 css:`
 .box1 {
@@ -15730,67 +15598,51 @@ footer {
 `,
 },
 zikidu:{html:`
-<!DOCTYPE html>
-<html lang="en">
+<p>上揃え</p>
+<div class="container-one">
+  <div class="item">短い要素です</div>
+  <div class="item">中くらいの<br>要素です</div>
+  <div class="item">少し<br>長い<br>要素です</div>
+  <div class="item">中くらいの<br>要素です</div>
+  <div class="item">短い要素です</div>
+</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
+<p>下揃え</p>
+<div class="container-two">
+  <div class="item">短い要素です</div>
+  <div class="item">中くらいの<br>要素です</div>
+  <div class="item">少し<br>長い<br>要素です</div>
+  <div class="item">中くらいの<br>要素です</div>
+  <div class="item">短い要素です</div>
+</div>
 
-<body>
+<p>中央揃え</p>
+<div class="container-three">
+  <div class="item">短い要素です</div>
+  <div class="item">中くらいの<br>要素です</div>
+  <div class="item">少し<br>長い<br>要素です</div>
+  <div class="item">中くらいの<br>要素です</div>
+  <div class="item">短い要素です</div>
+</div>
 
-    <p>上揃え</p>
-    <div class="container-one">
-        <div class="item">短い要素です</div>
-        <div class="item">中くらいの<br>要素です</div>
-        <div class="item">少し<br>長い<br>要素です</div>
-        <div class="item">中くらいの<br>要素です</div>
-        <div class="item">短い要素です</div>
-    </div>
+<p>ベースライン揃え</p>
+<div class="container-four">
+  <div class="item baseline">ベースラインの要素です</div>
+  <div class="item baseline">ベースラインの要素です</div>
+  <div class="item baseline">ベースラインの要素です</div>
+  <div class="item baseline">ベースラインの要素です</div>
+  <div class="item baseline">ベースラインの要素です</div>
+</div>
 
-    <p>下揃え</p>
-    <div class="container-two">
-        <div class="item">短い要素です</div>
-        <div class="item">中くらいの<br>要素です</div>
-        <div class="item">少し<br>長い<br>要素です</div>
-        <div class="item">中くらいの<br>要素です</div>
-        <div class="item">短い要素です</div>
-    </div>
+<p>高さ揃え※初期値</p>
+<div class="container-five">
+  <div class="item">短い要素です</div>
+  <div class="item">中くらいの<br>要素です</div>
+  <div class="item">少し<br>長い<br>要素です</div>
+  <div class="item">中くらいの<br>要素です</div>
+  <div class="item">短い要素です</div>
+</div>
 
-    <p>中央揃え</p>
-    <div class="container-three">
-        <div class="item">短い要素です</div>
-        <div class="item">中くらいの<br>要素です</div>
-        <div class="item">少し<br>長い<br>要素です</div>
-        <div class="item">中くらいの<br>要素です</div>
-        <div class="item">短い要素です</div>
-    </div>
-
-    <p>ベースライン揃え</p>
-    <div class="container-four">
-        <div class="item baseline">ベースラインの要素です</div>
-        <div class="item baseline">ベースラインの要素です</div>
-        <div class="item baseline">ベースラインの要素です</div>
-        <div class="item baseline">ベースラインの要素です</div>
-        <div class="item baseline">ベースラインの要素です</div>
-    </div>
-
-    <p>高さ揃え※初期値</p>
-    <div class="container-five">
-        <div class="item">短い要素です</div>
-        <div class="item">中くらいの<br>要素です</div>
-        <div class="item">少し<br>長い<br>要素です</div>
-        <div class="item">中くらいの<br>要素です</div>
-        <div class="item">短い要素です</div>
-    </div>
-
-</body>
-
-</html>
 `,
 css:`
 .item {
