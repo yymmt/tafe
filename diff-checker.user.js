@@ -168,7 +168,11 @@
                 }
                 if (ism(/mentor(.training)?.reports/)) {
                     ks=[Array.from(document.querySelectorAll("a[href]"))
-                        .filter((e) => e.getAttribute("href").includes("first-sidejob-2") || e.getAttribute("href").includes("web-production-mom"))
+                        .filter((e) => 
+                            e.getAttribute("href").includes("first-sidejob-2") || 
+                            e.getAttribute("href").includes("first-sidejob-2-r") || 
+                            e.getAttribute("href").includes("first-sidejob-2-immersive")
+                        )
                         .filter((e) => e.getAttribute("href").includes("/lessons/"))
                         .filter((e) => e.getAttribute("href").includes("#kadai"))[0]
                         .getAttribute("href").replace(/.*#/,"")];

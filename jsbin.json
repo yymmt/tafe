@@ -430,11 +430,27 @@ botacuw:{html:`
 `,
 },
 boyejec:{html:`
-<picture>
-  <source media="(max-width:639px)" srcset="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/mobile-design/639.jpg">
-  <source media="(min-width:640px)" srcset="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/mobile-design/640.jpg">
-  <img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/mobile-design/640.jpg" alt="">
-</picture>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>画面幅ごとに画像を切り替える</title>
+
+</head>
+
+<body>
+
+  <picture>
+    <source media="(max-width:639px)" srcset="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/mobile-design/639.jpg">
+    <source media="(min-width:640px)" srcset="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/mobile-design/640.jpg">
+    <img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/mobile-design/640.jpg" alt="">
+  </picture>
+
+</body>
+
+</html>
+
 `,
 css:`
 img {
@@ -777,6 +793,28 @@ footer {
 }
 `,
 },
+cevodal:{html:`
+<h4>見出し1</h4>
+<h4>見出し2</h4>
+<h4>見出し3</h4>
+
+`,
+css:`
+
+ {
+  content: " ★";
+  font-size: 20px;
+  color: orange;
+}
+
+/* 以下は変更しない */
+h4:before {
+  content: "★ ";
+  font-size: 20px;
+  color: orange;
+}
+`,
+},
 cibadoq:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -1044,6 +1082,15 @@ css:`
 .mincho {
     font-family: "游明朝体", "Yu Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "メイリオ", Meiryo, serif;
 }
+`,
+},
+cimexeg:{html:`
+<ul>
+  じゃがいも
+  さつまいも
+  さといも
+  こんにゃくいも
+</ul>
 `,
 },
 cipovah:{html:`
@@ -1582,6 +1629,21 @@ dajujut:{html:`
 </html>
 `,
 },
+daposod:{html:`
+<p class="gothic">ゴシック体</p>
+<p class="mincho">明朝体</p>
+
+`,
+css:`
+.gothic {
+  font-family: ;
+}
+
+.mincho {
+  font-family: ;  
+}
+`,
+},
 dawucis:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -1635,6 +1697,13 @@ footer {
     display: block;
     clear: both;
 }
+`,
+},
+dejifon:{html:`
+
+HTML文書の中身を大きく分けるとhead要素とbody要素に分かれます。それぞれheadタグとbodyタグで囲います。
+head要素内には文書に関する「メタ情報」を記述し、body要素には「コンテンツ」を記述します。メタ情報(head)には閲覧者に表示されない設定やページ情報などを記述し、コンテンツ(body)には閲覧者に見てもらうためのWebページの文書を記述します。
+headタグ内に記述するメタ情報には、ページタイトル、外部スタイルシートの場所、外部JavaScriptファイルの場所、文字エンコーディング情報、ページの概要、などが含まれます。ブラウザで表示した際に、これらの内容は表示されません。
 `,
 },
 depeden:{html:`
@@ -1806,6 +1875,30 @@ a[href="https://techacademy.jp"] {
 }
 `,
 },
+dibubul:{html:`
+<div class="container">
+  <div class="bg-white">
+    <h1>CSS</h1>
+  </div>
+</div>
+`,
+css:`
+.container {
+  background-image: linear-gradient(90deg, rgba(210, 153, 194, 1), rgba(255, 247, 194, 1));
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-white {
+  background-color: white;
+  text-align: center;
+  height: 100px;
+}
+
+`,
+},
 dodiwod:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -1842,6 +1935,19 @@ new Vue({
     'button-preference': ButtonPreference,
   },
 })
+`,
+},
+dovumud:{html:`
+<div>
+  <h3>セレクタについて</h3>
+  <p>セレクタとは、デザインを適用する要素を指定するものです。</p>
+  <p>CSSの記法を確認し、セレクタが書かれる位置を把握しておきましょう。</p>
+</div>
+`,
+css:`
+ {
+  color: red;
+}
 `,
 },
 dubomav:{html:`
@@ -2955,6 +3061,30 @@ body {
 }
 `,
 },
+gabilen:{html:`
+<div class="header">
+  <ul>
+    <li>会社概要</li>
+    <li>商品一覧</li>
+  </ul>
+</div>
+`,
+css:`
+li {
+  background-color: crimson;
+  padding: 2px 4px;
+  color: white;
+  width: 88px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+`,
+},
 gadilim:{html:`
 <h1>自己紹介</h1>
 <h2>氏名</h2>
@@ -3381,6 +3511,12 @@ a {
   background-color: #26547c;
 }
 
+`,
+},
+gemehux:{html:`
+<h4>
+  菜の花や月は東に日は西に
+</h4>
 `,
 },
 gesixeb:{html:`
@@ -4013,6 +4149,40 @@ buttonCheerful.addEventListener('click', () => {
 });
 `,
 },
+hacigaj:{html:`
+<a href="#">リンク</a>
+<span>↑クリックして応募！</span>
+`,
+css:`
+a {
+  display: ;
+  background-color: pink;
+}
+
+span {
+  display: ;
+  background-color: lime;
+}
+`,
+},
+hahebux:{html:`
+JavaScript
+Ruby
+Python
+`,
+},
+halayan:{html:`
+<section>
+  TechAcademy
+  テックアカデミーとは？
+  <p>
+    現役エンジニアから学べるオンラインに特化したプログラミングスクール。
+    確かなスキルをもとに受講生をマンツーマンサポートします。
+  </p>
+</section>
+
+`,
+},
 hanilac:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -4147,6 +4317,25 @@ Web
 英語
 `,
 },
+hesofoh:{html:`
+<div>
+  <a href="https://techacademy.jp">Top</a><br>
+  <a href="https://techacademy.jp/blog">Blog</a><br>
+  <a href="https://techacademy.jp/magazine">Magazine</a><br>
+  <a href="https://techacademy.jp/foo">存在しないページ</a><br>
+</div>
+`,
+css:`
+a {
+  color: gray;
+}
+
+/* 以下は変更しない */
+a {
+  color: blue;
+}
+`,
+},
 hiduqum:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -4192,6 +4381,19 @@ hijivan:{html:`
 `,
 javascript:`
 \$('#box').text('Hello jQuery!');
+`,
+},
+hitujiq:{html:`
+<a href="#news">ニュースへのリンク</a>
+<section id="news">ニュース</section>
+<a href="#">ページ上部へのリンク</a>
+
+`,
+css:`
+section {
+  margin-top: 600px;
+  margin-bottom: 600px;
+}
 `,
 },
 hobibap:{html:`
@@ -4325,6 +4527,31 @@ honoced:{html:`
 css:`
 div { background-color: pink; }
 span { background-color: palegreen; }
+`,
+},
+hovituv:{html:`
+<p class="w-bold">boldの太さ</p>
+<p class="w-100">100の太さ</p>
+<p class="w-600">600の太さ</p>
+<p class="w-900">900の太さ</p>
+`,
+css:`
+.w-bold {
+    font-weight: ;
+}
+
+.w-100 {
+    font-weight: ;
+}
+
+
+.w-600 {
+    font-weight: ;
+}
+
+.w-900 {
+    font-weight: ;
+}
 `,
 },
 howufoz:{html:`
@@ -4720,6 +4947,19 @@ css:`
 }
 `,
 },
+jejavat:{html:`
+<p>テキストです</p>
+<article>
+  <p>articleの中のp要素</p>
+</article>
+
+`,
+css:`
+article p {
+  color: orange;
+}
+`,
+},
 jekihaw:{html:`
 <!DOCTYPE html>
 <html>
@@ -4886,6 +5126,15 @@ const app = new Vue({
 });
 `,
 },
+jikojuc:{html:`
+<h2>COLOR</h2>
+`,
+css:`
+h2 {
+  color: ;
+}
+`,
+},
 jinefe:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -4931,6 +5180,19 @@ const app = new Vue({
     name: '太郎',
   },
 });
+`,
+},
+jobicah:{html:`
+<h1>以下、太字</h1>
+<p>
+  メロスは、村の牧人である。笛を吹き、羊と遊んで暮して来た。
+  けれども邪悪に対しては、人一倍に敏感であった。
+</p>
+`,
+css:`
+p {
+  
+}
 `,
 },
 jocukow:{html:`
@@ -5434,6 +5696,35 @@ kizexod:{html:`
 </html>
 `,
 },
+kizufah:{html:`
+<section>
+  <h1 class="font-bold">CSSの基礎</h1>
+  <p class="font-bold none">セレクタでHTML要素を指定する</p>
+  <div class="buttons">
+    <a href="#" class="btn none">PUSH！</a>
+    <a href="#" class="btn">PUSH！</a>
+    <a href="#" class="btn">PUSH！</a>
+  </div>
+</section>
+`,
+css:`
+.none {
+  
+}
+
+/* 以下は変更しない */
+a.btn {
+  padding: 8px 16px;
+  border-bottom: 5px solid;
+  border-radius: 8px;
+  margin-top: 3px;
+  background-color: pink;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+}
+`,
+},
 kobekeh:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -5490,6 +5781,43 @@ css:`
     width: 100px;
     height: 100px;
     background-color: skyblue;
+}
+`,
+},
+kosarah:{html:`
+<head>
+  
+</head>
+
+<h1>メロスは激怒した。必ず、かの邪智暴虐の王を除かなければならぬと決意した。</h1>
+
+`,
+css:`
+h1 {
+  font-family: ;
+}
+`,
+},
+kowahex:{html:`
+<p class="px">FONT SIZE 30px</p>
+<p class="vw">FONT SIZE 10vw</p>
+<p class="percent">FONT SIZE 80%</p>
+
+
+
+
+`,
+css:`
+p.px {
+  font-size: ;
+}
+
+p.vw {
+  font-size: ;
+}
+
+p.percent {
+  font-size: ;
 }
 `,
 },
@@ -5660,6 +5988,27 @@ button.addEventListener('click', (e) => {
 });
 `,
 },
+kupebej:{html:`
+<body>
+  <p class="text-left">左寄せの文章</p>
+  <p class="text-center">中央寄せの文章</p>
+  <p class="text-right">右寄せの文章</p>
+</body>
+`,
+css:`
+.text-left {
+    text-align: ;
+}
+
+.text-center {
+    text-align: ;
+}
+
+.text-right {
+    text-align: ;
+}
+`,
+},
 kuzafus:{html:`
 <!DOCTYPE html>
 <html>
@@ -5811,6 +6160,26 @@ footer {
 }
 `,
 },
+lepakan:{html:`
+
+<h4>スター・ウォーズ</h4>
+<ul>
+  <li class="jedi">オビ＝ワン</li>
+  <li class="jedi">ヨーダ</li>
+  <li class="sith">アナキン</li>
+  <li class="sith">ダース・シディアス</li>
+</ul>
+`,
+css:`
+ {
+  color: blue;
+}
+
+ {
+  color: red;
+}
+`,
+},
 lewuwut:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -5832,6 +6201,19 @@ lewuwut:{html:`
 javascript:`
 var element = 'p';
 \$(element).text('こんにちは！');
+`,
+},
+lexoxeg:{html:`
+<div>
+  <h4>HTML</h4>
+  <h4>CSS</h4>
+  <h4>JavaScript</h4>
+</div>
+`,
+css:`
+h4 {
+  color:red
+}
 `,
 },
 lifohus:{html:`
@@ -6235,6 +6617,25 @@ css:`
   .container {
     flex-direction: column;
   }
+}
+`,
+},
+lulijej:{html:`
+<div>
+  <a href="https://techacademy.jp">Top</a><br>
+  <a href="https://techacademy.jp/blog">Blog</a><br>
+  <a href="https://techacademy.jp/magazine">Magazine</a><br>
+  <a href="https://techacademy.jp/foo">存在しないページ</a><br>
+</div>
+`,
+css:`
+a {
+  color: green;
+}
+
+/* 以下は変更しない */
+a {
+  color: blue;
 }
 `,
 },
@@ -6650,6 +7051,30 @@ body {
 }
 `,
 },
+mewuzow:{html:`
+<section>
+  <h1 class="font-bold">CSSの基礎</h1>
+  <p class="font-bold">セレクタでHTML要素を指定する</p>
+  <div class="buttons">
+    <a href="#" class="btn">PUSH！</a>
+    <a href="#" class="btn">PUSH！</a>
+    <a href="#" class="btn">PUSH！</a>
+  </div>
+</section>
+`,
+css:`
+a.btn {
+  padding: 8px 16px;
+  border-bottom: 5px solid;
+  border-radius: 8px;
+  margin-top: 3px;
+  background-color: pink;
+  vertical-align: middle;
+  text-decoration: none;
+  text-align: center;
+}
+`,
+},
 mexijev:{html:`
 <p class="letter-spacing-normal">字間ノーマル（デフォルト）のテキスト</p>
 <p class="letter-spacing-5">字間5pxのテキスト</p>
@@ -6879,6 +7304,14 @@ javascript:`
 \$('#pm').text('こんにちは！');
 `,
 },
+miseyil:{html:`
+< ="https://techacademy.jp/">テックアカデミー</a>
+<img src="http://static.techacademy.jp/magazine/wp-content/themes/ta-magazine/images/logo-magazine.png" >
+<h1>自己紹介</h1>
+<h2>氏名</h2>
+<h2>煌　太郎</h2>
+`,
+},
 miwihej:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -7013,6 +7446,20 @@ li {
   color: #2f92dd;
 }
 
+`,
+},
+mizehen:{html:`
+<h5>マウスホバーする</h5>
+`,
+css:`
+h5 {
+  transform: scale(1.8);
+  transition: 0.6s;
+}
+
+h5 {
+  text-align: center;
+}
 `,
 },
 mogeqiq:{html:`
@@ -7200,6 +7647,30 @@ mucunad:{html:`
 `,
 javascript:`
 document.getElementById('box').textContent = new Date().toLocaleString();
+`,
+},
+muxumiw:{html:`
+<h2>ブラウザ</h2>
+
+<article id="article1">
+  <h3>Google Chrome</h3>
+  <p>
+    Google Chromeは、Googleが開発し、2008年にリリースされたWebブラウザです。<span class="important">世界で最も人気のある</span>ブラウザです。
+  </p>
+</article>
+
+<article id="article2">
+  <h3>Mozilla Firefox</h3>
+  <p>Mozilla Firefoxは、Mozillaが開発した<span class="important">オープンソースの</span>Webブラウザです。Firefoxは今も継続的にアップデートされています。</p>
+</article>
+
+`,
+css:`
+.important {
+  border-bottom:double;
+  border-color:#FF0000;
+  border-width:3px;
+}
 `,
 },
 nafoven:{html:`
@@ -8493,6 +8964,18 @@ a {
 
 `,
 },
+pasukiw:{html:`
+<section>
+  <img />
+  <h1>TechAcademy</h1>
+  <h2>テックアカデミーとは？</h2>
+  <p>
+    現役エンジニアから学べるオンラインに特化したプログラミングスクール。
+    確かなスキルをもとに受講生をマンツーマンサポートします。
+  </p>
+</section>
+`,
+},
 pebiroj:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -8662,6 +9145,13 @@ javascript:`
     content.slideDown();
   }
 });
+`,
+},
+pibunen:{html:`
+  <li>お湯を沸かす</li>
+  <li>線までお湯を注ぐ</li>
+  <li>フタをして3分待つ</li>
+  <li>出来上がり</li>
 `,
 },
 pificis:{html:`
@@ -8968,6 +9458,18 @@ const button = document.getElementById('my-button');
 button.addEventListener('click', () => {
   alert('押された！');
 });
+`,
+},
+qageyaw:{html:`
+<div>
+  非表示テキスト
+</div>
+`,
+css:`
+div {
+  display: ;
+  background-color: pink;
+}
 `,
 },
 qazifum:{html:`
@@ -9290,6 +9792,39 @@ li {
 }
 `,
 },
+qivibew:{html:`
+<h2>ブラウザ</h2>
+
+<article>
+  <div class="important">Google Chrome</div>
+  <div>
+    Google Chromeは、Googleが開発し、2008年にリリースされたWebブラウザです。<span class="important">世界で最も人気のある</span>ブラウザです。
+  </div>
+</article>
+
+<article>
+  <div class="important">Mozilla Firefox</div>
+  <div>
+    Mozilla Firefoxは、Mozillaが開発した<span class="important">オープンソースの</span>Webブラウザです。Firefoxは今も継続的にアップデートされています。
+  </div>
+</article>
+
+`,
+css:`
+
+.important {
+  background-color: coral;
+}
+
+/* 以下は変更しない */
+span.important {
+  border-bottom:double;
+  border-color:#FF0000;
+  border-width:3px;
+}
+
+`,
+},
 qofehig:{html:`
 <!DOCTYPE html>
 <html>
@@ -9549,6 +10084,33 @@ quqilul:{html:`
 </body>
 
 </html>
+`,
+},
+qutejub:{html:`
+<div id="red">赤</div>
+<div id="yellow">黄</div>
+<div id="blue">青</div>
+`,
+css:`
+div {
+  display: ;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+/* 以下は変更しない */
+div#red {
+  background-color: red;
+}
+
+div#yellow {
+  background-color: yellow;
+}
+
+div#blue {
+  background-color: blue;
+}
 `,
 },
 racuqud:{html:`
@@ -10142,6 +10704,16 @@ riwezim:{html:`
 </body>
 
 </html>
+`,
+},
+rizuzur:{html:`
+<input class="amount" value="¥1,230">
+
+`,
+css:`
+.amount {
+ 
+}
 `,
 },
 rocofiy:{html:`
@@ -11197,6 +11769,19 @@ sukeqax:{html:`
 </html>
 `,
 },
+sukiret:{html:`
+<div>
+  <h4>HTML</h4>
+  <h4>CSS</h4>
+  <h4>JavaScript</h4>
+</div>
+`,
+css:`
+h4 {
+  color: red;
+}
+`,
+},
 suqupe:{html:`
 <div></div>
 `,
@@ -11224,6 +11809,33 @@ ul {
 li {
     display: inline-block;
     margin: 20px;
+}
+`,
+},
+suxodab:{html:`
+<div id="red">赤</div>
+<div id="yellow">黄</div>
+<div id="blue">青</div>
+`,
+css:`
+div {
+  display: ;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+/* 以下は変更しない */
+div#red {
+  background-color: red;
+}
+
+div#yellow {
+  background-color: yellow;
+}
+
+div#blue {
+  background-color: blue;
 }
 `,
 },
@@ -11645,6 +12257,157 @@ javascript:`
   'color': '#ffffff',
   'background-color': '#000000',
 });
+`,
+},
+tewaxun:{html:`
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>レイアウト - 画像付きリストピル型横並び</title>
+
+    <!-- CSSリセット -->
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+  <body>
+
+    <!-- Voice-->
+    <section class="voice">
+
+      <!-- コンテナ -->
+      <div class="container">
+
+        <!-- アイテム -->
+        <a href="#" class="voice-item">
+          <div class="voice-item-body">
+            <img src="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/parts/laptop.jpg"
+                 alt="ラップトップ" width="80" height="80" class="img-circle">
+            <div class="voice-item-body-text">
+              <h2 class="voice-item-title">タイトル</h2>
+              <p class="voice-item-description">テキストが入ります</p>
+            </div>
+          </div>
+          <i class="voice-item-icon bi bi-arrow-right"></i>
+        </a>
+        <!-- アイテム -->
+        <a href="#" class="voice-item">
+          <div class="voice-item-body">
+            <img src="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/parts/laptop.jpg"
+                 alt="ラップトップ" width="80" height="80" class="img-circle">
+            <div class="voice-item-body-text">
+              <h2 class="voice-item-title">タイトル</h2>
+              <p class="voice-item-description">テキストが入ります</p>
+            </div>
+          </div>
+          <i class="voice-item-icon bi bi-arrow-right"></i>
+        </a>
+        <!-- アイテム -->
+        <a href="#" class="voice-item">
+          <div class="voice-item-body">
+            <img src="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/parts/laptop.jpg"
+                 alt="ラップトップ" width="80" height="80" class="img-circle">
+            <div class="voice-item-body-text">
+              <h2 class="voice-item-title">タイトル</h2>
+              <p class="voice-item-description">テキストが入ります</p>
+            </div>
+          </div>
+          <i class="voice-item-icon bi bi-arrow-right"></i>
+        </a>
+        <!-- アイテム -->
+        <a href="#" class="voice-item">
+          <div class="voice-item-body">
+            <img src="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/parts/laptop.jpg"
+                 alt="ラップトップ" width="80" height="80" class="img-circle">
+            <div class="voice-item-body-text">
+              <h2 class="voice-item-title">タイトル</h2>
+              <p class="voice-item-description">テキストが入ります</p>
+            </div>
+          </div>
+          <i class="voice-item-icon bi bi-arrow-right"></i>
+        </a>
+
+      </div>
+    </section>
+
+  </body>
+</html>
+`,
+css:`
+/* リンク */
+a {
+  color: #040000;
+  text-decoration: none;
+}
+
+/* 画像の円形 */
+.img-circle {
+  border-radius: 50%;
+}
+
+/* コンテナ */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2.5rem;
+  row-gap: 1.25rem;
+  max-width: 67.5rem;
+  margin: 5rem auto;
+}
+
+
+/* Voice
+------------------------------------------ */
+
+/* アイテム */
+.voice-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc((100% - 2.5rem) / 2);
+  padding: .75rem 1.75rem .75rem 1rem;
+  color: #fff;
+  background-color: #54bbef;
+  border-radius: 3.75rem;
+}
+
+.voice-item:hover {
+  background-color: #26547c;
+  transition: all 0.3s ease;
+}
+
+/* ボディ */
+.voice-item-body {
+  display: flex;
+  align-items: center;
+}
+
+/* テキスト */
+.voice-item-body-text {
+  margin-left: 1.25rem;
+}
+
+/* タイトル */
+.voice-item-title {
+  margin-bottom: .5rem;
+  font-size: 1.25rem;
+}
+
+/* 説明文 */
+.voice-item-description {
+  font-size: .875rem;
+}
+
+/* 矢印アイコン */
+.voice-item-icon {
+  font-size: 1.75rem;
+}
+
 `,
 },
 texefa:{html:`
@@ -12225,6 +12988,17 @@ div {
 }
 `,
 },
+tulozas:{html:`
+<div id="logo">株式会社リンゴ</div>
+<h4>素晴らしいPCをお手頃価格で。</h4>
+<p>頑丈なボディに高速なコンピュータを搭載しました。</p>
+`,
+css:`
+ {
+  font-size: 28px;
+}
+`,
+},
 tupezor:{html:`
 <p class="pseudo">こんにちは！</p>
 `,
@@ -12409,6 +13183,12 @@ vegoper:{html:`
 
 `,
 },
+vepumiv:{html:`
+コードを書く
+エラーが出る
+修正する
+`,
+},
 verereb:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -12529,6 +13309,37 @@ new Vue({
     'button-preference': ButtonPreference,
   },
 })
+`,
+},
+vihavam:{html:`
+<div class="container">
+  <div class="bg-white">
+    <h1>CSS</h1>
+  </div>
+  <div class="bg-black">
+    Cascading Style Sheets
+  </div>
+</div>
+`,
+css:`
+.container {
+  background-image: linear-gradient(90deg, rgba(210, 153, 194, 1), rgba(255, 247, 194, 1));
+  height: 240px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bg-white {
+  background-color: white;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.bg-black {
+  background-color: black;
+  color: white;
+}
 `,
 },
 vikebox:{html:`
@@ -12941,6 +13752,15 @@ css:`
 
 .noto-sans {
   font-family: 'Noto Sans JP', sans-serif;  
+}
+`,
+},
+vozumin:{html:`
+<h1>最適な文字サイズ</h1>
+`,
+css:`
+h1 {
+  font-size: ;
 }
 `,
 },
@@ -13424,6 +14244,31 @@ div.normal p {
 
 `,
 },
+wisawot:{html:`
+<body>
+  <div>
+    じゅげむ　じゅげむ　ごこうのすりきれ　かいじゃりすいぎょの　すいぎょうまつ　うんらいまつ　ふうらいまつ　くうねるところにすむところ　やぶらこうじのぶらこうじ　ぱいぽ　ぱいぽ　ぱいぽのしゅーりんがん　しゅーりんがんのぐーりんだい　ぐーりんだいのぽんぽこぴーの　ぽんぽこなーの　ちょうきゅうめいのちょうすけ
+  </div>
+  <div>
+    じゅげむ　じゅげむ　ごこうのすりきれ　かいじゃりすいぎょの　すいぎょうまつ　うんらいまつ　ふうらいまつ　くうねるところにすむところ　やぶらこうじのぶらこうじ　ぱいぽ　ぱいぽ　ぱいぽのしゅーりんがん　しゅーりんがんのぐーりんだい　ぐーりんだいのぽんぽこぴーの　ぽんぽこなーの　ちょうきゅうめいのちょうすけ
+  </div>
+</body>
+
+`,
+css:`
+div {
+  margin: ;
+  padding: ;
+  border: ;
+  background-color: pink;
+}
+
+/* 以下は変更しない */
+body {
+  border: 1px dotted black;
+}
+`,
+},
 wocevap:{html:`
 <!DOCTYPE html>
 <html>
@@ -13692,7 +14537,6 @@ wurajac:{html:`
             <span class="news-item-header-badge">カテゴリ</span>
           </div>
           <a href="#" class="news-item-text">ニューステキストが入りますニューステキストが入りますニューステキストが入ります</a>
-          <p class="news-item-text"></p>
         </div>
         <!-- アイテム -->
         <div class="news-item">
@@ -13701,7 +14545,6 @@ wurajac:{html:`
             <span class="news-item-header-badge">カテゴリ</span>
           </div>
           <a href="#" class="news-item-text">ニューステキストが入りますニューステキストが入りますニューステキストが入ります</a>
-          <p class="news-item-text"></p>
         </div>
         <!-- アイテム -->
         <div class="news-item">
@@ -13710,7 +14553,6 @@ wurajac:{html:`
             <span class="news-item-header-badge">カテゴリ</span>
           </div>
           <a href="#" class="news-item-text">ニューステキストが入りますニューステキストが入りますニューステキストが入ります</a>
-          <p class="news-item-text"></p>
         </div>
         <!-- アイテム -->
         <div class="news-item">
@@ -13719,7 +14561,6 @@ wurajac:{html:`
             <span class="news-item-header-badge">カテゴリ</span>
           </div>
           <a href="#" class="news-item-text">ニューステキストが入りますニューステキストが入りますニューステキストが入ります</a>
-          <p class="news-item-text"></p>
         </div>
 
       </div>
@@ -13791,6 +14632,19 @@ javascript:`
   'color': '#ffffff',
   'background-color': '#000000',
 });
+`,
+},
+wuzoyeg:{html:`
+
+
+<a href="https://techacademy.jp/"> [テックアカデミー] |</a>
+<img src="http://static.techacademy.jp/magazine/wp-content/themes/ta-magazine/images/logo-magazine.png" >
+<h1>自己紹介</h1>
+<h2>氏名</h2>
+<h2>煌　太郎</h2>
+
+
+
 `,
 },
 xavarap:{html:`
@@ -14594,6 +15448,49 @@ css:`
 }
 `,
 },
+xomofol:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>画面幅ごとに画像を切り替える</title>
+
+</head>
+
+<body>
+
+  <picture>
+    <source media="(max-width:639px)" srcset="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/mobile-design/639.jpg">
+    <source media="(min-width:640px)" srcset="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/mobile-design/640.jpg">
+    <img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/mobile-design/640.jpg" alt="">
+  </picture>
+
+</body>
+
+</html>
+
+`,
+css:`
+img {
+    width: 100%;
+}
+`,
+},
+xosivoj:{html:`
+<h4>見出し１</h4>
+<h4>見出し2</h4>
+<h4>見出し3</h4>
+`,
+css:`
+
+ {
+  content: "★ ";
+  font-size: 20px;
+  color: orange;
+}
+`,
+},
 xotoson:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -15043,6 +15940,29 @@ li {
 .sns-list-item:hover {
   background-color: #040000;
   transition: all 0.3s ease;
+}
+`,
+},
+yokepey:{html:`
+<ol>
+  <li>ウサギ</li>
+  <li>ペンギン</li>
+  <li>クジラ</li>
+  <li>ワニ</li>
+  <li>ダチョウ</li>
+  <li>キジ</li>
+  <li>フラミンゴ</li>
+  <li>コウノトリ</li>
+  <li>フクロウ</li>
+  <li>ブッポウソウ</li>
+  <li>ツル</li>
+  <li>タカ</li>
+  <li>スズメ</li>
+</ol>
+`,
+css:`
+li {
+  background:lime;
 }
 `,
 },
@@ -16072,6 +16992,34 @@ zosipil:{html:`
 </body>
 
 </html>
+`,
+},
+zoxowub:{html:`
+<div class="container">
+  <div class="bg-white">
+    <h1>１</h1>
+  </div>
+  <div class="bg-white">
+    <h1>２</h1>
+  </div>
+  <div class="bg-white">
+    <h1>３</h1>
+  </div>
+</div>
+`,
+css:`
+.container {
+  background-image: linear-gradient(90deg, rgba(210, 153, 194, 1), rgba(255, 247, 194, 1));
+  height: 240px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bg-white {
+  background-color: white;
+  text-align: center;
+}
 `,
 },
 zulequc:{html:`
