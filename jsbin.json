@@ -2286,7 +2286,7 @@ javascript:`
 hemovec:{html:`
 自己紹介
 氏名
-煌木　太郎
+武龍　太郎
 職業
 Webデザイナー
 スキル
@@ -4244,39 +4244,43 @@ nimayab:{html:`
       <!-- コンテナ -->
       <div class="footer-container">
 
-        <!-- ナビゲーション -->
-        <nav>
-          <ul class="footer-nav-list">
-            <li class="footer-nav-list-item"><a href="#">レシピ一覧</a></li>
-            <li class="footer-nav-list-item"><a href="#">特集</a></li>
-            <li class="footer-nav-list-item"><a href="#">ランキング</a></li>
-            <li class="footer-nav-list-item"><a href="#">運営会社</a></li>
-            <li class="footer-nav-list-item"><a href="#">お問い合わせ</a></li>
-            <li class="footer-nav-list-item"><a href="#">利用規約</a></li>
-            <li class="footer-nav-list-item"><a href="#">プライバシーポリシー</a></li>
-          </ul>
-        </nav>
+        <div class="footer-nav-container">
 
-        <!-- SNSリンク -->
-        <ul class="footer-sns-list">
-          <li class="footer-sns-list-item">
-            <a href="#"><i class="bi bi-instagram"></i></a>
-          </li>
-          <li class="footer-sns-list-item">
-            <a href="#"><i class="bi bi-youtube"></i></a>
-          </li>
-          <li class="footer-sns-list-item">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-          </li>
-          <li class="footer-sns-list-item">
-            <a href="#"><i class="bi bi-twitter"></i></a>
-          </li>
-        </ul>
+          <!-- ナビゲーション -->
+          <nav>
+            <ul class="footer-nav-list">
+              <li class="footer-nav-list-item"><a href="#">レシピ一覧</a></li>
+              <li class="footer-nav-list-item"><a href="#">特集</a></li>
+              <li class="footer-nav-list-item"><a href="#">ランキング</a></li>
+              <li class="footer-nav-list-item"><a href="#">運営会社</a></li>
+              <li class="footer-nav-list-item"><a href="#">お問い合わせ</a></li>
+              <li class="footer-nav-list-item"><a href="#">利用規約</a></li>
+              <li class="footer-nav-list-item"><a href="#">プライバシーポリシー</a></li>
+            </ul>
+          </nav>
+
+          <!-- SNSリンク -->
+          <ul class="footer-sns-list">
+            <li class="footer-sns-list-item">
+              <a href="#"><i class="bi bi-instagram"></i></a>
+            </li>
+            <li class="footer-sns-list-item">
+              <a href="#"><i class="bi bi-youtube"></i></a>
+            </li>
+            <li class="footer-sns-list-item">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="footer-sns-list-item">
+              <a href="#"><i class="bi bi-twitter"></i></a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- コピーライト -->
+        <small class="footer-copyright">copyright ©2022 ○○ All Rights Reserved.</small>
 
       </div>
-
-      <!-- コピーライト -->
-      <small class="footer-copyright">copyright ©2022 ○○ All Rights Reserved.</small>
 
     </footer>
 
@@ -4294,8 +4298,6 @@ a {
 ------------------------------------------ */
 
 .footer {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
   background-color: #040000;
 }
 
@@ -4305,24 +4307,25 @@ a {
 
 /* コンテナ */
 .footer-container {
+  padding: 2.5rem 1.25rem;
+  max-width: 70rem;
+  margin: auto;
+}
+
+/* ナビゲーションコンテナ */
+.footer-nav-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-right: 1.25rem;
-  padding-left: 1.25rem;
-  max-width: 70rem;
-  margin: 0 auto 1rem;
 }
 
 /* ナビゲーション */
 .footer-nav-list {
   display: flex;
+  column-gap: 2.5rem;
+  row-gap: 1.25rem;
   flex-wrap: wrap;
   max-width: 21.5rem;
-}
-
-.footer-nav-list-item {
-  margin-right: 2.5rem;
   margin-bottom: 1.25rem;
 }
 
@@ -4337,11 +4340,8 @@ a {
 /* SNSリンク */
 .footer-sns-list {
   display: flex;
+  column-gap: 1rem;
   margin-bottom: 2rem;
-}
-
-.footer-sns-list-item:not(:last-child) {
-  margin-right: 1rem;
 }
 
 .footer-sns-list-item a {
@@ -4355,9 +4355,10 @@ a {
 
 /* コピーライト */
 .footer-copyright {
-  display: flex;
-  justify-content: center;
+  display: inline-block;
+  width: 100%;
   color: #ccc;
+  text-align: center;
 }
 
 `,
