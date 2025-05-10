@@ -37,6 +37,82 @@ css:`
 }
 `,
 },
+bihahex:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+
+  <title>コンテナに最大横幅を指定する</title>
+
+  <!-- CSSリセット -->
+  <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+  <section class="section">
+    <div class="flex-container">
+      <div class="flex-item">
+        <h2 class="flex-item-titile">タイトルが入ります</h2>
+        <p>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+      </div>
+      <div class="flex-item">
+        <h2 class="flex-item-titile">タイトルが入ります</h2>
+        <p>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+      </div>
+      <div class="flex-item">
+        <h2 class="flex-item-titile">タイトルが入ります</h2>
+        <p>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+`,
+css:`
+/* セクション */
+.section {
+  padding: 3.5rem 1.25rem;
+  background-color: #F1F1F1;
+}
+
+/* コンテナ */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  max-width: 67.5rem; /* 最大幅指定 */
+  margin: auto; /* 中央寄せ */
+}
+
+@media (min-width: 768px) {
+  .flex-container {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+}
+
+/* アイテム */
+.flex-item {
+  padding: 2.25rem;
+  background-color: #fff;
+}
+
+/* タイトル */
+.flex-item-titile {
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+}
+`,
+},
 bixixuf:{html:`
 <!DOCTYPE html>
 <html>
@@ -1550,6 +1626,80 @@ li {
 }
 `,
 },
+gahihax:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+
+  <title>縦並びと横並びを切り替える</title>
+
+  <!-- CSSリセット -->
+  <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+  <section class="section">
+    <div class="flex-container">
+      <div class="flex-item">
+        <h2 class="flex-item-titile">タイトルが入ります</h2>
+        <p>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+      </div>
+      <div class="flex-item">
+        <h2 class="flex-item-titile">タイトルが入ります</h2>
+        <p>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+      </div>
+      <div class="flex-item">
+        <h2 class="flex-item-titile">タイトルが入ります</h2>
+        <p>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+`,
+css:`
+/* セクション */
+.section {
+  padding: 3.5rem 1.25rem;
+  background-color: #F1F1F1;
+}
+
+/* コンテナ */
+.flex-container {
+  display: flex;
+  flex-direction: column; /* 縦並び指定 */
+  gap: 2.25rem; /* .flex-itemの間の余白 */
+}
+
+@media (min-width: 768px) {
+  .flex-container {
+    flex-direction: row; /* 横並び指定 */
+    gap: 2.5rem; /* .flex-itemの間の余白 */
+  }
+}
+
+/* アイテム */
+.flex-item {
+  padding: 2.25rem;
+  background-color: #fff;
+}
+
+/* タイトル */
+.flex-item-titile {
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+}
+`,
+},
 gedociz:{html:`
 <!DOCTYPE html>
 <html>
@@ -2727,6 +2877,19 @@ javascript:`
 \$('#box').text('Hello jQuery!');
 `,
 },
+jaxijog:{html:`
+<picture>
+  <source media="(max-width:767px)" srcset="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/smartphone/responsive_imae_sp.jpg">
+  <source media="(min-width:768px)" srcset="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/smartphone/responsive_imae_pc.jpg">
+  <img src="https://techacademy.s3.ap-northeast-1.amazonaws.com/bootcamp/first-sidejob-2/smartphone/responsive_imae_pc.jpg" alt="">
+</picture>
+`,
+css:`
+img {
+    width: 100%;
+}
+`,
+},
 jejavat:{html:`
 <p>テキストです</p>
 <article>
@@ -2882,6 +3045,122 @@ div {
   left: 100px;
   background-color: #999;  
 }
+`,
+},
+jomoxak:{html:`
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+
+  <title>要素を非表示にする</title>
+
+  <!-- CSSリセット -->
+  <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+  <header class="header">
+
+    <!-- ロゴ -->
+    <h1 class="header-logo">ロゴ</h1>
+
+    <!-- ハンバーガーボタン -->
+    <i class="hamburger-button bi bi-list"></i>
+
+    <!-- ナビゲーション -->
+    <nav class="header-nav">
+      <ul class="header-nav-list">
+        <li><a href="#">メニュー</a></li>
+        <li><a href="#">メニュー</a></li>
+        <li><a href="#">メニュー</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+</body>
+</html>
+`,
+css:`
+/* リンク */
+a {
+  text-decoration: none;
+}
+
+/* リスト */
+li {
+  list-style: none;
+}
+
+
+/* ヘッダー
+------------------------------------------ */
+
+/* ヘッダー */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.5rem;
+  padding: 0 1.25rem;
+  background-color: #F1F1F1;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-right: 2.5rem;
+  }
+}
+
+/* リンクの色 */
+.header a {
+  color: #000;
+}
+
+/* ロゴ */
+.header-logo {
+  font-size: 1.5rem;
+}
+
+/* ハンバーガーボタン */
+.hamburger-button {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .hamburger-button {
+    display: none; /* 非表示 */
+  }
+}
+
+/* ヘッダーメニュー */
+.header-nav {
+  display: none; /* 非表示 */
+}
+
+@media (min-width: 768px) {
+  .header-nav {
+    display: block; /* 表示 */
+  }
+}
+
+/* ヘッダーメニューのリスト */
+.header-nav-list {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
 `,
 },
 jusuzom:{html:`
@@ -5235,6 +5514,40 @@ div#blue {
 }
 `,
 },
+racotaq:{html:`
+<div class="box-rem">
+  <p>最大横幅62.5remのボックス</p>
+</div>
+
+<div class="box-px">
+  <p>横幅1000pxのボックス</p>
+</div>
+
+`,
+css:`
+body {
+  margin: 100px 0;
+}
+
+.box-rem {
+  max-width: 62.5rem; /* 1000px */
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 2px solid #84ceef;
+  box-sizing: border-box;
+}
+
+.box-px {
+  width: 1000px;
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 2px solid #E47292;
+  box-sizing: border-box;
+}
+
+
+`,
+},
 racuqud:{html:`
 <!DOCTYPE html>
 <html>
@@ -5305,6 +5618,31 @@ rasucic:{html:`
 `,
 javascript:`
 \$('#pm').text('こんにちは！');
+`,
+},
+recejah:{html:`
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>max-widthを記述しないサンプル</title>
+</head>
+<body>
+
+</body>
+</html>
+`,
+css:`
+body {
+  background-color: #F4769A;
+}
+
+@media (min-width: 768px){
+  body {
+    background-color: #2F92DD;
+  }
+}
 `,
 },
 rejosaf:{html:`
@@ -8107,6 +8445,33 @@ css:`
 }
 `,
 },
+yequvuy:{html:`
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>メディアクエリに小数を指定するサンプル</title>
+</head>
+<body>
+
+</body>
+</html>
+`,
+css:`
+@media (max-width: 767.98px){
+  body {
+    background-color: #F4769A;
+  }
+}
+
+@media (min-width: 768px){
+  body {
+    background-color: #2F92DD;
+  }
+}
+`,
+},
 yiruduy:{html:`
 <p>普通の文章</p>
 <p id="important">id属性が指定されたp要素</p>
@@ -8325,6 +8690,53 @@ yufakil:{html:`
 
 `,
 },
+zasubeg:{html:`
+<div class="box-percent">
+  <p>横幅90%のボックス</p>
+</div>
+
+<div class="box-vw">
+  <p>横幅90vwのボックス</p>
+</div>
+
+<div class="box-px">
+  <p>横幅1000pxのボックス</p>
+</div>
+
+
+`,
+css:`
+body {
+  margin: 100px 0;
+}
+
+.box-percent {
+  width: 90%;
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 2px solid #84CEEF;
+  box-sizing: border-box;
+}
+
+.box-vw {
+  width: 90vw;
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 2px solid #72E8A7;
+  box-sizing: border-box;
+}
+
+.box-px {
+  width: 1000px;
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 2px solid #E47292;
+  box-sizing: border-box;
+}
+
+
+`,
+},
 zedapac:{html:`
 <div class="box1">
   div要素内1
@@ -8412,6 +8824,33 @@ a {
   font-weight: 700;
   color: #fff;
   background-color: #26547c;
+}
+`,
+},
+zetenex:{html:`
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>特定の条件下でメディアクエリが適用されない場合のサンプル</title>
+</head>
+<body>
+
+</body>
+</html>
+`,
+css:`
+@media (max-width: 767px){
+  body {
+    background-color: #F4769A;
+  }
+}
+
+@media (min-width: 768px){
+  body {
+    background-color: #2F92DD;
+  }
 }
 `,
 },
