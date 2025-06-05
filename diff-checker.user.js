@@ -3,7 +3,7 @@
 // ==UserScript==
 // @name         模写チェッカー
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  try to take over the world!
 // @author       You
 // @match        https://techacademy.jp/mentor/users/*
@@ -18,8 +18,23 @@
     let ism = (pat) => location.href.match(pat);
     if (ism(/mentor\/users\/\d+(#.*)?$/) || ism(/mentor(.training)?.reports/)) {
         (async ()=>{
-            let g=$("a[href*='drive.google.com']:has(i)").attr("href").match(/folders.([a-zA-Z0-9_-]+)/)[1];
+            let g=
+                ism(/mentor\/users\/\d+(#.*)?$/)?
+                    $("a[href*='drive.google.com']:has(i):contains('はじめての副業コース')").attr("href").match(/folders.([a-zA-Z0-9_-]+)/)[1]:
+                    $("a[href*='drive.google.com']:has(i)").attr("href").match(/folders.([a-zA-Z0-9_-]+)/)[1];
             if(g){
+                let courseName;
+                if (ism(/mentor\/users\/\d+(#.*)?$/)) {
+                    courseName = $("tr:contains('カリキュラム') a:contains('はじめての副業')").text().includes("はじめての副業3") ? "first-sidejob-3" : "first-sidejob-2";
+                }
+                if (ism(/mentor(.training)?.reports/)) {
+                    courseName = Array.from(document.querySelectorAll("a[href]"))
+                        .filter((e) => e.getAttribute("href").includes("first-sidejob-3") || e.getAttribute("href").includes("first-sidejob-2") || e.getAttribute("href").includes("web-production-mom"))
+                        .filter((e) => e.getAttribute("href").includes("/lessons/"))
+                        .filter((e) => e.getAttribute("href").includes("#kadai"))[0]
+                        .getAttribute("href").includes("first-sidejob-3") ? "first-sidejob-3" : "first-sidejob-2";
+                }
+
                 let kadaiToFolder = {
                     'kadai-html-1':'kadai-html',
                     'kadai-html-2':'kadai-html',
@@ -41,9 +56,9 @@
                     'kadai-corporate-site-4':'corporate-site',
                     'kadai-final-exam':'final-exam',
                 };
-                let url;
+                let url= courseName == "first-sidejob-2" ? "https://techacademy.jp/mentor/courses/first-sidejob/curriculums/first-sidejob-2/review_guide" : 
+                    "https://techacademy.jp/mentor/courses/first-sidejob-oneonone-plan/curriculums/first-sidejob-3/review_guide";
                 let doc;
-                url="https://techacademy.jp/mentor/courses/first-sidejob/curriculums/first-sidejob-2/review_guide";
                 await fetch(url).then((response) => response.text()).then((html) => {
                     doc = new DOMParser().parseFromString(html, "text/html");
                 });
@@ -69,7 +84,8 @@
                     .replace(/\n+/g, '\n')
                     .trim();
                 let noans = "模範解答なし";
-                let ansList = {
+                let ansList = courseName == "first-sidejob-2" ? 
+                {
                     "kadai-html-1": [
                         ["index.html", docNthAns("kadai-html-1",0)],
                     ],
@@ -141,6 +157,77 @@
                     "kadai-final-exam": [
                         ["index.html", noans],
                     ],
+                } : {
+                    "kadai-html-1": [
+                        ["index.html", docNthAns("kadai-html-1",0)],
+                    ],
+                    "kadai-html-2": [
+                        ["index.html", noans],
+                    ],
+                    "kadai-css": [
+                        ["index.html", noans],
+                    ],
+                    "kadai-portfolio-1": [
+                        ["index.html", docNthAns("kadai-portfolio-1",0)],
+                        ["css/style.css", docNthAns("kadai-portfolio-1",1)],
+                    ],
+                    "kadai-portfolio-2": [
+                        ["index.html", docNthAns("kadai-portfolio-2",0)],
+                        ["css/style.css", docNthAns("kadai-portfolio-2",1)],
+                    ],
+                    "kadai-portfolio-3": [
+                        ["career.html", noans],
+                    ],
+                    "kadai-jquery1": [
+                        ["index.html", noans],
+                    ],
+                    "kadai-jquery2": [
+                        ["index.html", noans],
+                    ],
+                    "kadai-jquery3": [
+                        ["index.html", noans],
+                    ],
+                    "kadai-smartphone-1": [
+                        ["index.html", docNthAns("kadai-smartphone-1",0)],
+                        ["css/style.css", docNthAns("kadai-smartphone-1",1)],
+                        ["js/main.js", docNthAns("kadai-smartphone-1",2)],
+                    ],
+                    "kadai-smartphone-2": [
+                        ["index.html", docNthAns("kadai-smartphone-1",0)],
+                        ["css/style.css", docNthAns("kadai-smartphone-2",0)],
+                    ],
+                    "kadai-recipe-1": [
+                        ["index.html", docNthAns("kadai-recipe-1",0)],
+                        ["css/style.css", docNthAns("kadai-recipe-1",1)],
+                        ["js/main.js", docNthAns("kadai-recipe-1",2)],
+                    ],
+                    "kadai-recipe-2": [
+                        ["index.html", docNthAns("kadai-recipe-2",0)],
+                        ["css/style.css", docNthAns("kadai-recipe-2",1)],
+                        ["js/main.js", docNthAns("kadai-recipe-2",2)],
+                    ],
+                    "kadai-recipe-3": [
+                        ["index.html", noans],
+                    ],
+                    "kadai-corporate-site-1": [
+                        ["index.html", docNthAns("kadai-corporate-site-1",0)],
+                        ["assets/css/style.css", docNthAns("kadai-corporate-site-1",1)],
+                        ["assets/js/main.js", docNthAns("kadai-corporate-site-1",2)],
+                    ],
+                    "kadai-corporate-site-2": [
+                        ["index.html", docNthAns("kadai-corporate-site-2",0)],
+                        ["assets/css/style.css", docNthAns("kadai-corporate-site-2",1)],
+                        ["assets/js/main.js", docNthAns("kadai-corporate-site-2",2)],
+                    ],
+                    "kadai-corporate-site-3": [
+                        ["access/index.html", noans],
+                    ],
+                    "kadai-corporate-site-4": [
+                        ["index.html", noans],
+                    ],
+                    "kadai-final-exam": [
+                        ["index.html", noans],
+                    ],
                 };
                 let combAns = k => {
                     if(!ansList[k]) return "";
@@ -168,11 +255,7 @@
                 }
                 if (ism(/mentor(.training)?.reports/)) {
                     ks=[Array.from(document.querySelectorAll("a[href]"))
-                        .filter((e) => 
-                            e.getAttribute("href").includes("first-sidejob-2") || 
-                            e.getAttribute("href").includes("first-sidejob-2-r") || 
-                            e.getAttribute("href").includes("first-sidejob-2-immersive")
-                        )
+                        .filter((e) => e.getAttribute("href").includes("first-sidejob-3") || e.getAttribute("href").includes("first-sidejob-2") || e.getAttribute("href").includes("web-production-mom"))
                         .filter((e) => e.getAttribute("href").includes("/lessons/"))
                         .filter((e) => e.getAttribute("href").includes("#kadai"))[0]
                         .getAttribute("href").replace(/.*#/,"")];
