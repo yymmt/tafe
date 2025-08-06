@@ -3966,7 +3966,7 @@ css:`
 `,
 },
 meyatad:{html:`
-<img src="https://techacademy.jp/_nuxt/img/logo-blue.5e6bcca.svg" alt="テックアカデミー" width="300">
+<img src="https://demo.techacademy.jp/assets/logo-blue.svg" alt="テックアカデミー" width="300">
 
 `,
 },
@@ -4090,7 +4090,7 @@ miwiyus:{html:`
     <div class="container">
 
       <!-- ステップ -->
-      <ul class="step-list-group">
+      <ol class="step-list-group">
         <li class="step-list-group-item done">
           <p class="step-list-group-item-number">ステップ 1</p>
           <p class="step-list-group-item-text">入力画面</p>
@@ -4103,7 +4103,7 @@ miwiyus:{html:`
           <p class="step-list-group-item-number">ステップ 3</p>
           <p class="step-list-group-item-text">完了画面</p>
         </li>
-      </ul>
+      </ol>
 
     </div>
 
@@ -8686,7 +8686,7 @@ footer {
 `,
 },
 yufakil:{html:`
-<a href="https://techacademy.jp/"><img src="https://techacademy.jp/_nuxt/img/logo-blue.5e6bcca.svg" alt="テックアカデミー" width="300"></a>
+<a href="https://techacademy.jp/"><img src="https://demo.techacademy.jp/assets/logo-blue.svg" alt="テックアカデミー" width="300"></a>
 
 `,
 },
