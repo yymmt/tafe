@@ -455,28 +455,6 @@ footer {
 }
 `,
 },
-cevodal:{html:`
-<h4>見出し1</h4>
-<h4>見出し2</h4>
-<h4>見出し3</h4>
-
-`,
-css:`
-
- {
-  content: " ★";
-  font-size: 20px;
-  color: orange;
-}
-
-/* 以下は変更しない */
-h4:before {
-  content: "★ ";
-  font-size: 20px;
-  color: orange;
-}
-`,
-},
 cikagir:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -696,15 +674,6 @@ css:`
 .mincho {
     font-family: "游明朝体", "Yu Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "メイリオ", Meiryo, serif;
 }
-`,
-},
-cimexeg:{html:`
-<ul>
-  じゃがいも
-  さつまいも
-  さといも
-  こんにゃくいも
-</ul>
 `,
 },
 cipovah:{html:`
@@ -935,21 +904,6 @@ css:`
 
 `,
 },
-daposod:{html:`
-<p class="gothic">ゴシック体</p>
-<p class="mincho">明朝体</p>
-
-`,
-css:`
-.gothic {
-  font-family: ;
-}
-
-.mincho {
-  font-family: ;  
-}
-`,
-},
 dawucis:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -1003,13 +957,6 @@ footer {
     display: block;
     clear: both;
 }
-`,
-},
-dejifon:{html:`
-
-HTML文書の中身を大きく分けるとhead要素とbody要素に分かれます。それぞれheadタグとbodyタグで囲います。
-head要素内には文書に関する「メタ情報」を記述し、body要素には「コンテンツ」を記述します。メタ情報(head)には閲覧者に表示されない設定やページ情報などを記述し、コンテンツ(body)には閲覧者に見てもらうためのWebページの文書を記述します。
-headタグ内に記述するメタ情報には、ページタイトル、外部スタイルシートの場所、外部JavaScriptファイルの場所、文字エンコーディング情報、ページの概要、などが含まれます。ブラウザで表示した際に、これらの内容は表示されません。
 `,
 },
 detadoq:{html:`
@@ -1080,43 +1027,6 @@ dewivak:{html:`
 css:`
 a[href="https://techacademy.jp"] {
   color: green;
-}
-`,
-},
-dibubul:{html:`
-<div class="container">
-  <div class="bg-white">
-    <h1>CSS</h1>
-  </div>
-</div>
-`,
-css:`
-.container {
-  background-image: linear-gradient(90deg, rgba(210, 153, 194, 1), rgba(255, 247, 194, 1));
-  height: 240px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bg-white {
-  background-color: white;
-  text-align: center;
-  height: 100px;
-}
-
-`,
-},
-dovumud:{html:`
-<div>
-  <h3>セレクタについて</h3>
-  <p>セレクタとは、デザインを適用する要素を指定するものです。</p>
-  <p>CSSの記法を確認し、セレクタが書かれる位置を把握しておきましょう。</p>
-</div>
-`,
-css:`
- {
-  color: red;
 }
 `,
 },
@@ -1602,30 +1512,6 @@ furoyem:{html:`
 
 `,
 },
-gabilen:{html:`
-<div class="header">
-  <ul>
-    <li>会社概要</li>
-    <li>商品一覧</li>
-  </ul>
-</div>
-`,
-css:`
-li {
-  background-color: crimson;
-  padding: 2px 4px;
-  color: white;
-  width: 88px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-}
-`,
-},
 gahihax:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -2045,12 +1931,6 @@ a {
 
 `,
 },
-gemehux:{html:`
-<h4>
-  菜の花や月は東に日は西に
-</h4>
-`,
-},
 ginuhey:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -2316,40 +2196,6 @@ var box = \$('#box');
 box.text('Hello jQuery!');
 `,
 },
-hacigaj:{html:`
-<a href="#">リンク</a>
-<span>↑クリックして応募！</span>
-`,
-css:`
-a {
-  display: ;
-  background-color: pink;
-}
-
-span {
-  display: ;
-  background-color: lime;
-}
-`,
-},
-hahebux:{html:`
-JavaScript
-Ruby
-Python
-`,
-},
-halayan:{html:`
-<section>
-  TechAcademy
-  テックアカデミーとは？
-  <p>
-    現役エンジニアから学べるオンラインに特化したプログラミングスクール。
-    確かなスキルをもとに受講生をマンツーマンサポートします。
-  </p>
-</section>
-
-`,
-},
 hapejac:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -2443,25 +2289,6 @@ Webデザイナー
 Web
 イラスト
 英語
-`,
-},
-hesofoh:{html:`
-<div>
-  <a href="https://techacademy.jp">Top</a><br>
-  <a href="https://techacademy.jp/blog">Blog</a><br>
-  <a href="https://techacademy.jp/magazine">Magazine</a><br>
-  <a href="https://techacademy.jp/foo">存在しないページ</a><br>
-</div>
-`,
-css:`
-a {
-  color: gray;
-}
-
-/* 以下は変更しない */
-a {
-  color: blue;
-}
 `,
 },
 hitujiq:{html:`
@@ -2608,31 +2435,6 @@ honoced:{html:`
 css:`
 div { background-color: pink; }
 span { background-color: palegreen; }
-`,
-},
-hovituv:{html:`
-<p class="w-bold">boldの太さ</p>
-<p class="w-100">100の太さ</p>
-<p class="w-600">600の太さ</p>
-<p class="w-900">900の太さ</p>
-`,
-css:`
-.w-bold {
-    font-weight: ;
-}
-
-.w-100 {
-    font-weight: ;
-}
-
-
-.w-600 {
-    font-weight: ;
-}
-
-.w-900 {
-    font-weight: ;
-}
 `,
 },
 hubupeb:{html:`
@@ -2989,28 +2791,6 @@ css:`
 }
 `,
 },
-jikojuc:{html:`
-<h2>COLOR</h2>
-`,
-css:`
-h2 {
-  color: ;
-}
-`,
-},
-jobicah:{html:`
-<h1>以下、太字</h1>
-<p>
-  メロスは、村の牧人である。笛を吹き、羊と遊んで暮して来た。
-  けれども邪悪に対しては、人一倍に敏感であった。
-</p>
-`,
-css:`
-p {
-  
-}
-`,
-},
 jomesoj:{html:`
 <div class="top">topで位置を指定した要素</div>
 <div class="right">rightで位置を指定した要素</div>
@@ -3188,30 +2968,6 @@ h1 {
 }
 `,
 },
-juwaxaq:{html:`
-<div class="box1">
-  <p>BOX1</p>
-</div>
-<div class="container">
-    <p>BOX2</p>
-</div>
-
-`,
-css:`
-.box1 {
-  width: 90%;
-  border: solid 1px skyblue;
-  margin: 10px;
-}
-.container {
-  max-width: 1000px;
-  margin: 10px;
-  padding: 10px;
-  border: solid 1px green;
-}
-
-`,
-},
 kegujah:{html:`
 <div>ボックス</div>
 `,
@@ -3248,35 +3004,6 @@ javascript:`
 \$('.pm').text('こんにちは！');
 `,
 },
-kizufah:{html:`
-<section>
-  <h1 class="font-bold">CSSの基礎</h1>
-  <p class="font-bold none">セレクタでHTML要素を指定する</p>
-  <div class="buttons">
-    <a href="#" class="btn none">PUSH！</a>
-    <a href="#" class="btn">PUSH！</a>
-    <a href="#" class="btn">PUSH！</a>
-  </div>
-</section>
-`,
-css:`
-.none {
-  
-}
-
-/* 以下は変更しない */
-a.btn {
-  padding: 8px 16px;
-  border-bottom: 5px solid;
-  border-radius: 8px;
-  margin-top: 3px;
-  background-color: pink;
-  vertical-align: middle;
-  text-decoration: none;
-  text-align: center;
-}
-`,
-},
 kogulaf:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -3299,64 +3026,6 @@ css:`
     width: 100px;
     height: 100px;
     background-color: skyblue;
-}
-`,
-},
-kosarah:{html:`
-<head>
-  
-</head>
-
-<h1>メロスは激怒した。必ず、かの邪智暴虐の王を除かなければならぬと決意した。</h1>
-
-`,
-css:`
-h1 {
-  font-family: ;
-}
-`,
-},
-kowahex:{html:`
-<p class="px">FONT SIZE 30px</p>
-<p class="vw">FONT SIZE 10vw</p>
-<p class="percent">FONT SIZE 80%</p>
-
-
-
-
-`,
-css:`
-p.px {
-  font-size: ;
-}
-
-p.vw {
-  font-size: ;
-}
-
-p.percent {
-  font-size: ;
-}
-`,
-},
-kupebej:{html:`
-<body>
-  <p class="text-left">左寄せの文章</p>
-  <p class="text-center">中央寄せの文章</p>
-  <p class="text-right">右寄せの文章</p>
-</body>
-`,
-css:`
-.text-left {
-    text-align: ;
-}
-
-.text-center {
-    text-align: ;
-}
-
-.text-right {
-    text-align: ;
 }
 `,
 },
@@ -3511,26 +3180,6 @@ footer {
 }
 `,
 },
-lepakan:{html:`
-
-<h4>スター・ウォーズ</h4>
-<ul>
-  <li class="jedi">オビ＝ワン</li>
-  <li class="jedi">ヨーダ</li>
-  <li class="sith">アナキン</li>
-  <li class="sith">ダース・シディアス</li>
-</ul>
-`,
-css:`
- {
-  color: blue;
-}
-
- {
-  color: red;
-}
-`,
-},
 lewuwut:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -3552,19 +3201,6 @@ lewuwut:{html:`
 javascript:`
 var element = 'p';
 \$(element).text('こんにちは！');
-`,
-},
-lexoxeg:{html:`
-<div>
-  <h4>HTML</h4>
-  <h4>CSS</h4>
-  <h4>JavaScript</h4>
-</div>
-`,
-css:`
-h4 {
-  color:red
-}
 `,
 },
 lilafup:{html:`
@@ -3652,25 +3288,6 @@ css:`
   .container {
     flex-direction: column;
   }
-}
-`,
-},
-lulijej:{html:`
-<div>
-  <a href="https://techacademy.jp">Top</a><br>
-  <a href="https://techacademy.jp/blog">Blog</a><br>
-  <a href="https://techacademy.jp/magazine">Magazine</a><br>
-  <a href="https://techacademy.jp/foo">存在しないページ</a><br>
-</div>
-`,
-css:`
-a {
-  color: green;
-}
-
-/* 以下は変更しない */
-a {
-  color: blue;
 }
 `,
 },
@@ -3820,51 +3437,6 @@ mapamun:{html:`
 
 `,
 },
-medilen:{html:`
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>無効なプロパティの確認用デモページ</title>
-</head>
-<body>
-  
-  <div class="container">
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-  </div>
-
-</body>
-</html>
-`,
-css:`
-.container {
-  display: block;
-  align-items: center;
-}
-
-.item {
-  width: 100px;
-  height: 100px;
-}
-
-.item:nth-child(1) {
-  background: #ffe966;
-}
-
-.item:nth-child(2) {
-  background: #72e8a7;
-}
-
-.item:nth-child(3) {
-  background: #84ceef;
-}
-
-
-`,
-},
 mehaqaj:{html:`
 <p class="gothic">ゴシック体</p>
 <p class="mincho">明朝体</p>
@@ -3908,30 +3480,6 @@ css:`
   background-color: #FFE966;
 }
 
-`,
-},
-mewuzow:{html:`
-<section>
-  <h1 class="font-bold">CSSの基礎</h1>
-  <p class="font-bold">セレクタでHTML要素を指定する</p>
-  <div class="buttons">
-    <a href="#" class="btn">PUSH！</a>
-    <a href="#" class="btn">PUSH！</a>
-    <a href="#" class="btn">PUSH！</a>
-  </div>
-</section>
-`,
-css:`
-a.btn {
-  padding: 8px 16px;
-  border-bottom: 5px solid;
-  border-radius: 8px;
-  margin-top: 3px;
-  background-color: pink;
-  vertical-align: middle;
-  text-decoration: none;
-  text-align: center;
-}
 `,
 },
 mexijev:{html:`
@@ -4011,14 +3559,6 @@ css:`
 .list-square {
   list-style: square;
 }
-`,
-},
-miseyil:{html:`
-< ="https://techacademy.jp/">テックアカデミー</a>
-<img src="http://static.techacademy.jp/magazine/wp-content/themes/ta-magazine/images/logo-magazine.png" >
-<h1>自己紹介</h1>
-<h2>氏名</h2>
-<h2>煌　太郎</h2>
 `,
 },
 miwihej:{html:`
@@ -4157,20 +3697,6 @@ li {
 
 `,
 },
-mizehen:{html:`
-<h5>マウスホバーする</h5>
-`,
-css:`
-h5 {
-  transform: scale(1.8);
-  transition: 0.6s;
-}
-
-h5 {
-  text-align: center;
-}
-`,
-},
 mowogab:{html:`
 <p>普通の文章</p>
 <p class="important">importantな文章</p>
@@ -4250,30 +3776,6 @@ div {
 
 .margin-left {
   margin-left: 20px;
-}
-`,
-},
-muxumiw:{html:`
-<h2>ブラウザ</h2>
-
-<article id="article1">
-  <h3>Google Chrome</h3>
-  <p>
-    Google Chromeは、Googleが開発し、2008年にリリースされたWebブラウザです。<span class="important">世界で最も人気のある</span>ブラウザです。
-  </p>
-</article>
-
-<article id="article2">
-  <h3>Mozilla Firefox</h3>
-  <p>Mozilla Firefoxは、Mozillaが開発した<span class="important">オープンソースの</span>Webブラウザです。Firefoxは今も継続的にアップデートされています。</p>
-</article>
-
-`,
-css:`
-.important {
-  border-bottom:double;
-  border-color:#FF0000;
-  border-width:3px;
 }
 `,
 },
@@ -4497,149 +3999,6 @@ var box = \$('.box');
 \$('.my-button-toggle').on('click', function() {
   box.slideToggle();
 });
-`,
-},
-nimayab:{html:`
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>フッター - 横並び</title>
-
-    <!-- CSSリセット -->
-    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <!-- CSS -->
-    <link rel="stylesheet" href="./style.css">
-
-  </head>
-  <body>
-
-    <!-- フッター -->
-    <footer class="footer">
-
-      <!-- コンテナ -->
-      <div class="footer-container">
-
-        <div class="footer-nav-container">
-
-          <!-- ナビゲーション -->
-          <nav>
-            <ul class="footer-nav-list">
-              <li class="footer-nav-list-item"><a href="#">レシピ一覧</a></li>
-              <li class="footer-nav-list-item"><a href="#">特集</a></li>
-              <li class="footer-nav-list-item"><a href="#">ランキング</a></li>
-              <li class="footer-nav-list-item"><a href="#">運営会社</a></li>
-              <li class="footer-nav-list-item"><a href="#">お問い合わせ</a></li>
-              <li class="footer-nav-list-item"><a href="#">利用規約</a></li>
-              <li class="footer-nav-list-item"><a href="#">プライバシーポリシー</a></li>
-            </ul>
-          </nav>
-
-          <!-- SNSリンク -->
-          <ul class="footer-sns-list">
-            <li class="footer-sns-list-item">
-              <a href="#"><i class="bi bi-instagram"></i></a>
-            </li>
-            <li class="footer-sns-list-item">
-              <a href="#"><i class="bi bi-youtube"></i></a>
-            </li>
-            <li class="footer-sns-list-item">
-              <a href="#"><i class="bi bi-facebook"></i></a>
-            </li>
-            <li class="footer-sns-list-item">
-              <a href="#"><i class="bi bi-twitter"></i></a>
-            </li>
-          </ul>
-
-        </div>
-
-        <!-- コピーライト -->
-        <small class="footer-copyright">copyright ©2022 ○○ All Rights Reserved.</small>
-
-      </div>
-
-    </footer>
-
-  </body>
-</html>
-`,
-css:`
-/* リンク */
-a {
-  text-decoration: none;
-}
-
-
-/* フッター
------------------------------------------- */
-
-.footer {
-  background-color: #040000;
-}
-
-.footer li {
-  list-style: none;
-}
-
-/* コンテナ */
-.footer-container {
-  padding: 2.5rem 1.25rem;
-  max-width: 70rem;
-  margin: auto;
-}
-
-/* ナビゲーションコンテナ */
-.footer-nav-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* ナビゲーション */
-.footer-nav-list {
-  display: flex;
-  column-gap: 2.5rem;
-  row-gap: 1.25rem;
-  flex-wrap: wrap;
-  max-width: 21.5rem;
-  margin-bottom: 1.25rem;
-}
-
-.footer-nav-list-item a {
-  color: #fff;
-}
-
-.footer-nav-list-item a:hover {
-  text-decoration: underline;
-}
-
-/* SNSリンク */
-.footer-sns-list {
-  display: flex;
-  column-gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.footer-sns-list-item a {
-  display: block;
-  padding: 0.75rem;
-  color: #040000;
-  background-color: #ccc;
-  border-radius: 50%;
-  line-height: 0;
-}
-
-/* コピーライト */
-.footer-copyright {
-  display: inline-block;
-  width: 100%;
-  color: #ccc;
-  text-align: center;
-}
-
 `,
 },
 nitolof:{html:`
@@ -5045,18 +4404,6 @@ a {
 
 `,
 },
-pasukiw:{html:`
-<section>
-  <img />
-  <h1>TechAcademy</h1>
-  <h2>テックアカデミーとは？</h2>
-  <p>
-    現役エンジニアから学べるオンラインに特化したプログラミングスクール。
-    確かなスキルをもとに受講生をマンツーマンサポートします。
-  </p>
-</section>
-`,
-},
 pebizej:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -5077,13 +4424,6 @@ pebizej:{html:`
 `,
 javascript:`
 \$('p').css('color', 'red');
-`,
-},
-pibunen:{html:`
-  <li>お湯を沸かす</li>
-  <li>線までお湯を注ぐ</li>
-  <li>フタをして3分待つ</li>
-  <li>出来上がり</li>
 `,
 },
 pixonur:{html:`
@@ -5172,18 +4512,6 @@ div.g {
 pugifay:{html:`
 <img src="https://demo.techacademy.jp/html-css/images/logo-techacademy.png" alt="ロゴ画像" />
 
-`,
-},
-qageyaw:{html:`
-<div>
-  非表示テキスト
-</div>
-`,
-css:`
-div {
-  display: ;
-  background-color: pink;
-}
 `,
 },
 qazifum:{html:`
@@ -5332,39 +4660,6 @@ li {
 }
 `,
 },
-qivibew:{html:`
-<h2>ブラウザ</h2>
-
-<article>
-  <div class="important">Google Chrome</div>
-  <div>
-    Google Chromeは、Googleが開発し、2008年にリリースされたWebブラウザです。<span class="important">世界で最も人気のある</span>ブラウザです。
-  </div>
-</article>
-
-<article>
-  <div class="important">Mozilla Firefox</div>
-  <div>
-    Mozilla Firefoxは、Mozillaが開発した<span class="important">オープンソースの</span>Webブラウザです。Firefoxは今も継続的にアップデートされています。
-  </div>
-</article>
-
-`,
-css:`
-
-.important {
-  background-color: coral;
-}
-
-/* 以下は変更しない */
-span.important {
-  border-bottom:double;
-  border-color:#FF0000;
-  border-width:3px;
-}
-
-`,
-},
 qofehig:{html:`
 <!DOCTYPE html>
 <html>
@@ -5485,33 +4780,6 @@ css:`
   background-color: gray;
 }
 
-`,
-},
-qutejub:{html:`
-<div id="red">赤</div>
-<div id="yellow">黄</div>
-<div id="blue">青</div>
-`,
-css:`
-div {
-  display: ;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-}
-
-/* 以下は変更しない */
-div#red {
-  background-color: red;
-}
-
-div#yellow {
-  background-color: yellow;
-}
-
-div#blue {
-  background-color: blue;
-}
 `,
 },
 racotaq:{html:`
@@ -5852,16 +5120,6 @@ div {
 }
 `,
 },
-rizuzur:{html:`
-<input class="amount" value="¥1,230">
-
-`,
-css:`
-.amount {
- 
-}
-`,
-},
 rocofiy:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -6143,6 +5401,149 @@ div {
 
 `,
 },
+sicihay:{html:`
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>フッター - 横並び</title>
+
+    <!-- CSSリセット -->
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+  <body>
+
+    <!-- フッター -->
+    <footer class="footer">
+
+      <!-- コンテナ -->
+      <div class="footer-container">
+
+        <div class="footer-nav-container">
+
+          <!-- ナビゲーション -->
+          <nav>
+            <ul class="footer-nav-list">
+              <li class="footer-nav-list-item"><a href="#">レシピ一覧</a></li>
+              <li class="footer-nav-list-item"><a href="#">特集</a></li>
+              <li class="footer-nav-list-item"><a href="#">ランキング</a></li>
+              <li class="footer-nav-list-item"><a href="#">運営会社</a></li>
+              <li class="footer-nav-list-item"><a href="#">お問い合わせ</a></li>
+              <li class="footer-nav-list-item"><a href="#">利用規約</a></li>
+              <li class="footer-nav-list-item"><a href="#">プライバシーポリシー</a></li>
+            </ul>
+          </nav>
+
+          <!-- SNSリンク -->
+          <ul class="footer-sns-list">
+            <li class="footer-sns-list-item">
+              <a href="#"><i class="bi bi-instagram"></i></a>
+            </li>
+            <li class="footer-sns-list-item">
+              <a href="#"><i class="bi bi-youtube"></i></a>
+            </li>
+            <li class="footer-sns-list-item">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="footer-sns-list-item">
+              <a href="#"><i class="bi bi-twitter"></i></a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- コピーライト -->
+        <small class="footer-copyright">copyright ©2022 ○○ All Rights Reserved.</small>
+
+      </div>
+
+    </footer>
+
+  </body>
+</html>
+`,
+css:`
+/* リンク */
+a {
+  text-decoration: none;
+}
+
+
+/* フッター
+------------------------------------------ */
+
+.footer {
+  background-color: #040000;
+}
+
+.footer li {
+  list-style: none;
+}
+
+/* コンテナ */
+.footer-container {
+  padding: 2.5rem 1.25rem;
+  max-width: 70rem;
+  margin: auto;
+}
+
+/* ナビゲーションコンテナ */
+.footer-nav-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* ナビゲーション */
+.footer-nav-list {
+  display: flex;
+  column-gap: 2.5rem;
+  row-gap: 1.25rem;
+  flex-wrap: wrap;
+  max-width: 21.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer-nav-list-item a {
+  color: #fff;
+}
+
+.footer-nav-list-item a:hover {
+  text-decoration: underline;
+}
+
+/* SNSリンク */
+.footer-sns-list {
+  display: flex;
+  column-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer-sns-list-item a {
+  display: block;
+  padding: 0.75rem;
+  color: #040000;
+  background-color: #ccc;
+  border-radius: 50%;
+  line-height: 0;
+}
+
+/* コピーライト */
+.footer-copyright {
+  display: inline-block;
+  width: 100%;
+  color: #ccc;
+  text-align: center;
+}
+
+`,
+},
 sidajuc:{html:`
 <ul>
   <li><a href="#">TOP</a></li>
@@ -6276,19 +5677,6 @@ javascript:`
 \$('[href="pm.html"]').text('こんにちは！');
 `,
 },
-sukiret:{html:`
-<div>
-  <h4>HTML</h4>
-  <h4>CSS</h4>
-  <h4>JavaScript</h4>
-</div>
-`,
-css:`
-h4 {
-  color: red;
-}
-`,
-},
 suwecux:{html:`
 <ul>
     <li>飲料水</li>
@@ -6305,33 +5693,6 @@ ul {
 li {
     display: inline-block;
     margin: 20px;
-}
-`,
-},
-suxodab:{html:`
-<div id="red">赤</div>
-<div id="yellow">黄</div>
-<div id="blue">青</div>
-`,
-css:`
-div {
-  display: ;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-}
-
-/* 以下は変更しない */
-div#red {
-  background-color: red;
-}
-
-div#yellow {
-  background-color: yellow;
-}
-
-div#blue {
-  background-color: blue;
 }
 `,
 },
@@ -6766,146 +6127,6 @@ javascript:`
 
 `,
 },
-timukux:{html:`
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>フッター - 縦並び</title>
-
-    <!-- CSSリセット -->
-    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <!-- CSS -->
-    <link rel="stylesheet" href="./style.css">
-
-  </head>
-  <body>
-
-    <!-- フッター -->
-    <footer class="footer">
-
-      <!-- コンテナ -->
-      <div class="footer-container">
-
-        <!-- ナビゲーション -->
-        <nav>
-          <ul class="footer-nav-list">
-            <li class="footer-nav-list-item"><a href="#">レシピ一覧</a></li>
-            <li class="footer-nav-list-item"><a href="#">特集</a></li>
-            <li class="footer-nav-list-item"><a href="#">ランキング</a></li>
-            <li class="footer-nav-list-item"><a href="#">運営会社</a></li>
-            <li class="footer-nav-list-item"><a href="#">お問い合わせ</a></li>
-            <li class="footer-nav-list-item"><a href="#">利用規約</a></li>
-            <li class="footer-nav-list-item"><a href="#">プライバシーポリシー</a></li>
-          </ul>
-        </nav>
-
-        <!-- SNSリンク -->
-        <ul class="footer-sns-list">
-          <li class="footer-sns-list-item">
-            <a href="#"><i class="bi bi-instagram"></i></a>
-          </li>
-          <li class="footer-sns-list-item">
-            <a href="#"><i class="bi bi-youtube"></i></a>
-          </li>
-          <li class="footer-sns-list-item">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-          </li>
-          <li class="footer-sns-list-item">
-            <a href="#"><i class="bi bi-twitter"></i></a>
-          </li>
-        </ul>
-
-      </div>
-
-      <!-- コピーライト -->
-      <small class="footer-copyright">copyright ©2022 ○○ All Rights Reserved.</small>
-
-    </footer>
-
-  </body>
-</html>
-`,
-css:`
-/* リンク */
-a {
-  text-decoration: none;
-}
-
-
-/* フッター
------------------------------------------- */
-
-.footer {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  background-color: #040000;
-}
-
-.footer li {
-  list-style: none;
-}
-
-/* コンテナ */
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 70rem;
-  padding-right: 1.25rem;
-  padding-left: 1.25rem;
-  margin: 0 auto 1rem;
-}
-
-/* ナビゲーション */
-.footer-nav-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.footer-nav-list-item {
-  margin-right: 2.5rem;
-  margin-bottom: 1.25rem;
-}
-
-.footer-nav-list-item a {
-  color: #fff;
-}
-
-.footer-nav-list-item a:hover {
-  text-decoration: underline;
-}
-
-/* SNSリンク */
-.footer-sns-list {
-  display: flex;
-  margin-bottom: 2rem;
-}
-
-.footer-sns-list-item:not(:last-child) {
-  margin-right: 1rem;
-}
-
-.footer-sns-list-item a {
-  display: block;
-  padding: 0.75rem;
-  color: #040000;
-  background-color: #ccc;
-  border-radius: 50%;
-  line-height: 0;
-}
-
-/* コピーライト */
-.footer-copyright {
-  display: flex;
-  justify-content: center;
-  color: #ccc;
-}
-
-`,
-},
 tiruzoq:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -7001,17 +6222,6 @@ div {
 
 .box-2 {
   box-sizing: border-box;    
-}
-`,
-},
-tulozas:{html:`
-<div id="logo">株式会社リンゴ</div>
-<h4>素晴らしいPCをお手頃価格で。</h4>
-<p>頑丈なボディに高速なコンピュータを搭載しました。</p>
-`,
-css:`
- {
-  font-size: 28px;
 }
 `,
 },
@@ -7148,43 +6358,6 @@ vegoper:{html:`
 
 `,
 },
-vepumiv:{html:`
-コードを書く
-エラーが出る
-修正する
-`,
-},
-vihavam:{html:`
-<div class="container">
-  <div class="bg-white">
-    <h1>CSS</h1>
-  </div>
-  <div class="bg-black">
-    Cascading Style Sheets
-  </div>
-</div>
-`,
-css:`
-.container {
-  background-image: linear-gradient(90deg, rgba(210, 153, 194, 1), rgba(255, 247, 194, 1));
-  height: 240px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.bg-white {
-  background-color: white;
-  text-align: center;
-  margin-bottom: 4px;
-}
-
-.bg-black {
-  background-color: black;
-  color: white;
-}
-`,
-},
 vikebox:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -7317,15 +6490,6 @@ css:`
 
 .noto-sans {
   font-family: 'Noto Sans JP', sans-serif;  
-}
-`,
-},
-vozumin:{html:`
-<h1>最適な文字サイズ</h1>
-`,
-css:`
-h1 {
-  font-size: ;
 }
 `,
 },
@@ -7481,31 +6645,6 @@ div.normal p {
 }
 
 
-`,
-},
-wisawot:{html:`
-<body>
-  <div>
-    じゅげむ　じゅげむ　ごこうのすりきれ　かいじゃりすいぎょの　すいぎょうまつ　うんらいまつ　ふうらいまつ　くうねるところにすむところ　やぶらこうじのぶらこうじ　ぱいぽ　ぱいぽ　ぱいぽのしゅーりんがん　しゅーりんがんのぐーりんだい　ぐーりんだいのぽんぽこぴーの　ぽんぽこなーの　ちょうきゅうめいのちょうすけ
-  </div>
-  <div>
-    じゅげむ　じゅげむ　ごこうのすりきれ　かいじゃりすいぎょの　すいぎょうまつ　うんらいまつ　ふうらいまつ　くうねるところにすむところ　やぶらこうじのぶらこうじ　ぱいぽ　ぱいぽ　ぱいぽのしゅーりんがん　しゅーりんがんのぐーりんだい　ぐーりんだいのぽんぽこぴーの　ぽんぽこなーの　ちょうきゅうめいのちょうすけ
-  </div>
-</body>
-
-`,
-css:`
-div {
-  margin: ;
-  padding: ;
-  border: ;
-  background-color: pink;
-}
-
-/* 以下は変更しない */
-body {
-  border: 1px dotted black;
-}
 `,
 },
 wocevap:{html:`
@@ -7674,6 +6813,147 @@ div {
 }
 `,
 },
+wujobon:{html:`
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>フッター - 縦並び</title>
+
+    <!-- CSSリセット -->
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+  <body>
+
+    <!-- フッター -->
+    <footer class="footer">
+
+      <!-- コンテナ -->
+      <div class="footer-container">
+
+        <div class="footer-nav-container">
+
+          <!-- ナビゲーション -->
+          <nav>
+            <ul class="footer-nav-list">
+              <li class="footer-nav-list-item"><a href="#">レシピ一覧</a></li>
+              <li class="footer-nav-list-item"><a href="#">特集</a></li>
+              <li class="footer-nav-list-item"><a href="#">ランキング</a></li>
+              <li class="footer-nav-list-item"><a href="#">運営会社</a></li>
+              <li class="footer-nav-list-item"><a href="#">お問い合わせ</a></li>
+              <li class="footer-nav-list-item"><a href="#">利用規約</a></li>
+              <li class="footer-nav-list-item"><a href="#">プライバシーポリシー</a></li>
+            </ul>
+          </nav>
+
+          <!-- SNSリンク -->
+          <ul class="footer-sns-list">
+            <li class="footer-sns-list-item">
+              <a href="#"><i class="bi bi-instagram"></i></a>
+            </li>
+            <li class="footer-sns-list-item">
+              <a href="#"><i class="bi bi-youtube"></i></a>
+            </li>
+            <li class="footer-sns-list-item">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="footer-sns-list-item">
+              <a href="#"><i class="bi bi-twitter"></i></a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- コピーライト -->
+        <small class="footer-copyright">copyright ©2022 ○○ All Rights Reserved.</small>
+
+      </div>
+
+    </footer>
+
+  </body>
+</html>
+`,
+css:`
+/* リンク */
+a {
+  text-decoration: none;
+}
+
+
+/* フッター
+------------------------------------------ */
+
+.footer {
+  background-color: #040000;
+}
+
+.footer li {
+  list-style: none;
+}
+
+/* コンテナ */
+.footer-container {
+  max-width: 70rem;
+  padding: 2.5rem 1.25rem;
+  margin: auto;
+}
+
+/* ナビゲーションコンテナ */
+.footer-nav-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ナビゲーション */
+.footer-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2.5rem;
+  row-gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer-nav-list-item a {
+  color: #fff;
+}
+
+.footer-nav-list-item a:hover {
+  text-decoration: underline;
+}
+
+/* SNSリンク */
+.footer-sns-list {
+  display: flex;
+  column-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer-sns-list-item a {
+  display: block;
+  padding: 0.75rem;
+  color: #040000;
+  background-color: #ccc;
+  border-radius: 50%;
+  line-height: 0;
+}
+
+/* コピーライト */
+.footer-copyright {
+  display: inline-block;
+  width: 100%;
+  color: #ccc;
+  text-align: center;
+}
+
+`,
+},
 wurajac:{html:`
 <!DOCTYPE html>
 <html>
@@ -7772,19 +7052,6 @@ a {
   color: #fff;
   background-color: #040000;
 }
-
-`,
-},
-wuzoyeg:{html:`
-
-
-<a href="https://techacademy.jp/"> [テックアカデミー] |</a>
-<img src="http://static.techacademy.jp/magazine/wp-content/themes/ta-magazine/images/logo-magazine.png" >
-<h1>自己紹介</h1>
-<h2>氏名</h2>
-<h2>煌　太郎</h2>
-
-
 
 `,
 },
@@ -8304,49 +7571,6 @@ javascript:`
 });
 `,
 },
-xomofol:{html:`
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>画面幅ごとに画像を切り替える</title>
-
-</head>
-
-<body>
-
-  <picture>
-    <source media="(max-width:639px)" srcset="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/mobile-design/639.jpg">
-    <source media="(min-width:640px)" srcset="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/mobile-design/640.jpg">
-    <img src="https://techacademy.s3-ap-northeast-1.amazonaws.com/bootcamp/webdesign/3/mobile-design/640.jpg" alt="">
-  </picture>
-
-</body>
-
-</html>
-
-`,
-css:`
-img {
-    width: 100%;
-}
-`,
-},
-xosivoj:{html:`
-<h4>見出し１</h4>
-<h4>見出し2</h4>
-<h4>見出し3</h4>
-`,
-css:`
-
- {
-  content: "★ ";
-  font-size: 20px;
-  color: orange;
-}
-`,
-},
 xuxukoq:{html:`
 <!DOCTYPE html>
 <html lang="ja">
@@ -8612,29 +7836,6 @@ li {
 .sns-list-item:hover {
   background-color: #040000;
   transition: all 0.3s ease;
-}
-`,
-},
-yokepey:{html:`
-<ol>
-  <li>ウサギ</li>
-  <li>ペンギン</li>
-  <li>クジラ</li>
-  <li>ワニ</li>
-  <li>ダチョウ</li>
-  <li>キジ</li>
-  <li>フラミンゴ</li>
-  <li>コウノトリ</li>
-  <li>フクロウ</li>
-  <li>ブッポウソウ</li>
-  <li>ツル</li>
-  <li>タカ</li>
-  <li>スズメ</li>
-</ol>
-`,
-css:`
-li {
-  background:lime;
 }
 `,
 },
@@ -9209,34 +8410,6 @@ zobapoq:{html:`
 `,
 javascript:`
 \$('a').attr('href', 'new.html');
-`,
-},
-zoxowub:{html:`
-<div class="container">
-  <div class="bg-white">
-    <h1>１</h1>
-  </div>
-  <div class="bg-white">
-    <h1>２</h1>
-  </div>
-  <div class="bg-white">
-    <h1>３</h1>
-  </div>
-</div>
-`,
-css:`
-.container {
-  background-image: linear-gradient(90deg, rgba(210, 153, 194, 1), rgba(255, 247, 194, 1));
-  height: 240px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.bg-white {
-  background-color: white;
-  text-align: center;
-}
 `,
 },
 zulequc:{html:`
