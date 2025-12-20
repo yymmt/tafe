@@ -42,7 +42,7 @@ window.onload = async () => {
   };
 
   console.log("■ index.html");
-  analyzeHtmlElm('Headings', /<h[1-6].*?>[\s\S]*?<\.*?>/gi, [
+  analyzeHtmlElm('Headings', /<h[1-6].*?>[\s\S]*?<\/h[1-6]>/gi, [
     e => e.tagName,
     e => `text: ${e.textContent}`,
   ]);
@@ -100,7 +100,18 @@ window.onload = async () => {
   analyzeCssRule('Media Queries', /@media.*?\)/gi);
   analyzeCssRule('Comments', /\/\*[\s\S]*?\*\//g);
 
+  let analyzeJs = (title, pattern) => {
+    console.log(`◆ ${title}`);
+    const matches = mainJsSource.match(pattern);
+    if(matches) {
+      matches.forEach((match) => {
+        console.log(match);
+      });
+    }
+  }
   console.log("■ main.js");
-  console.log('Comments (Single):', mainJsSource.match(/\/\/.*/g));
-  console.log('Comments (Multi):', mainJsSource.match(/\/\*[\s\S]*?\*\//g));
+  analyzeJs('Comments (Single)', /\/\/.*/g);
+  analyzeJs('Comments (Multi)', /\/\*[\s\S]*?\*\//g);
+  analyzeJs('Slick / autoplay', /\.slick[\s\S]*?\}/g);
+  analyzeJs('SmartTab / autoAdjustHeight', /\.smartTab[\s\S]*?\}/g);
 }
