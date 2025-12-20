@@ -42,11 +42,11 @@ window.onload = async () => {
   };
 
   console.log("■ index.html");
-  analyzeHtmlElm('Headings', /<h[1-6][^>]*>[\s\S]*?<\/h[1-6]>/gi, [
+  analyzeHtmlElm('Headings', /<h[1-6].*?>[\s\S]*?<\.*?>/gi, [
     e => e.tagName,
     e => `text: ${e.textContent}`,
   ]);
-  analyzeHtmlElm('Anchors', /<a\s[^>]*>[\s\S]*?<\/a>/gi, [
+  analyzeHtmlElm('Anchors', /<a\s.*?>[\s\S]*?<\/a>/gi, [
     e => `text: ${e.textContent}`,
     e => `href: ${e.getAttribute('href')}`,
   ]);
@@ -54,8 +54,16 @@ window.onload = async () => {
     e => `src: ${e.getAttribute('src')}`,
     e => `alt: ${e.getAttribute('alt')}`,
   ]);
-  analyzeHtmlElm('Breaks', /<.*?>.*?<br\s*\/?>.*?<\/.*?>/gi, []);
+  analyzeHtmlElm('Breaks', /<.*?>.*?<br.*?>.*?<\/.*?>/gi, []);
   analyzeHtmlElm('Comments', /<!--[\s\S]*?-->/g, []);
+  analyzeHtmlElm('Title', /<title.*?>.*?<\/title>/gi, [
+    e => e.textContent == 'Kira-Kira English｜キラキライングリッシュ キッズオンライン英会話教室' ? 'OK': 'NG',
+  ]);
+  analyzeHtmlElm('Description', /<meta.*?name=.*?description.*?>/gi, [
+    e => e.getAttribute('content') == 'Kira-Kira English(キラキライングリッシュ)は、お子様向けのオンライン英会話教室です。0歳から15歳までのお子様向けに楽しく学べて“使える英語力”が身につき幅広いレッスンが受講でき、家族割やきょうだい割も大好評！ご希望に合わせて英語検定受験コース、高校受験向けコースも開講しています。' ? 'OK': 'NG',
+  ]);
+  analyzeHtmlElm('header, nav, main, section, footer', /<(header|nav|main|section|footer).*?>/gi, [
+  ]);
 
   let analyzeCssRule = (title, pattern) => {
     console.log(`◆ ${title}`);
@@ -88,6 +96,7 @@ window.onload = async () => {
   console.log("■ style.css");
   analyzeCssRule('Negative Margins', /margin(-[a-z]+)?\s*:.*?-[0-9\.].*?;/gi);
   analyzeCssRule('Position', /position\s*:.*?;/gi);
+  analyzeCssRule('Transform', /transform\s*:.*?;/gi);
   analyzeCssRule('Media Queries', /@media.*?\)/gi);
   analyzeCssRule('Comments', /\/\*[\s\S]*?\*\//g);
 
