@@ -25,7 +25,9 @@
             if(g){
                 let courseName;
                 if (ism(/mentor\/users\/\d+(#.*)?$/)) {
-                    courseName = $("tr:contains('カリキュラム') a:contains('はじめての副業')").text().includes("はじめての副業3") ? "first-sidejob-3" : "first-sidejob-2";
+                    courseName = $("tr:contains('カリキュラム') a[href*='first-sidejob']").attr("href").includes("first-sidejob-3")
+                        ? "first-sidejob-3"
+                        : "first-sidejob-2";
                 }
                 if (ism(/mentor(.training)?.reports/)) {
                     courseName = Array.from(document.querySelectorAll("a[href]"))
