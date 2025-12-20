@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         最終課題チェッカー2 - ソースコード部分
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  最終課題チェッカー2 - ソースコード部分
 // @author       You
 // @match        http://*/final-exam/*
